@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <!-- Deep Obsidian Jet Background -->
+    <linearGradient id="fav-l-bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+
+    <!-- Metallic Silver Rim -->
+    <linearGradient id="fav-l-rim" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Top Gloss Arc -->
+    <linearGradient id="fav-l-shine" x1="32" y1="2" x2="32" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Obsidian Badge Container -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#fav-l-bg)"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="15.5" stroke="url(#fav-l-rim)" stroke-width="1.2"/>
+  
+  <!-- Subtle Top Glass Shine -->
+  <path d="M4 18C4 10.268 10.268 4 18 4H46C53.732 4 60 10.268 60 18C60 22 48 30 32 30C16 30 4 22 4 18Z" fill="url(#fav-l-shine)"/>
+
+  <!-- Haute Couture Luxury Letter L (Bodoni / Didone Italic) -->
+  <path d="M 31.01 15.08 L 23.14 52.04 L 31.01 52.04 C 33.54 52.04, 35.51 51.81, 36.92 51.34 C 38.33 50.87, 39.64 49.83, 40.85 48.22 C 42.07 46.61, 43.39 44.06, 44.82 40.56 L 46.37 40.56 L 42.82 53.56 L 10.43 53.56 L 10.76 52.04 L 16.31 52.04 L 24.06 15.08 L 18.13 15.08 L 18.45 13.56 L 37.25 13.56 L 36.89 15.08 Z" fill="#FFFFFF"/>
+
+  <!-- 4-Point Diamond Sparkle Star (Kim Cương Tinh Tế) -->
+  <path d="M 47 21 L 48.2 18 L 51 16.8 L 48.2 15.6 L 47 13 L 45.8 15.6 L 43 16.8 L 45.8 18 Z" fill="#FFFFFF" fill-opacity="0.95"/>
+</svg>

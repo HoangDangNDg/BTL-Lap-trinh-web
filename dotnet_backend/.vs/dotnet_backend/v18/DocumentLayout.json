@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\D\\btlwebtrentruong\\dotnet_backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Services\\CoSoVatChatService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\CoSoVatChatService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Services\\AdminService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\AdminService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Common\\ApiResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Common\\ApiResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Common\\LocalizationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Common\\LocalizationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Common\\ILocalizationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Common\\ILocalizationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Data\\QuanLyTrungTamDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\QuanLyTrungTamDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\DTOs\\HocSinhDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\HocSinhDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\TaiChinhController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\TaiChinhController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\LocalizationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\LocalizationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\HocSinhController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\HocSinhController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\DiemDanhController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\DiemDanhController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\DaoTaoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\DaoTaoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "QuanLyTrungTamDbContext.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Data\\QuanLyTrungTamDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\QuanLyTrungTamDbContext.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Data\\QuanLyTrungTamDbContext.cs",
+              "RelativeToolTip": "Data\\QuanLyTrungTamDbContext.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T14:26:24.832Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CoSoVatChatService.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Services\\CoSoVatChatService.cs",
+              "RelativeDocumentMoniker": "Services\\CoSoVatChatService.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Services\\CoSoVatChatService.cs",
+              "RelativeToolTip": "Services\\CoSoVatChatService.cs",
+              "ViewState": "AgIAAN4BAAAAAAAAAAAowBcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T14:27:50.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Services\\AdminService.cs",
+              "RelativeDocumentMoniker": "Services\\AdminService.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Services\\AdminService.cs",
+              "RelativeToolTip": "Services\\AdminService.cs",
+              "ViewState": "AgIAAHEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T14:27:43.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LocalizationService.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Common\\LocalizationService.cs",
+              "RelativeDocumentMoniker": "Common\\LocalizationService.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Common\\LocalizationService.cs",
+              "RelativeToolTip": "Common\\LocalizationService.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T14:27:24.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ILocalizationService.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Common\\ILocalizationService.cs",
+              "RelativeDocumentMoniker": "Common\\ILocalizationService.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Common\\ILocalizationService.cs",
+              "RelativeToolTip": "Common\\ILocalizationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T14:27:21.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Common\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "Common\\ApiResponse.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Common\\ApiResponse.cs",
+              "RelativeToolTip": "Common\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T14:27:15.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HocSinhDtos.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\DTOs\\HocSinhDtos.cs",
+              "RelativeDocumentMoniker": "DTOs\\HocSinhDtos.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\DTOs\\HocSinhDtos.cs",
+              "RelativeToolTip": "DTOs\\HocSinhDtos.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T14:26:48.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TaiChinhController.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\TaiChinhController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TaiChinhController.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\TaiChinhController.cs",
+              "RelativeToolTip": "Controllers\\TaiChinhController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-18T08:22:37.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LocalizationController.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\LocalizationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LocalizationController.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\LocalizationController.cs",
+              "RelativeToolTip": "Controllers\\LocalizationController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-18T08:22:34.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HocSinhController.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\HocSinhController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HocSinhController.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\HocSinhController.cs",
+              "RelativeToolTip": "Controllers\\HocSinhController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-18T08:22:26.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DiemDanhController.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\DiemDanhController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DiemDanhController.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\DiemDanhController.cs",
+              "RelativeToolTip": "Controllers\\DiemDanhController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-18T08:22:22.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DaoTaoController.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\DaoTaoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DaoTaoController.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\DaoTaoController.cs",
+              "RelativeToolTip": "Controllers\\DaoTaoController.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-18T08:22:15.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\D\\btlwebtrentruong\\dotnet_backend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-18T08:22:05.53Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

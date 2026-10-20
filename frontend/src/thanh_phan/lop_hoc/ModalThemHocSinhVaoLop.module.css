@@ -1,0 +1,741 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  padding: 1rem;
+}
+
+.modalCard {
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeIn 0.2s ease;
+  border: 1px solid #E2E8F0;
+}
+
+/* ── HEADER MODAL ── */
+.header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F8FAFC;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.headerIconBox {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background-color: #EFF6FF;
+  color: #0284C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #BFDBFE;
+}
+
+.headerTitle {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.headerSub {
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.headerSub strong {
+  color: #0284C7;
+}
+
+.btnClose {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #64748B;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.btnClose:hover {
+  background-color: #F1F5F9;
+  color: #0F172A;
+}
+
+/* ── THANH TIẾN ĐỘ SĨ SỐ LỚP ── */
+.quotaBar {
+  padding: 0.75rem 1.5rem;
+  background-color: #F0FDF4;
+  border-bottom: 1px solid #DCFCE7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.quotaBarFull {
+  background-color: #FEF2F2;
+  border-bottom-color: #FECACA;
+}
+
+.quotaLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quotaIcon {
+  color: #16A34A;
+}
+
+.quotaIconFull {
+  color: #DC2626;
+}
+
+.quotaLabel {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.quotaCount {
+  color: #16A34A;
+}
+
+.quotaCountFull {
+  color: #DC2626;
+}
+
+.quotaRight {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.progressTrack {
+  width: 120px;
+  height: 8px;
+  background-color: #E2E8F0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.progressNormal {
+  background-color: #10B981;
+}
+
+.progressWarning {
+  background-color: #F59E0B;
+}
+
+.progressFull {
+  background-color: #EF4444;
+}
+
+.percentText {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #475569;
+}
+
+.percentTextFull {
+  color: #DC2626;
+}
+
+/* ── TABS CHUYỂN ĐỔI ── */
+.tabsBar {
+  display: flex;
+  border-bottom: 1px solid #E2E8F0;
+  background-color: #F8FAFC;
+  padding: 0.35rem 1.5rem 0;
+  gap: 0.5rem;
+}
+
+.tabBtn {
+  padding: 0.7rem 1.15rem;
+  border: none;
+  border-bottom: 2.5px solid transparent;
+  background-color: transparent;
+  color: #64748B;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.15s ease;
+}
+
+.tabBtn:hover {
+  color: #0284C7;
+}
+
+.tabBtnActive {
+  border-bottom-color: #0284C7;
+  color: #0284C7;
+  font-weight: 800;
+}
+
+/* ── TOAST THÔNG BÁO ── */
+.toastSuccess {
+  margin: 0.75rem 1.5rem 0;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  background-color: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #065F46;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  fontSize: 0.825rem;
+  font-weight: 700;
+}
+
+.toastError {
+  margin: 0.75rem 1.5rem 0;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  background-color: #FEF2F2;
+  border: 1px solid #FECACA;
+  color: #991B1B;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  fontSize: 0.825rem;
+  font-weight: 700;
+}
+
+/* ── TAB 1: TRA CỨU CCCD ── */
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.searchForm {
+  padding: 1rem 1.5rem 0.75rem;
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.searchInputWrapper {
+  position: relative;
+  flex: 1;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0284C7;
+}
+
+.searchInput {
+  width: 100%;
+  height: 42px;
+  padding: 0 1rem 0 2.35rem;
+  border-radius: 12px;
+  border: 1.5px solid #CBD5E1;
+  background-color: #F8FAFC;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.searchInput:focus {
+  border-color: #0284C7;
+  background-color: #FFFFFF;
+}
+
+.btnSearch {
+  height: 42px;
+  padding: 0 1.25rem;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  transition: all 0.15s ease;
+}
+
+.btnSearchEnabled {
+  background-color: #0284C7;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+.btnSearchEnabled:hover {
+  background-color: #0369A1;
+}
+
+.btnSearchDisabled {
+  background-color: #CBD5E1;
+  color: #FFFFFF;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.resultsContainer {
+  padding: 0.5rem 1.5rem 1.5rem;
+  overflow-y: auto;
+  max-height: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.searchLoadingBox {
+  padding: 3rem;
+  text-align: center;
+  color: #64748B;
+}
+
+.searchLoadingSpinner {
+  margin: 0 auto 0.75rem;
+  color: #0284C7;
+}
+
+.searchLoadingText {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.guideBox {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: #F8FAFC;
+  border-radius: 16px;
+  border: 1px dashed #CBD5E1;
+  margin: 0.5rem 0;
+}
+
+.guideIconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background-color: #EFF6FF;
+  color: #0284C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.85rem;
+  border: 1px solid #BFDBFE;
+}
+
+.guideTitle {
+  margin: 0 0 0.35rem;
+  color: #0F172A;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.guideDesc {
+  margin: 0 auto;
+  max-width: 400px;
+  font-size: 0.825rem;
+  color: #64748B;
+  line-height: 1.45;
+}
+
+.guideDesc strong {
+  color: #0F172A;
+}
+
+.notFoundBox {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background-color: #FFFBEB;
+  border-radius: 16px;
+  border: 1px solid #FDE68A;
+  margin: 0.5rem 0;
+}
+
+.notFoundIcon {
+  color: #D97706;
+  margin: 0 auto 0.5rem;
+}
+
+.notFoundTitle {
+  margin: 0 0 0.35rem;
+  color: #92400E;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.notFoundDesc {
+  margin: 0 0 1rem;
+  font-size: 0.825rem;
+  color: #78350F;
+}
+
+.btnSwitchManual {
+  padding: 0.6rem 1.25rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #D97706;
+  color: #FFFFFF;
+  font-size: 0.825rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.25);
+  transition: all 0.15s ease;
+}
+
+.btnSwitchManual:hover {
+  background-color: #B45309;
+}
+
+.studentResultCard {
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  border: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.85rem;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.studentResultCard:hover {
+  border-color: #BFDBFE;
+  background-color: #F8FAFC;
+}
+
+.studentResultLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.studentAvatarCircle {
+  width: 42px;
+  height: 42px;
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  font-size: 0.85rem;
+  font-weight: 800;
+  border: 1.5px solid #BFDBFE;
+  flex-shrink: 0;
+}
+
+.studentResultInfo {
+  min-width: 0;
+}
+
+.studentNameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.studentNameText {
+  font-size: 0.92rem;
+  color: #0F172A;
+}
+
+.studentMetaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.2rem;
+  font-size: 0.775rem;
+  color: #64748B;
+  flex-wrap: wrap;
+}
+
+.metaItemCccdActive {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #0369A1;
+  font-weight: 700;
+}
+
+.metaItemCccdInactive {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #94A3B8;
+}
+
+.metaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.iconBlue {
+  color: #0284C7;
+}
+
+.iconGreen {
+  color: #10B981;
+}
+
+.iconAmber {
+  color: #D97706;
+}
+
+.iconPurple {
+  color: #8B5CF6;
+}
+
+.btnAddStudent {
+  height: 36px;
+  padding: 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.785rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  background-color: #0284C7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(2, 132, 199, 0.25);
+  transition: all 0.15s ease;
+}
+
+.btnAddStudent:hover {
+  background-color: #0369A1;
+}
+
+.btnAddStudentDisabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.tabFooter {
+  padding: 0.85rem 1.5rem;
+  border-top: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F8FAFC;
+}
+
+.footerNote {
+  font-size: 0.775rem;
+  color: #64748B;
+}
+
+.btnCancel {
+  height: 36px;
+  padding: 0 1.25rem;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #475569;
+  font-size: 0.825rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnCancel:hover {
+  background-color: #F1F5F9;
+}
+
+/* ── TAB 2: FORM NHẬP THỦ CÔNG ── */
+.manualForm {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.manualFormContent {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.formCard {
+  background-color: #F8FAFC;
+  border-radius: 16px;
+  padding: 1.15rem;
+  border: 1px solid #E2E8F0;
+}
+
+.formCardTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
+  color: #0F172A;
+}
+
+.formCardTitleText {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.85rem;
+}
+
+.formGridParent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.85rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.reqStar {
+  color: #DC2626;
+}
+
+.subLabel {
+  color: #0284C7;
+  font-size: 0.7rem;
+}
+
+.input {
+  width: 100%;
+  height: 38px;
+  padding: 0 0.85rem;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  font-size: 0.85rem;
+  outline: none;
+  background-color: #FFFFFF;
+  transition: border-color 0.15s ease;
+}
+
+.input:focus {
+  border-color: #0284C7;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 0.85rem;
+  height: 38px;
+  align-items: center;
+}
+
+.radioLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.manualFooter {
+  padding: 0.85rem 1.5rem;
+  border-top: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #F8FAFC;
+  gap: 0.75rem;
+}
+
+.btnCancelManual {
+  height: 40px;
+  padding: 0 1.25rem;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #475569;
+  font-size: 0.825rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnCancelManual:hover {
+  background-color: #F1F5F9;
+}
+
+.btnSubmitManual {
+  height: 40px;
+  padding: 0 1.5rem;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.15s ease;
+}
+
+.btnSubmitManualEnabled {
+  background-color: #0284C7;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+
+.btnSubmitManualEnabled:hover {
+  background-color: #0369A1;
+}
+
+.btnSubmitManualDisabled {
+  background-color: #94A3B8;
+  cursor: not-allowed;
+  box-shadow: none;
+}

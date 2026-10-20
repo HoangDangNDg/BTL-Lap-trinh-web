@@ -1,0 +1,112 @@
+/* DieuHuongPhanCapHocSinh.module.css - Stylesheet cho thanh điều hướng Queue State Quản Lý Học Sinh */
+
+.container {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btnRollback {
+  height: 36px;
+  padding: 0 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  fontSize: 0.8rem;
+  font-weight: 700;
+  color: #0F172A;
+  background-color: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnRollback:hover {
+  background-color: #F1F5F9;
+  border-color: #94A3B8;
+}
+
+.breadcrumbNav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.separator {
+  color: #94A3B8;
+  margin: 0 0.15rem;
+}
+
+.breadcrumbBtn {
+  border: none;
+  font-size: 0.825rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.15s ease;
+}
+
+.breadcrumbCurrent {
+  background-color: #F1F5F9;
+  color: #0F172A;
+  font-weight: 800;
+  cursor: default;
+}
+
+.breadcrumbHistory {
+  background-color: transparent;
+  color: #64748B;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.breadcrumbHistory:hover {
+  background-color: #F8FAFC;
+  color: #0095F6;
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btnRefresh {
+  height: 36px;
+  padding: 0 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748B;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnRefresh:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}

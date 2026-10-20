@@ -1,0 +1,244 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 45%, #ECFDF5 100%);
+}
+
+/* ── CÁC QUẢ CẦU PHÁT SÁNG NỘI TẠI ── */
+.glowOrbTopLeft {
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(56, 189, 248, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.glowOrbBottomRight {
+  position: absolute;
+  bottom: -100px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(110, 231, 183, 0.38) 0%, rgba(110, 231, 183, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.glowOrbCenterRight {
+  position: absolute;
+  top: 25%;
+  right: 15%;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.22) 0%, rgba(167, 139, 250, 0) 70%);
+  filter: blur(45px);
+  pointer-events: none;
+}
+
+/* ── TẤM THẺ KÍNH GIỌT NƯỚC TRUNG TÂM ── */
+.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 2.5rem 2.25rem;
+  border-radius: 28px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 20px 45px -8px rgba(15, 23, 42, 0.12), 0 4px 16px -2px rgba(15, 23, 42, 0.05), inset 2px 2px 4px rgba(255, 255, 255, 1), inset -2px -2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.logoWrapper {
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.025em;
+}
+
+.subtitle {
+  color: #64748B;
+  font-size: 0.875rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Thông Báo Lỗi & Thông Tin */
+.errorBox {
+  background-color: #FEF2F2;
+  color: #B91C1C;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  border: 1px solid #FEE2E2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.errorIcon {
+  flex-shrink: 0;
+  color: #EF4444;
+}
+
+.infoBox {
+  background-color: #F0F9FF;
+  color: #0369A1;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  border: 1px solid #BAE6FD;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.infoIcon {
+  flex-shrink: 0;
+  color: #0284C7;
+}
+
+/* Form Đăng Nhập */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 0.45rem;
+}
+
+.labelIcon {
+  color: #94A3B8;
+}
+
+.inputFieldIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+}
+
+.passwordInput {
+  padding-right: 2.75rem;
+}
+
+.togglePasswordBtn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94A3B8;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: color 0.15s ease;
+}
+
+.togglePasswordBtn:hover {
+  color: #475569;
+}
+
+/* Options row */
+.optionsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.825rem;
+  margin-top: -0.2rem;
+}
+
+.rememberLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  color: #64748B;
+  user-select: none;
+}
+
+.checkbox {
+  accent-color: #0284C7;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 4px;
+}
+
+.forgotLink {
+  color: #0284C7;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.forgotLink:hover {
+  color: #0369A1;
+  text-decoration: underline;
+}
+
+/* Nút Submit */
+.btnSubmit {
+  height: 48px;
+  border-radius: 9999px;
+  font-size: 0.925rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnSubmitLoading {
+  cursor: not-allowed;
+  opacity: 0.75;
+}

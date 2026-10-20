@@ -1,0 +1,406 @@
+/* ── TỔNG QUAN GIÁO VIÊN (DROPLET DESIGN) ── */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  padding-bottom: 2.5rem;
+}
+
+/* ── HEADER BANNER ── */
+.banner {
+  padding: 1.75rem 2rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.9) 0%, rgba(240, 253, 250, 0.9) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.bannerLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.bannerDateRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.badgePortal {
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.bannerDateText {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.bannerTitle {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0.4rem 0 0.2rem;
+  letter-spacing: -0.025em;
+}
+
+.bannerDesc {
+  font-size: 0.9rem;
+  color: #475569;
+  margin: 0;
+}
+
+.refreshBtn {
+  height: 44px;
+  padding: 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #0284c7;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.refreshBtn:hover {
+  background-color: #e0f2fe;
+}
+
+/* ── METRICS GRID ── */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.metricCard {
+  padding: 1.75rem 1.65rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 175px;
+  border-radius: 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-2px);
+}
+
+.metricCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.metricLabel {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.metricIconBlue {
+  width: 42px;
+  height: 42px;
+  color: #2563eb;
+  background-color: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.metricIconSky {
+  width: 42px;
+  height: 42px;
+  color: #0ea5e9;
+  background-color: #f0f9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.metricIconGreen {
+  width: 42px;
+  height: 42px;
+  color: #10b981;
+  background-color: #ecfdf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.metricBody {
+  padding-top: 8%;
+  padding-bottom: 2%;
+}
+
+.metricValueRow {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metricUnit {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.metricValueSalary {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #059669;
+  line-height: 1.15;
+}
+
+.metricLinkBlue {
+  font-size: 0.8rem;
+  color: #2563eb;
+  font-weight: 700;
+  margin-top: 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.metricLinkSky {
+  font-size: 0.8rem;
+  color: #0ea5e9;
+  font-weight: 700;
+  margin-top: 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.metricBadgeSalary {
+  font-size: 0.8rem;
+  color: #10b981;
+  font-weight: 700;
+  margin-top: 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── DETAILS GRID ── */
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.detailPanel {
+  padding: 1.75rem;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.panelBadge {
+  font-size: 0.75rem;
+}
+
+.panelLinkAll {
+  font-size: 0.825rem;
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.panelLinkAll:hover {
+  text-decoration: underline;
+}
+
+.loadingBox {
+  padding: 2rem;
+  text-align: center;
+  color: #94a3b8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.loadingIconBlue {
+  color: #2563eb;
+  margin: 0 auto 0.5rem;
+}
+
+.loadingIconSky {
+  color: #0284c7;
+  margin: 0 auto 0.5rem;
+}
+
+.emptyBox {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background-color: rgba(248, 250, 252, 0.7);
+  border-radius: 16px;
+  border: 1px dashed #cbd5e1;
+}
+
+.emptyIcon {
+  color: #94a3b8;
+  margin: 0 auto 0.75rem;
+}
+
+.emptyTitle {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.emptyDesc {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.scheduleItem {
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 4px solid #0284c7;
+  transition: background-color 0.2s ease;
+}
+
+.scheduleHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scheduleClassName {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.scheduleBadge {
+  font-size: 0.725rem;
+}
+
+.scheduleMetaRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.scheduleMetaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.scheduleClockIcon {
+  color: #0284c7;
+}
+
+.schedulePinIcon {
+  color: #10b981;
+}
+
+.scheduleEnterBtn {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.785rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.classItem {
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.2s ease;
+}
+
+.classTitle {
+  font-weight: 800;
+  font-size: 0.925rem;
+  color: #0f172a;
+}
+
+.classSubtitle {
+  font-size: 0.785rem;
+  color: #64748b;
+  margin-top: 0.2rem;
+}
+
+.classAttendanceBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.panelFooter {
+  padding-top: 1.25rem;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 1.25rem;
+}
+
+.panelFullBtn {
+  width: 100%;
+  height: 42px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #0284c7;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.panelActionBtn {
+  width: 100%;
+  height: 42px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}

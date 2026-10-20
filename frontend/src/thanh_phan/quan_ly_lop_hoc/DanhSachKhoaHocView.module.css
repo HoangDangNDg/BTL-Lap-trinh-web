@@ -1,0 +1,310 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Header Banner */
+.headerBanner {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.headerIconBox {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background-color: #F3E8FF;
+  color: #8B5CF6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #DDD6FE;
+  flex-shrink: 0;
+}
+
+.headerTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.headerTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.headerSubtitle {
+  font-size: 0.8rem;
+  color: #64748B;
+  margin: 0.2rem 0 0;
+}
+
+.highlightDark {
+  color: #0F172A;
+}
+
+.highlightAction {
+  color: #0095F6;
+  font-weight: 600;
+}
+
+/* Header Right Buttons */
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.btnStudents {
+  height: 38px;
+  padding: 0 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #15803D;
+  background-color: #F0FDF4;
+  border: 1px solid #86EFAC;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(22, 163, 74, 0.08);
+  transition: all 0.2s ease;
+}
+
+.btnStudents:hover {
+  background-color: #DCFCE7;
+}
+
+.btnRefresh {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0F172A;
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnRefresh:hover {
+  background-color: #F8FAFC;
+  border-color: #94A3B8;
+}
+
+/* Empty / Loading States */
+.stateCard {
+  padding: 3.5rem;
+  text-align: center;
+  color: #64748B;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+}
+
+.loadingIcon {
+  margin: 0 auto 0.75rem;
+  color: #8B5CF6;
+}
+
+.loadingText {
+  font-weight: 600;
+  font-size: 0.925rem;
+}
+
+.emptyIcon {
+  margin: 0 auto 0.75rem;
+  color: #CBD5E1;
+}
+
+.emptyTitle {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0F172A;
+  margin: 0 0 0.35rem;
+}
+
+.emptySubtitle {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* List of Courses */
+.courseList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.courseCard {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.courseCard:hover {
+  border-color: #0095F6;
+  box-shadow: 0 6px 20px rgba(0, 149, 246, 0.12);
+  transform: translateY(-2px);
+}
+
+.courseHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.courseMainInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.courseIconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #EDE9FE;
+  color: #7C3AED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #DDD6FE;
+  flex-shrink: 0;
+}
+
+.subjectBadge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #7C3AED;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.courseTitle {
+  margin: 0.15rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.015em;
+}
+
+.courseHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.btnCourseStudents {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.785rem;
+  font-weight: 700;
+  color: #15803D;
+  background-color: #F0FDF4;
+  border: 1px solid #86EFAC;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.15s ease;
+}
+
+.btnCourseStudents:hover {
+  background-color: #DCFCE7;
+}
+
+.statusBadge {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.arrowBox {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background-color: #F0F9FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0095F6;
+  border: 1px solid #BAE6FD;
+  flex-shrink: 0;
+}
+
+/* Metrics Grid */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  background-color: #F8FAFC;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #F1F5F9;
+}
+
+.metricItem {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.metricLabel {
+  font-size: 0.725rem;
+  color: #64748B;
+  display: block;
+}
+
+.metricValue {
+  font-size: 0.9rem;
+  color: #0F172A;
+}
+
+.metricPrice {
+  font-size: 0.95rem;
+  color: #D97706;
+  font-weight: 800;
+}
+
+.metricDate {
+  font-size: 0.85rem;
+  color: #0F172A;
+}
+
+.iconBlue { color: #0095F6; }
+.iconGreen { color: #10B981; }
+.iconAmber { color: #F59E0B; }
+.iconPurple { color: #8B5CF6; }

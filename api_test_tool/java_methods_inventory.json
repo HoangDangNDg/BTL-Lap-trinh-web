@@ -1,0 +1,2294 @@
+{
+  "AdminService.java": [
+    {
+      "line": 40,
+      "name": "layDanhSachAdmin",
+      "returnType": "ApiResponse<List<AdminDto>>",
+      "params": ""
+    },
+    {
+      "line": 55,
+      "name": "layAdminTheoId",
+      "returnType": "ApiResponse<AdminDto>",
+      "params": "Integer idAdmin"
+    },
+    {
+      "line": 69,
+      "name": "taoMoiAdmin",
+      "returnType": "ApiResponse<AdminDto>",
+      "params": "AdminDto dto"
+    },
+    {
+      "line": 113,
+      "name": "capNhatAdmin",
+      "returnType": "ApiResponse<AdminDto>",
+      "params": "Integer idAdmin, AdminDto dto"
+    },
+    {
+      "line": 138,
+      "name": "xoaAdmin",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idAdmin"
+    },
+    {
+      "line": 156,
+      "name": "taoTaiKhoanChuDoanhNghiep",
+      "returnType": "ApiResponse<ChuCoDong>",
+      "params": "TaoChuDoanhNghiepDto dto"
+    },
+    {
+      "line": 221,
+      "name": "layDanhSachTokens",
+      "returnType": "ApiResponse<List<TokenInfoResponseDto>>",
+      "params": ""
+    },
+    {
+      "line": 251,
+      "name": "thuHoiToken",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idRefresh"
+    },
+    {
+      "line": 263,
+      "name": "capNhatDoanhNghiep",
+      "returnType": "ApiResponse<DoanhNghiep>",
+      "params": "Integer idDn, DoanhNghiep dto"
+    }
+  ],
+  "CoSoVatChatService.java": [
+    {
+      "line": 35,
+      "name": "timNamHocTheoId",
+      "returnType": "ApiResponse<NamHoc>",
+      "params": "Integer idNh"
+    },
+    {
+      "line": 50,
+      "name": "luuNamHoc",
+      "returnType": "ApiResponse<NamHoc>",
+      "params": "NamHoc namHoc"
+    },
+    {
+      "line": 117,
+      "name": "luuNamHoc",
+      "returnType": "ApiResponse<NamHoc>",
+      "params": "Integer idDn, NamHoc nh"
+    },
+    {
+      "line": 130,
+      "name": "taoTuanHocHangLoatTheoNamHoc",
+      "returnType": "ApiResponse<List<TuanHoc>>",
+      "params": "Integer idNh"
+    },
+    {
+      "line": 242,
+      "name": "doiTrangThaiHoanThanh",
+      "returnType": "ApiResponse<NamHoc>",
+      "params": "Integer idNh, Boolean daHoanThanh"
+    },
+    {
+      "line": 280,
+      "name": "timTuanHocTheoNamHoc",
+      "returnType": "ApiResponse<List<TuanHoc>>",
+      "params": "Integer idNh"
+    },
+    {
+      "line": 285,
+      "name": "timKyHocTheoNamHoc",
+      "returnType": "ApiResponse<List<KyHoc>>",
+      "params": "Integer idNh"
+    },
+    {
+      "line": 301,
+      "name": "luuKyHoc",
+      "returnType": "ApiResponse<KyHoc>",
+      "params": "Integer idNh, KyHoc kh"
+    },
+    {
+      "line": 356,
+      "name": "timTuanHocTheoKyHoc",
+      "returnType": "ApiResponse<List<TuanHoc>>",
+      "params": "Integer idKh"
+    },
+    {
+      "line": 372,
+      "name": "luuTuanHoc",
+      "returnType": "ApiResponse<TuanHoc>",
+      "params": "Integer idKh, TuanHoc th"
+    },
+    {
+      "line": 419,
+      "name": "timBoMonTheoId",
+      "returnType": "ApiResponse<BoMon>",
+      "params": "Integer idBoMon"
+    },
+    {
+      "line": 433,
+      "name": "timBoMonTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<BoMon>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 439,
+      "name": "luuBoMon",
+      "returnType": "ApiResponse<BoMon>",
+      "params": "BoMon bm"
+    },
+    {
+      "line": 455,
+      "name": "luuBoMon",
+      "returnType": "ApiResponse<BoMon>",
+      "params": "Integer idDn, BoMon bm"
+    },
+    {
+      "line": 464,
+      "name": "timChuyenMonTheoId",
+      "returnType": "ApiResponse<ChuyenMon>",
+      "params": "Integer idCm"
+    },
+    {
+      "line": 478,
+      "name": "timChuyenMonTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ChuyenMon>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 484,
+      "name": "luuChuyenMon",
+      "returnType": "ApiResponse<ChuyenMon>",
+      "params": "ChuyenMon cm"
+    },
+    {
+      "line": 500,
+      "name": "luuChuyenMon",
+      "returnType": "ApiResponse<ChuyenMon>",
+      "params": "Integer idDn, ChuyenMon cm"
+    },
+    {
+      "line": 509,
+      "name": "timMonHocTheoBoMon",
+      "returnType": "ApiResponse<List<MonHoc>>",
+      "params": "Integer idBoMon"
+    },
+    {
+      "line": 524,
+      "name": "timMonHocTheoChuyenMon",
+      "returnType": "ApiResponse<List<MonHoc>>",
+      "params": "Integer idCm"
+    },
+    {
+      "line": 539,
+      "name": "timMonHocTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<MonHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 545,
+      "name": "luuMonHoc",
+      "returnType": "ApiResponse<MonHoc>",
+      "params": "MonHoc mh"
+    },
+    {
+      "line": 561,
+      "name": "luuMonHoc",
+      "returnType": "ApiResponse<MonHoc>",
+      "params": "Integer idDn, MonHoc mh"
+    },
+    {
+      "line": 571,
+      "name": "timPhongHocTheoId",
+      "returnType": "ApiResponse<PhongHoc>",
+      "params": "Integer idPhong"
+    },
+    {
+      "line": 578,
+      "name": "timPhongHocTheoChiNhanh",
+      "returnType": "ApiResponse<List<PhongHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 594,
+      "name": "luuPhongHoc",
+      "returnType": "ApiResponse<PhongHoc>",
+      "params": "Integer idCn, PhongHoc phong"
+    },
+    {
+      "line": 615,
+      "name": "xoaNamHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idNh"
+    },
+    {
+      "line": 633,
+      "name": "xoaKyHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idKh"
+    },
+    {
+      "line": 651,
+      "name": "xoaTuanHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idTh"
+    },
+    {
+      "line": 669,
+      "name": "xoaBoMon",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idBoMon"
+    },
+    {
+      "line": 687,
+      "name": "xoaChuyenMon",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idCm"
+    },
+    {
+      "line": 705,
+      "name": "xoaMonHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idMh"
+    },
+    {
+      "line": 723,
+      "name": "xoaPhongHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idPhong"
+    }
+  ],
+  "DoanhNghiepService.java": [
+    {
+      "line": 37,
+      "name": "timTatCaDoanhNghiep",
+      "returnType": "ApiResponse<List<DoanhNghiep>>",
+      "params": ""
+    },
+    {
+      "line": 57,
+      "name": "khoiPhucDoanhNghiep",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 83,
+      "name": "xoaDoanhNghiep",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 123,
+      "name": "timDoanhNghiepTheoId",
+      "returnType": "ApiResponse<DoanhNghiep>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 138,
+      "name": "luuDoanhNghiep",
+      "returnType": "ApiResponse<DoanhNghiep>",
+      "params": "DoanhNghiep dn"
+    },
+    {
+      "line": 153,
+      "name": "timTatCaChiNhanh",
+      "returnType": "ApiResponse<List<ChiNhanh>>",
+      "params": ""
+    },
+    {
+      "line": 162,
+      "name": "timChiNhanhTheoId",
+      "returnType": "ApiResponse<ChiNhanh>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 169,
+      "name": "timChiNhanhTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ChiNhanh>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 185,
+      "name": "luuChiNhanh",
+      "returnType": "ApiResponse<ChiNhanh>",
+      "params": "Integer idDn, ChiNhanh cn"
+    },
+    {
+      "line": 202,
+      "name": "capNhatChiNhanh",
+      "returnType": "ApiResponse<ChiNhanh>",
+      "params": "Integer idCn, ChiNhanh cn"
+    },
+    {
+      "line": 215,
+      "name": "xoaChiNhanh",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 225,
+      "name": "timChuCoDongTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ChuCoDong>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 240,
+      "name": "timChuCoDongTheoId",
+      "returnType": "ApiResponse<ChuCoDong>",
+      "params": "Integer idCd"
+    },
+    {
+      "line": 247,
+      "name": "timGopVonTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<GopVonSoHuu>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 262,
+      "name": "timGopVonTheoChuCoDong",
+      "returnType": "ApiResponse<List<GopVonSoHuu>>",
+      "params": "Integer idCd"
+    },
+    {
+      "line": 278,
+      "name": "luuChuCoDong",
+      "returnType": "ApiResponse<ChuCoDong>",
+      "params": "Integer idDn, ChuCoDong cd"
+    },
+    {
+      "line": 296,
+      "name": "capNhatChuCoDong",
+      "returnType": "ApiResponse<ChuCoDong>",
+      "params": "Integer idCd, ChuCoDong cd"
+    },
+    {
+      "line": 309,
+      "name": "ghiNhanGopVon",
+      "returnType": "ApiResponse<GopVonSoHuu>",
+      "params": "GopVonSoHuu gv"
+    },
+    {
+      "line": 325,
+      "name": "capNhatGopVon",
+      "returnType": "ApiResponse<GopVonSoHuu>",
+      "params": "Integer idGopVon, GopVonSoHuu gv"
+    },
+    {
+      "line": 337,
+      "name": "timQuanLyTheoChiNhanh",
+      "returnType": "ApiResponse<List<QuanLy>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 352,
+      "name": "timQuanLyTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<QuanLy>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 367,
+      "name": "timQuanLyTheoId",
+      "returnType": "ApiResponse<QuanLy>",
+      "params": "Integer idQly"
+    },
+    {
+      "line": 375,
+      "name": "luuQuanLy",
+      "returnType": "ApiResponse<QuanLy>",
+      "params": "QuanLy ql"
+    },
+    {
+      "line": 391,
+      "name": "luuQuanLyChiNhanh",
+      "returnType": "ApiResponse<QuanLy>",
+      "params": "Integer idCn, QuanLy ql"
+    },
+    {
+      "line": 412,
+      "name": "taoTaiKhoanQuanLy",
+      "returnType": "ApiResponse<QuanLy>",
+      "params": "TaoQuanLyDto dto"
+    },
+    {
+      "line": 456,
+      "name": "capNhatQuanLy",
+      "returnType": "ApiResponse<QuanLy>",
+      "params": "Integer idQly, QuanLy ql"
+    },
+    {
+      "line": 472,
+      "name": "xoaChuCoDong",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idCd"
+    },
+    {
+      "line": 490,
+      "name": "xoaGopVon",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idGopVon"
+    },
+    {
+      "line": 508,
+      "name": "xoaQuanLy",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idQly"
+    }
+  ],
+  "GiaoVienHoSoService.java": [
+    {
+      "line": 34,
+      "name": "layHoSoCaNhan",
+      "returnType": "ApiResponse<HoSoGiaoVienDto>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 82,
+      "name": "capNhatHoSoCaNhan",
+      "returnType": "ApiResponse<HoSoGiaoVienDto>",
+      "params": "Integer idGv, CapNhatHoSoGiaoVienDto req"
+    },
+    {
+      "line": 131,
+      "name": "themChungChi",
+      "returnType": "ApiResponse<ChungChiGiaoVienDto>",
+      "params": "Integer idGv, Integer idDn, ChungChiRequestDto req"
+    },
+    {
+      "line": 164,
+      "name": "suaChungChi",
+      "returnType": "ApiResponse<ChungChiGiaoVienDto>",
+      "params": "Integer idGv, Integer idChungChi, ChungChiRequestDto req"
+    },
+    {
+      "line": 192,
+      "name": "xoaChungChi",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idGv, Integer idChungChi"
+    }
+  ],
+  "HocSinhPhuHuynhService.java": [
+    {
+      "line": 55,
+      "name": "luuHocSinh",
+      "returnType": "ApiResponse<HocSinh>",
+      "params": "Integer idDn, HocSinh hs"
+    },
+    {
+      "line": 85,
+      "name": "luuHocSinh",
+      "returnType": "ApiResponse<HocSinh>",
+      "params": "HocSinh hs"
+    },
+    {
+      "line": 91,
+      "name": "luuHocSinh",
+      "returnType": "ApiResponse<HocSinh>",
+      "params": "Integer idDn, Integer idPh, HocSinh hs"
+    },
+    {
+      "line": 110,
+      "name": "capNhatHocSinh",
+      "returnType": "ApiResponse<HocSinh>",
+      "params": "Integer idHs, HocSinh hs"
+    },
+    {
+      "line": 177,
+      "name": "xoaHocSinh",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idHs"
+    },
+    {
+      "line": 194,
+      "name": "timHocSinhTheoId",
+      "returnType": "ApiResponse<HocSinh>",
+      "params": "Integer idHs"
+    },
+    {
+      "line": 210,
+      "name": "timHocSinhTheoSoDienThoai",
+      "returnType": "ApiResponse<List<HocSinh>>",
+      "params": "String sdt"
+    },
+    {
+      "line": 224,
+      "name": "timHocSinhTheoCccd",
+      "returnType": "ApiResponse<List<HocSinh>>",
+      "params": "String cccd"
+    },
+    {
+      "line": 243,
+      "name": "luuPhuHuynh",
+      "returnType": "ApiResponse<PhuHuynh>",
+      "params": "Integer idDn, PhuHuynh ph"
+    },
+    {
+      "line": 260,
+      "name": "luuPhuHuynh",
+      "returnType": "ApiResponse<PhuHuynh>",
+      "params": "PhuHuynh ph"
+    },
+    {
+      "line": 273,
+      "name": "capNhatPhuHuynh",
+      "returnType": "ApiResponse<PhuHuynh>",
+      "params": "Integer idPh, PhuHuynh ph"
+    },
+    {
+      "line": 304,
+      "name": "xoaPhuHuynh",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idPh"
+    },
+    {
+      "line": 321,
+      "name": "timPhuHuynhTheoId",
+      "returnType": "ApiResponse<PhuHuynh>",
+      "params": "Integer idPh"
+    },
+    {
+      "line": 337,
+      "name": "timPhuHuynhTheoSoDienThoai",
+      "returnType": "ApiResponse<List<PhuHuynh>>",
+      "params": "String sdt"
+    },
+    {
+      "line": 351,
+      "name": "timPhuHuynhTheoIdHocSinh",
+      "returnType": "ApiResponse<List<PhuHuynh>>",
+      "params": "Integer idHs"
+    },
+    {
+      "line": 365,
+      "name": "timPhuHuynhTheoCccd",
+      "returnType": "ApiResponse<List<PhuHuynh>>",
+      "params": "String cccd"
+    },
+    {
+      "line": 375,
+      "name": "timHocSinhTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<HocSinh>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 385,
+      "name": "timPhuHuynhTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<PhuHuynh>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 395,
+      "name": "timKiemVaGoiYPhuHuynh",
+      "returnType": "ApiResponse<List<PhuHuynh>>",
+      "params": "Integer idDn, String keyword, Boolean goiY"
+    },
+    {
+      "line": 419,
+      "name": "timHocSinhTheoKhoaHoc",
+      "returnType": "ApiResponse<List<HocSinh>>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 429,
+      "name": "timHocSinhTheoDoanhNghiepVaKhoaHoc",
+      "returnType": "ApiResponse<List<HocSinh>>",
+      "params": "Integer idDn, Integer idKhoaHoc"
+    },
+    {
+      "line": 442,
+      "name": "timHocSinhKhoaHocTheoKhoaHoc",
+      "returnType": "ApiResponse<List<HocSinhKhoaHoc>>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 452,
+      "name": "timHocSinhKhoaHocTheoDoanhNghiepVaKhoaHoc",
+      "returnType": "ApiResponse<List<HocSinhKhoaHoc>>",
+      "params": "Integer idDn, Integer idKhoaHoc"
+    },
+    {
+      "line": 465,
+      "name": "layDanhSachNganGonHocSinhKhoaHoc",
+      "returnType": "ApiResponse<List<HocSinhKhoaHocDTO>>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 477,
+      "name": "ganHocSinhVaoKhoaHoc",
+      "returnType": "ApiResponse<HocSinhKhoaHoc>",
+      "params": "Integer idHs, Integer idKhoaHoc, Integer idDn, Integer soBuoiDaHoc"
+    },
+    {
+      "line": 534,
+      "name": "xoaHocSinhKhoaHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idHs, Integer idKhoaHoc"
+    },
+    {
+      "line": 567,
+      "name": "layHocSinhTheoPhuHuynhBangPhu",
+      "returnType": "ApiResponse<List<PhuHuynhHocSinh>>",
+      "params": "Integer idPh"
+    },
+    {
+      "line": 601,
+      "name": "layPhuHuynhTheoHocSinhBangPhu",
+      "returnType": "ApiResponse<List<PhuHuynhHocSinh>>",
+      "params": "Integer idHs"
+    },
+    {
+      "line": 613,
+      "name": "ganQuanHePhuHuynhHocSinh",
+      "returnType": "ApiResponse<PhuHuynhHocSinh>",
+      "params": "Integer idPh, Integer idHs, String quanHe, Boolean laNguoiDaiDien"
+    },
+    {
+      "line": 653,
+      "name": "taoMoiPhuHuynhChoHocSinh",
+      "returnType": "ApiResponse<PhuHuynh>",
+      "params": "Integer idHs, PhuHuynh ph, String quanHe"
+    },
+    {
+      "line": 676,
+      "name": "xoaQuanHePhuHuynhHocSinh",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idPhHs"
+    }
+  ],
+  "NghiepVuDayHocService.java": [
+    {
+      "line": 54,
+      "name": "timTatCaTuanHoc",
+      "returnType": "ApiResponse<List<TuanHoc>>",
+      "params": ""
+    },
+    {
+      "line": 58,
+      "name": "timTatCaTuanHoc",
+      "returnType": "ApiResponse<List<TuanHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 65,
+      "name": "timTuanHocTheoId",
+      "returnType": "ApiResponse<TuanHoc>",
+      "params": "Integer idTh"
+    },
+    {
+      "line": 71,
+      "name": "timTuanHocTheoKyHoc",
+      "returnType": "ApiResponse<List<TuanHoc>>",
+      "params": "Integer idKh"
+    },
+    {
+      "line": 76,
+      "name": "timTuanHocTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<TuanHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 83,
+      "name": "timTkbTuanTheoLop",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuan>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 88,
+      "name": "timTkbTuanTheoTuan",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuan>>",
+      "params": "Integer idTh"
+    },
+    {
+      "line": 93,
+      "name": "timTkbTuanTheoPhong",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuan>>",
+      "params": "Integer idPhong"
+    },
+    {
+      "line": 98,
+      "name": "timTkbTuanTheoGiaoVien",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuan>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 103,
+      "name": "timTkbTuanTheoGiaoVienVaTuan",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuan>>",
+      "params": "Integer idGv, Integer idTh"
+    },
+    {
+      "line": 111,
+      "name": "timTkbTuanTheoDoanhNghiepVaTuan",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuan>>",
+      "params": "Integer idDn, Integer idTh"
+    },
+    {
+      "line": 119,
+      "name": "timTkbTuanTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuan>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 201,
+      "name": "luuThoiKhoaBieuTuan",
+      "returnType": "ApiResponse<ThoiKhoaBieuTuan>",
+      "params": "ThoiKhoaBieuTuan tkb"
+    },
+    {
+      "line": 289,
+      "name": "luuThoiKhoaBieuHangLoat",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuan>>",
+      "params": "List<ThoiKhoaBieuTuan> dsTkb"
+    },
+    {
+      "line": 476,
+      "name": "xoaThoiKhoaBieuTuan",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer id"
+    },
+    {
+      "line": 509,
+      "name": "timLichCoDinhTheoLop",
+      "returnType": "ApiResponse<List<KhungLichHocCoDinh>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 521,
+      "name": "timLichCoDinhTheoPhong",
+      "returnType": "ApiResponse<List<KhungLichHocCoDinh>>",
+      "params": "Integer idPhong"
+    },
+    {
+      "line": 527,
+      "name": "luuLichCoDinh",
+      "returnType": "ApiResponse<KhungLichHocCoDinh>",
+      "params": "KhungLichHocCoDinh lich"
+    },
+    {
+      "line": 551,
+      "name": "luuLichCoDinh",
+      "returnType": "ApiResponse<KhungLichHocCoDinh>",
+      "params": "Integer idLop, Integer idPhong, KhungLichHocCoDinh lich"
+    },
+    {
+      "line": 574,
+      "name": "xoaKhungLichHocCoDinh",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer id"
+    },
+    {
+      "line": 591,
+      "name": "xoaLichCoDinh",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer id"
+    },
+    {
+      "line": 597,
+      "name": "timBuoiHocTheoLop",
+      "returnType": "ApiResponse<List<BuoiHoc>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 602,
+      "name": "timBuoiHocTheoKhoaHoc",
+      "returnType": "ApiResponse<List<BuoiHoc>>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 607,
+      "name": "timBuoiHocTheoPhong",
+      "returnType": "ApiResponse<List<BuoiHoc>>",
+      "params": "Integer idPhong"
+    },
+    {
+      "line": 613,
+      "name": "luuBuoiHoc",
+      "returnType": "ApiResponse<BuoiHoc>",
+      "params": "BuoiHoc buoi"
+    },
+    {
+      "line": 851,
+      "name": "luuBuoiHoc",
+      "returnType": "ApiResponse<BuoiHoc>",
+      "params": "Integer idLop, Integer idPhong, BuoiHoc buoi"
+    },
+    {
+      "line": 864,
+      "name": "timBuoiHocTheoId",
+      "returnType": "ApiResponse<BuoiHoc>",
+      "params": "Integer idBuoiHoc"
+    },
+    {
+      "line": 879,
+      "name": "xoaBuoiHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer id"
+    },
+    {
+      "line": 913,
+      "name": "timDangKyHocTheoHocSinh",
+      "returnType": "ApiResponse<List<DangKyHoc>>",
+      "params": "Integer idHs"
+    },
+    {
+      "line": 925,
+      "name": "timDangKyHocTheoLop",
+      "returnType": "ApiResponse<List<DangKyHoc>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 937,
+      "name": "timDangKyHocTheoPhuHuynh",
+      "returnType": "ApiResponse<List<DangKyHoc>>",
+      "params": "Integer idPh"
+    },
+    {
+      "line": 942,
+      "name": "layDanhSachHocSinhTheoLop",
+      "returnType": "ApiResponse<List<DangKyHoc>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 948,
+      "name": "dangKyHoc",
+      "returnType": "ApiResponse<DangKyHoc>",
+      "params": "Integer idHs, Integer idLop, Integer idPh"
+    },
+    {
+      "line": 987,
+      "name": "luuDangKyHoc",
+      "returnType": "ApiResponse<DangKyHoc>",
+      "params": "Integer idHs, Integer idLop, Integer idPh, DangKyHoc dk"
+    },
+    {
+      "line": 1050,
+      "name": "xoaDangKyHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer id"
+    },
+    {
+      "line": 1070,
+      "name": "xoaHocSinhKhoiLop",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idLop, Integer idHs"
+    },
+    {
+      "line": 1079,
+      "name": "huyDangKyHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer id"
+    },
+    {
+      "line": 1084,
+      "name": "luuKhungLichCoDinh",
+      "returnType": "ApiResponse<KhungLichHocCoDinh>",
+      "params": "KhungLichHocCoDinh lich"
+    },
+    {
+      "line": 1089,
+      "name": "luuKhungLichCoDinh",
+      "returnType": "ApiResponse<KhungLichHocCoDinh>",
+      "params": "Integer idLop, Integer idPhong, KhungLichHocCoDinh lich"
+    },
+    {
+      "line": 1094,
+      "name": "xoaKhungLichCoDinh",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer id"
+    },
+    {
+      "line": 1116,
+      "name": "layTkbTuanDtoTheoLop",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuanDto>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 1121,
+      "name": "layTkbTuanDtoTheoTuan",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuanDto>>",
+      "params": "Integer idTh"
+    },
+    {
+      "line": 1126,
+      "name": "layTkbTuanDtoTheoPhong",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuanDto>>",
+      "params": "Integer idPhong"
+    },
+    {
+      "line": 1131,
+      "name": "layTkbTuanDtoTheoGiaoVien",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuanDto>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 1136,
+      "name": "layTkbTuanDtoTheoGiaoVienVaTuan",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuanDto>>",
+      "params": "Integer idGv, Integer idTh"
+    },
+    {
+      "line": 1144,
+      "name": "layTkbTuanDtoTheoDoanhNghiepVaTuan",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuanDto>>",
+      "params": "Integer idDn, Integer idTh"
+    },
+    {
+      "line": 1149,
+      "name": "layTkbTuanDtoTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThoiKhoaBieuTuanDto>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 1154,
+      "name": "layBuoiHocDtoTheoId",
+      "returnType": "ApiResponse<BuoiHocDto>",
+      "params": "Integer idBuoiHoc"
+    },
+    {
+      "line": 1160,
+      "name": "layBuoiHocDtoTheoLop",
+      "returnType": "ApiResponse<List<BuoiHocDto>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 1165,
+      "name": "layBuoiHocDtoTheoKhoaHoc",
+      "returnType": "ApiResponse<List<BuoiHocDto>>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 1170,
+      "name": "layBuoiHocDtoTheoPhong",
+      "returnType": "ApiResponse<List<BuoiHocDto>>",
+      "params": "Integer idPhong"
+    },
+    {
+      "line": 1175,
+      "name": "layBuoiHocDtoTheoNgay",
+      "returnType": "ApiResponse<List<BuoiHocDto>>",
+      "params": "LocalDate ngayHoc, Integer idDn"
+    },
+    {
+      "line": 1180,
+      "name": "layBuoiHocDtoTheoGiaoVienVaNgay",
+      "returnType": "ApiResponse<List<BuoiHocDto>>",
+      "params": "Integer idGv, LocalDate ngayHoc"
+    },
+    {
+      "line": 1185,
+      "name": "layBuoiHocDtoTheoGiaoVien",
+      "returnType": "ApiResponse<List<BuoiHocDto>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 1190,
+      "name": "layBuoiHocDtoTheoChiNhanhVaNgay",
+      "returnType": "ApiResponse<List<BuoiHocDto>>",
+      "params": "Integer idCn, LocalDate ngayHoc"
+    },
+    {
+      "line": 1195,
+      "name": "layKhungLichDtoTheoLop",
+      "returnType": "ApiResponse<List<KhungLichHocCoDinhDto>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 1200,
+      "name": "layKhungLichDtoTheoPhong",
+      "returnType": "ApiResponse<List<KhungLichHocCoDinhDto>>",
+      "params": "Integer idPhong"
+    },
+    {
+      "line": 1205,
+      "name": "layKhungLichDtoTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<KhungLichHocCoDinhDto>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 1210,
+      "name": "layDangKyHocDtoTheoLop",
+      "returnType": "ApiResponse<List<DangKyHocDto>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 1215,
+      "name": "layDangKyHocDtoTheoHocSinh",
+      "returnType": "ApiResponse<List<DangKyHocDto>>",
+      "params": "Integer idHs"
+    },
+    {
+      "line": 1220,
+      "name": "layDangKyHocDtoTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<DangKyHocDto>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 1225,
+      "name": "layDangKyHocDtoTheoChiNhanh",
+      "returnType": "ApiResponse<List<DangKyHocDto>>",
+      "params": "Integer idCn"
+    }
+  ],
+  "NghiepVuDiemDanhService.java": [
+    {
+      "line": 219,
+      "name": "luuListDiemDanhHocSinhVaoBuoiHoc",
+      "returnType": "ApiResponse<List<DiemDanhHocSinh>>",
+      "params": "Integer idBuoiHoc, List<DiemDanhHocSinh> list"
+    },
+    {
+      "line": 240,
+      "name": "xoaListDiemDanhHocSinhOBuoiHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idBuoiHoc, List<Integer> idDiemDanhs"
+    },
+    {
+      "line": 272,
+      "name": "luuGiaoVienVaoBuoiHoc",
+      "returnType": "ApiResponse<DiemDanhGiaoVien>",
+      "params": "Integer idBuoiHoc, Integer idGv, DiemDanhGiaoVien dd"
+    },
+    {
+      "line": 321,
+      "name": "suaDiemDanhGiaoVienVaoBuoiHoc",
+      "returnType": "ApiResponse<DiemDanhGiaoVien>",
+      "params": "Integer idDiemDanh, DiemDanhGiaoVien dd"
+    },
+    {
+      "line": 358,
+      "name": "timDiemDanhHocSinhTheoBuoi",
+      "returnType": "ApiResponse<List<DiemDanhHocSinh>>",
+      "params": "Integer idBuoiHoc"
+    },
+    {
+      "line": 366,
+      "name": "timDiemDanhHocSinhTheoBuoiHoc",
+      "returnType": "ApiResponse<List<DiemDanhHocSinh>>",
+      "params": "Integer idBuoiHoc"
+    },
+    {
+      "line": 370,
+      "name": "timDiemDanhHocSinhTheoHocSinh",
+      "returnType": "ApiResponse<List<DiemDanhHocSinh>>",
+      "params": "Integer idHs"
+    },
+    {
+      "line": 375,
+      "name": "timDiemDanhHocSinhTheoKhoaHoc",
+      "returnType": "ApiResponse<List<DiemDanhHocSinh>>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 380,
+      "name": "timDiemDanhGiaoVienTheoBuoi",
+      "returnType": "ApiResponse<List<DiemDanhGiaoVien>>",
+      "params": "Integer idBuoiHoc"
+    },
+    {
+      "line": 388,
+      "name": "timDiemDanhGiaoVienTheoGiaoVien",
+      "returnType": "ApiResponse<List<DiemDanhGiaoVien>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 393,
+      "name": "timLichSuDiemDanhCuaGiaoVien",
+      "returnType": "ApiResponse<List<DiemDanhGiaoVien>>",
+      "params": "Integer idGv"
+    }
+  ],
+  "NhanSuService.java": [
+    {
+      "line": 46,
+      "name": "timGiaoVienTheoId",
+      "returnType": "ApiResponse<GiaoVien>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 60,
+      "name": "timGiaoVienTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<GiaoVien>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 76,
+      "name": "luuGiaoVien",
+      "returnType": "ApiResponse<GiaoVien>",
+      "params": "Integer idDn, GiaoVien gv"
+    },
+    {
+      "line": 105,
+      "name": "capNhatGiaoVien",
+      "returnType": "ApiResponse<GiaoVien>",
+      "params": "Integer idGv, GiaoVien gv"
+    },
+    {
+      "line": 121,
+      "name": "timChiTietGv",
+      "returnType": "ApiResponse<ChiTietGv>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 136,
+      "name": "luuChiTietGv",
+      "returnType": "ApiResponse<ChiTietGv>",
+      "params": "Integer idGv, ChiTietGv chiTiet"
+    },
+    {
+      "line": 165,
+      "name": "timChungChiTheoGiaoVien",
+      "returnType": "ApiResponse<List<ChungChiGiaoVien>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 181,
+      "name": "luuChungChi",
+      "returnType": "ApiResponse<ChungChiGiaoVien>",
+      "params": "Integer idGv, ChungChiGiaoVien cc"
+    },
+    {
+      "line": 199,
+      "name": "timChuyenMonTheoGiaoVien",
+      "returnType": "ApiResponse<List<GiaoVienChuyenMon>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 211,
+      "name": "timGiaoVienTheoChuyenMon",
+      "returnType": "ApiResponse<List<GiaoVienChuyenMon>>",
+      "params": "Integer idCm"
+    },
+    {
+      "line": 224,
+      "name": "ganChuyenMonChoGiaoVien",
+      "returnType": "ApiResponse<GiaoVienChuyenMon>",
+      "params": "Integer idGv, Integer idCm"
+    },
+    {
+      "line": 248,
+      "name": "timChiNhanhTheoGiaoVien",
+      "returnType": "ApiResponse<List<GiaoVienChiNhanh>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 260,
+      "name": "timGiaoVienTheoChiNhanh",
+      "returnType": "ApiResponse<List<GiaoVienChiNhanh>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 273,
+      "name": "ganChiNhanhChoGiaoVien",
+      "returnType": "ApiResponse<GiaoVienChiNhanh>",
+      "params": "Integer idGv, Integer idCn"
+    },
+    {
+      "line": 301,
+      "name": "timNhanCongTheoChiNhanh",
+      "returnType": "ApiResponse<List<NhanCongKhac>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 317,
+      "name": "luuNhanCong",
+      "returnType": "ApiResponse<NhanCongKhac>",
+      "params": "Integer idCn, NhanCongKhac nc"
+    },
+    {
+      "line": 335,
+      "name": "timNhanCongTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<NhanCongKhac>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 341,
+      "name": "capNhatNhanCong",
+      "returnType": "ApiResponse<NhanCongKhac>",
+      "params": "Integer idNc, NhanCongKhac nc"
+    },
+    {
+      "line": 358,
+      "name": "xoaGiaoVien",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 376,
+      "name": "xoaChiTietGv",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 394,
+      "name": "xoaChungChi",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idChungChi"
+    },
+    {
+      "line": 412,
+      "name": "xoaGiaoVienChuyenMon",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idGvChuyenMon"
+    },
+    {
+      "line": 430,
+      "name": "xoaGiaoVienChiNhanh",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idGvChiNhanh"
+    },
+    {
+      "line": 448,
+      "name": "xoaNhanCong",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idNhanCongKhac"
+    },
+    {
+      "line": 467,
+      "name": "taoTaiKhoanChoGiaoVien",
+      "returnType": "ApiResponse<TaiKhoanGv>",
+      "params": "Integer idGv, TaiKhoan taiKhoan"
+    },
+    {
+      "line": 516,
+      "name": "timTaiKhoanCuaGiaoVien",
+      "returnType": "ApiResponse<TaiKhoan>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 546,
+      "name": "luuGiaoVienHangLoat",
+      "returnType": "ApiResponse<BulkResultDto>",
+      "params": "Integer idDn, List<GiaoVienBulkDto> danhSach"
+    },
+    {
+      "line": 838,
+      "name": "timGiaoVienTheoSdt",
+      "returnType": "ApiResponse<List<GiaoVien>>",
+      "params": "String sdt, Integer idDn"
+    },
+    {
+      "line": 849,
+      "name": "timTatCaGiaoVien",
+      "returnType": "ApiResponse<List<GiaoVien>>",
+      "params": ""
+    },
+    {
+      "line": 853,
+      "name": "timTatCaGiaoVien",
+      "returnType": "ApiResponse<List<GiaoVien>>",
+      "params": "Integer idDn"
+    }
+  ],
+  "TaiKhoanService.java": [
+    {
+      "line": 45,
+      "name": "dangNhap",
+      "returnType": "ApiResponse<LoginResponseDto>",
+      "params": "TaiKhoan credentials"
+    },
+    {
+      "line": 73,
+      "name": "dangKy",
+      "returnType": "ApiResponse<TaiKhoan>",
+      "params": "TaiKhoan taiKhoan"
+    },
+    {
+      "line": 93,
+      "name": "lamMoiToken",
+      "returnType": "ApiResponse<LoginResponseDto>",
+      "params": "String refreshToken"
+    },
+    {
+      "line": 230,
+      "name": "xoaTaiKhoan",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idTk"
+    },
+    {
+      "line": 248,
+      "name": "resetPasswordForDev",
+      "returnType": "void",
+      "params": "Integer id"
+    },
+    {
+      "line": 258,
+      "name": "doiMatKhau",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idTk, String matKhauCu, String matKhauMoi"
+    },
+    {
+      "line": 285,
+      "name": "capNhatTaiKhoan",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idTk, com.example.project.dto.CapNhatTaiKhoanDto req"
+    }
+  ],
+  "ThanhToanBaoLuuService.java": [
+    {
+      "line": 32,
+      "name": "timBaoLuuTheoHocSinh",
+      "returnType": "ApiResponse<List<BaoLuuKhoaHoc>>",
+      "params": "Integer idHs"
+    },
+    {
+      "line": 46,
+      "name": "timBaoLuuTheoLop",
+      "returnType": "ApiResponse<List<BaoLuuKhoaHoc>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 60,
+      "name": "timBaoLuuTheoChiNhanh",
+      "returnType": "ApiResponse<List<BaoLuuKhoaHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 67,
+      "name": "timBaoLuuTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<BaoLuuKhoaHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 75,
+      "name": "taoBaoLuu",
+      "returnType": "ApiResponse<BaoLuuKhoaHoc>",
+      "params": "BaoLuuKhoaHoc baoLuu"
+    },
+    {
+      "line": 96,
+      "name": "xoaBaoLuuKhoaHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idBaoLuu"
+    },
+    {
+      "line": 112,
+      "name": "luuBaoLuuKhoaHoc",
+      "returnType": "ApiResponse<BaoLuuKhoaHoc>",
+      "params": "Integer idHs, Integer idLop, Integer idDangKy, Integer idDn, BaoLuuKhoaHoc bl"
+    },
+    {
+      "line": 146,
+      "name": "duyetBaoLuuKhoaHoc",
+      "returnType": "ApiResponse<BaoLuuKhoaHoc>",
+      "params": "Integer idBaoLuu, Boolean trangThaiBaoLuu, LocalDate ngayKetThuc"
+    },
+    {
+      "line": 166,
+      "name": "capNhatTrangThaiHocSinhKhoaHocBaoLuu",
+      "returnType": "void",
+      "params": "BaoLuuKhoaHoc bl, Boolean trangThai"
+    }
+  ],
+  "ThanhToanHocPhiVaLuongService.java": [
+    {
+      "line": 90,
+      "name": "taoThanhToanHocPhiKhoaHocHocSinh",
+      "returnType": "ApiResponse<ThanhToanHocPhiKhoaHocHocSinh>",
+      "params": "Integer idHs, Integer idKhoaHoc"
+    },
+    {
+      "line": 95,
+      "name": "taoThanhToanHocPhiKhoaHocHocSinh",
+      "returnType": "ApiResponse<ThanhToanHocPhiKhoaHocHocSinh>",
+      "params": "Integer idHsKh"
+    },
+    {
+      "line": 151,
+      "name": "taoThanhToanGiaoVienKhoaHoc",
+      "returnType": "ApiResponse<ThanhToanGiaoVienKhoaHoc>",
+      "params": "Integer idGv, Integer idKhoaHoc"
+    },
+    {
+      "line": 429,
+      "name": "timPhieuThuTheoHocSinh",
+      "returnType": "ApiResponse<List<PhieuThuHocPhi>>",
+      "params": "Integer idHs"
+    },
+    {
+      "line": 443,
+      "name": "timPhieuThuTheoDangKyHoc",
+      "returnType": "ApiResponse<List<PhieuThuHocPhi>>",
+      "params": "Integer idDangKy"
+    },
+    {
+      "line": 450,
+      "name": "timPhieuThuTheoKhoaHoc",
+      "returnType": "ApiResponse<List<PhieuThuHocPhi>>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 457,
+      "name": "timThanhToanHocPhiTheoKhoaHoc",
+      "returnType": "ApiResponse<List<ThanhToanHocPhiKhoaHocHocSinh>>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 465,
+      "name": "lapPhieuThuHocPhi",
+      "returnType": "ApiResponse<PhieuThuHocPhi>",
+      "params": "PhieuThuHocPhi pt"
+    },
+    {
+      "line": 491,
+      "name": "xoaPhieuThuHocPhi",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idPhieuThu"
+    },
+    {
+      "line": 540,
+      "name": "luuPhieuThuHocPhi",
+      "returnType": "ApiResponse<PhieuThuHocPhi>",
+      "params": "Integer idHs, Integer idDangKy, Integer idDn, PhieuThuHocPhi pt"
+    },
+    {
+      "line": 573,
+      "name": "timThanhToanTheoHocSinhKhoaHoc",
+      "returnType": "ApiResponse<ThanhToanHocPhiKhoaHocHocSinh>",
+      "params": "Integer idHsKh"
+    },
+    {
+      "line": 579,
+      "name": "timThanhToanTheoGiaoVienKhoaHoc",
+      "returnType": "ApiResponse<ThanhToanGiaoVienKhoaHoc>",
+      "params": "Integer idGv, Integer idKhoaHoc"
+    },
+    {
+      "line": 585,
+      "name": "timThanhToanKhoaHocCuaGiaoVien",
+      "returnType": "ApiResponse<List<ThanhToanGiaoVienKhoaHoc>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 590,
+      "name": "timThanhToanGiaoVienTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThanhToanGiaoVien>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 597,
+      "name": "timThanhToanGiaoVienTheoGiaoVien",
+      "returnType": "ApiResponse<List<ThanhToanGiaoVien>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 604,
+      "name": "timThanhToanGiaoVienTheoChiNhanh",
+      "returnType": "ApiResponse<List<ThanhToanGiaoVien>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 611,
+      "name": "timThanhToanLuongCuaGiaoVien",
+      "returnType": "ApiResponse<List<ThanhToanGiaoVien>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 616,
+      "name": "thanhToanLuongGiaoVien",
+      "returnType": "ApiResponse<ThanhToanGiaoVien>",
+      "params": "ThanhToanGiaoVien tt"
+    },
+    {
+      "line": 629,
+      "name": "luuThanhToanGiaoVien",
+      "returnType": "ApiResponse<ThanhToanGiaoVien>",
+      "params": "Integer idGv, Integer idDn, ThanhToanGiaoVien tt"
+    },
+    {
+      "line": 653,
+      "name": "xoaThanhToanGiaoVien",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idTt"
+    },
+    {
+      "line": 668,
+      "name": "timGiaoDichTheoChiNhanh",
+      "returnType": "ApiResponse<List<SoQuyThuChi>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 675,
+      "name": "timGiaoDichTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<SoQuyThuChi>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 683,
+      "name": "luuSoQuyThuChi",
+      "returnType": "ApiResponse<SoQuyThuChi>",
+      "params": "Integer idCn, SoQuyThuChi gd"
+    },
+    {
+      "line": 719,
+      "name": "xoaSoQuyThuChi",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idGd"
+    },
+    {
+      "line": 746,
+      "name": "timHoacTaoThangHoc",
+      "returnType": "ThangHoc",
+      "params": "LocalDate date, KyHoc kyHoc, NamHoc namHoc, DoanhNghiep dn"
+    },
+    {
+      "line": 785,
+      "name": "timTuanHocTheoNgay",
+      "returnType": "TuanHoc",
+      "params": "LocalDate date, KyHoc kyHoc, DoanhNghiep dn"
+    },
+    {
+      "line": 888,
+      "name": "layThuChiNamTheoChiNhanh",
+      "returnType": "ApiResponse<List<ThuChiNamHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 893,
+      "name": "layThuChiKyTheoChiNhanh",
+      "returnType": "ApiResponse<List<ThuChiKyHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 898,
+      "name": "layThuChiThangTheoChiNhanh",
+      "returnType": "ApiResponse<List<ThuChiThangHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 903,
+      "name": "layThuChiTuanTheoChiNhanh",
+      "returnType": "ApiResponse<List<ThuChiTuanHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 908,
+      "name": "layThuChiNamTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThuChiNamHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 913,
+      "name": "layThuChiKyTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThuChiKyHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 918,
+      "name": "layThuChiThangTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThuChiThangHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 923,
+      "name": "layThuChiTuanTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThuChiTuanHoc>>",
+      "params": "Integer idDn"
+    }
+  ],
+  "ThanhToanTaiChinhService.java": [
+    {
+      "line": 30,
+      "name": "timBaoLuuTheoHocSinh",
+      "returnType": "ApiResponse<List<BaoLuuKhoaHoc>>",
+      "params": "Integer idHs"
+    },
+    {
+      "line": 34,
+      "name": "timBaoLuuTheoLop",
+      "returnType": "ApiResponse<List<BaoLuuKhoaHoc>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 38,
+      "name": "timBaoLuuTheoChiNhanh",
+      "returnType": "ApiResponse<List<BaoLuuKhoaHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 42,
+      "name": "timBaoLuuTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<BaoLuuKhoaHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 46,
+      "name": "taoBaoLuu",
+      "returnType": "ApiResponse<BaoLuuKhoaHoc>",
+      "params": "BaoLuuKhoaHoc baoLuu"
+    },
+    {
+      "line": 50,
+      "name": "xoaBaoLuuKhoaHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idBaoLuu"
+    },
+    {
+      "line": 54,
+      "name": "luuBaoLuuKhoaHoc",
+      "returnType": "ApiResponse<BaoLuuKhoaHoc>",
+      "params": "Integer idHs, Integer idLop, Integer idDangKy, Integer idDn, BaoLuuKhoaHoc bl"
+    },
+    {
+      "line": 58,
+      "name": "duyetBaoLuuKhoaHoc",
+      "returnType": "ApiResponse<BaoLuuKhoaHoc>",
+      "params": "Integer idBaoLuu, Boolean trangThaiBaoLuu, LocalDate ngayKetThuc"
+    },
+    {
+      "line": 66,
+      "name": "timPhieuThuTheoHocSinh",
+      "returnType": "ApiResponse<List<PhieuThuHocPhi>>",
+      "params": "Integer idHs"
+    },
+    {
+      "line": 70,
+      "name": "timPhieuThuTheoDangKyHoc",
+      "returnType": "ApiResponse<List<PhieuThuHocPhi>>",
+      "params": "Integer idDangKy"
+    },
+    {
+      "line": 74,
+      "name": "timPhieuThuTheoKhoaHoc",
+      "returnType": "ApiResponse<List<PhieuThuHocPhi>>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 78,
+      "name": "timThanhToanHocPhiTheoKhoaHoc",
+      "returnType": "ApiResponse<List<ThanhToanHocPhiKhoaHocHocSinh>>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 82,
+      "name": "lapPhieuThuHocPhi",
+      "returnType": "ApiResponse<PhieuThuHocPhi>",
+      "params": "PhieuThuHocPhi pt"
+    },
+    {
+      "line": 86,
+      "name": "xoaPhieuThuHocPhi",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idPhieuThu"
+    },
+    {
+      "line": 90,
+      "name": "luuPhieuThuHocPhi",
+      "returnType": "ApiResponse<PhieuThuHocPhi>",
+      "params": "Integer idHs, Integer idDangKy, Integer idDn, PhieuThuHocPhi pt"
+    },
+    {
+      "line": 99,
+      "name": "taoThanhToanHocPhiKhoaHocHocSinh",
+      "returnType": "ApiResponse<ThanhToanHocPhiKhoaHocHocSinh>",
+      "params": "Integer idHs, Integer idKhoaHoc"
+    },
+    {
+      "line": 103,
+      "name": "taoThanhToanHocPhiKhoaHocHocSinh",
+      "returnType": "ApiResponse<ThanhToanHocPhiKhoaHocHocSinh>",
+      "params": "Integer idHs, Integer idKhoaHoc, BigDecimal tongTienPhaiNap"
+    },
+    {
+      "line": 107,
+      "name": "taoThanhToanHocPhiKhoaHocHocSinh",
+      "returnType": "ApiResponse<ThanhToanHocPhiKhoaHocHocSinh>",
+      "params": "Integer idHsKh"
+    },
+    {
+      "line": 121,
+      "name": "timThanhToanTheoHocSinhKhoaHoc",
+      "returnType": "ApiResponse<ThanhToanHocPhiKhoaHocHocSinh>",
+      "params": "Integer idHsKh"
+    },
+    {
+      "line": 129,
+      "name": "taoThanhToanGiaoVienKhoaHoc",
+      "returnType": "ApiResponse<ThanhToanGiaoVienKhoaHoc>",
+      "params": "Integer idGv, Integer idKhoaHoc"
+    },
+    {
+      "line": 133,
+      "name": "taoThanhToanGiaoVienKhoaHoc",
+      "returnType": "ApiResponse<ThanhToanGiaoVienKhoaHoc>",
+      "params": "Integer idGv, Integer idKhoaHoc, BigDecimal tongTienPhaiNap"
+    },
+    {
+      "line": 147,
+      "name": "timThanhToanTheoGiaoVienKhoaHoc",
+      "returnType": "ApiResponse<ThanhToanGiaoVienKhoaHoc>",
+      "params": "Integer idGv, Integer idKhoaHoc"
+    },
+    {
+      "line": 151,
+      "name": "timThanhToanKhoaHocCuaGiaoVien",
+      "returnType": "ApiResponse<List<ThanhToanGiaoVienKhoaHoc>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 155,
+      "name": "timThanhToanGiaoVienTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThanhToanGiaoVien>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 159,
+      "name": "timThanhToanGiaoVienTheoGiaoVien",
+      "returnType": "ApiResponse<List<ThanhToanGiaoVien>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 163,
+      "name": "timThanhToanGiaoVienTheoChiNhanh",
+      "returnType": "ApiResponse<List<ThanhToanGiaoVien>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 167,
+      "name": "timThanhToanLuongCuaGiaoVien",
+      "returnType": "ApiResponse<List<ThanhToanGiaoVien>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 171,
+      "name": "thanhToanLuongGiaoVien",
+      "returnType": "ApiResponse<ThanhToanGiaoVien>",
+      "params": "ThanhToanGiaoVien tt"
+    },
+    {
+      "line": 175,
+      "name": "luuThanhToanGiaoVien",
+      "returnType": "ApiResponse<ThanhToanGiaoVien>",
+      "params": "Integer idGv, Integer idDn, ThanhToanGiaoVien tt"
+    },
+    {
+      "line": 179,
+      "name": "xoaThanhToanGiaoVien",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idTt"
+    },
+    {
+      "line": 187,
+      "name": "timGiaoDichTheoChiNhanh",
+      "returnType": "ApiResponse<List<SoQuyThuChi>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 191,
+      "name": "timGiaoDichTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<SoQuyThuChi>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 195,
+      "name": "luuSoQuyThuChi",
+      "returnType": "ApiResponse<SoQuyThuChi>",
+      "params": "Integer idCn, SoQuyThuChi gd"
+    },
+    {
+      "line": 199,
+      "name": "xoaSoQuyThuChi",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idGd"
+    },
+    {
+      "line": 207,
+      "name": "layThuChiNamTheoChiNhanh",
+      "returnType": "ApiResponse<List<ThuChiNamHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 211,
+      "name": "layThuChiKyTheoChiNhanh",
+      "returnType": "ApiResponse<List<ThuChiKyHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 215,
+      "name": "layThuChiThangTheoChiNhanh",
+      "returnType": "ApiResponse<List<ThuChiThangHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 219,
+      "name": "layThuChiTuanTheoChiNhanh",
+      "returnType": "ApiResponse<List<ThuChiTuanHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 223,
+      "name": "layThuChiNamTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThuChiNamHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 227,
+      "name": "layThuChiKyTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThuChiKyHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 231,
+      "name": "layThuChiThangTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThuChiThangHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 235,
+      "name": "layThuChiTuanTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ThuChiTuanHoc>>",
+      "params": "Integer idDn"
+    }
+  ],
+  "ThongKeService.java": [
+    {
+      "line": 41,
+      "name": "layDanhSachNamHoc",
+      "returnType": "ApiResponse<List<NamHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 56,
+      "name": "layDanhSachKyHocTheoNamHoc",
+      "returnType": "ApiResponse<List<KyHoc>>",
+      "params": "Integer idNh"
+    },
+    {
+      "line": 71,
+      "name": "thongKeTongQuan",
+      "returnType": "ApiResponse<ThongKeTongQuanDto>",
+      "params": "Integer idDn, Integer idNamHoc, Integer idKyHoc"
+    },
+    {
+      "line": 108,
+      "name": "thongKeTongQuanChiNhanh",
+      "returnType": "ApiResponse<ThongKeChiNhanhDto>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 137,
+      "name": "thongKeTongQuanServer",
+      "returnType": "ApiResponse<ThongKeServerDto>",
+      "params": ""
+    }
+  ],
+  "TimKiemNhanhService.java": [
+    {
+      "line": 36,
+      "name": "timGiaoVienTheoSdt",
+      "returnType": "ApiResponse<List<NguoiDungNganGonDto>>",
+      "params": "String sdt, Integer idDn"
+    },
+    {
+      "line": 53,
+      "name": "timGiaoVienTheoCccd",
+      "returnType": "ApiResponse<List<NguoiDungNganGonDto>>",
+      "params": "String cccd, Integer idDn"
+    },
+    {
+      "line": 79,
+      "name": "timQuanLyTheoSdt",
+      "returnType": "ApiResponse<List<NguoiDungNganGonDto>>",
+      "params": "String sdt, Integer idDn"
+    },
+    {
+      "line": 96,
+      "name": "timQuanLyTheoCccd",
+      "returnType": "ApiResponse<List<NguoiDungNganGonDto>>",
+      "params": "String cccd, Integer idDn"
+    },
+    {
+      "line": 117,
+      "name": "timHocSinhTheoSdt",
+      "returnType": "ApiResponse<List<NguoiDungNganGonDto>>",
+      "params": "String sdt, Integer idDn"
+    },
+    {
+      "line": 134,
+      "name": "timHocSinhTheoCccd",
+      "returnType": "ApiResponse<List<NguoiDungNganGonDto>>",
+      "params": "String cccd, Integer idDn"
+    }
+  ],
+  "TraCuuLopHocService.java": [
+    {
+      "line": 62,
+      "name": "timNamHocTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<NamHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 68,
+      "name": "luuNamHoc",
+      "returnType": "ApiResponse<NamHoc>",
+      "params": "NamHoc namHoc"
+    },
+    {
+      "line": 138,
+      "name": "luuNamHoc",
+      "returnType": "ApiResponse<NamHoc>",
+      "params": "Integer idDn, NamHoc namHoc"
+    },
+    {
+      "line": 146,
+      "name": "capNhatNamHoc",
+      "returnType": "ApiResponse<NamHoc>",
+      "params": "Integer idNh, NamHoc namHoc"
+    },
+    {
+      "line": 224,
+      "name": "timKyHocTheoNamHoc",
+      "returnType": "ApiResponse<List<KyHoc>>",
+      "params": "Integer idNh"
+    },
+    {
+      "line": 239,
+      "name": "taoKyHocChoNamHoc",
+      "returnType": "ApiResponse<List<KyHoc>>",
+      "params": "Integer idNh"
+    },
+    {
+      "line": 328,
+      "name": "luuKyHoc",
+      "returnType": "ApiResponse<KyHoc>",
+      "params": "KyHoc kyHoc"
+    },
+    {
+      "line": 338,
+      "name": "luuKyHoc",
+      "returnType": "ApiResponse<KyHoc>",
+      "params": "Integer idNh, KyHoc kyHoc"
+    },
+    {
+      "line": 346,
+      "name": "capNhatKyHoc",
+      "returnType": "ApiResponse<KyHoc>",
+      "params": "Integer idKh, KyHoc kyHoc"
+    },
+    {
+      "line": 394,
+      "name": "timLopHocTheoKyHoc",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idKh"
+    },
+    {
+      "line": 409,
+      "name": "timLopHocTheoMonHoc",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idMh"
+    },
+    {
+      "line": 424,
+      "name": "timLopHocTheoBoMon",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idBoMon"
+    },
+    {
+      "line": 439,
+      "name": "timLopHocTheoMonHocVaKyHoc",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idMh, Integer idKh"
+    },
+    {
+      "line": 456,
+      "name": "timLopHocTheoGiaoVienVaKyHoc",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idGv, Integer idKh"
+    },
+    {
+      "line": 473,
+      "name": "timLopHocTheoChiNhanhVaKyHoc",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idCn, Integer idKh"
+    },
+    {
+      "line": 490,
+      "name": "timKiemLopHoc",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idCn, Integer idKh, Integer idBoMon, Integer idMh, Integer idGv, String keyword"
+    },
+    {
+      "line": 506,
+      "name": "timKiemLopHoc",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idCn, Integer idKh, Integer idBoMon, Integer idGv, String keyword"
+    },
+    {
+      "line": 515,
+      "name": "luuLopHoc",
+      "returnType": "ApiResponse<LopHoc>",
+      "params": "LopHoc lop"
+    },
+    {
+      "line": 583,
+      "name": "luuLopHoc",
+      "returnType": "ApiResponse<LopHoc>",
+      "params": "Integer idCn, Integer idKy, Integer idGv, LopHoc lop"
+    },
+    {
+      "line": 592,
+      "name": "capNhatLopHoc",
+      "returnType": "ApiResponse<LopHoc>",
+      "params": "Integer idLop, LopHoc lop"
+    },
+    {
+      "line": 627,
+      "name": "xoaLopHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer id"
+    },
+    {
+      "line": 647,
+      "name": "timBoMonTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<BoMon>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 656,
+      "name": "luuBoMon",
+      "returnType": "ApiResponse<BoMon>",
+      "params": "BoMon bm"
+    },
+    {
+      "line": 688,
+      "name": "luuBoMon",
+      "returnType": "ApiResponse<BoMon>",
+      "params": "Integer idDn, BoMon bm"
+    },
+    {
+      "line": 695,
+      "name": "capNhatBoMon",
+      "returnType": "ApiResponse<BoMon>",
+      "params": "Integer idBoMon, BoMon bm"
+    },
+    {
+      "line": 713,
+      "name": "xoaBoMon",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idBoMon"
+    },
+    {
+      "line": 736,
+      "name": "timMonHocTheoBoMon",
+      "returnType": "ApiResponse<List<MonHoc>>",
+      "params": "Integer idBoMon"
+    },
+    {
+      "line": 745,
+      "name": "luuMonHoc",
+      "returnType": "ApiResponse<MonHoc>",
+      "params": "MonHoc monHoc"
+    },
+    {
+      "line": 793,
+      "name": "luuMonHoc",
+      "returnType": "ApiResponse<MonHoc>",
+      "params": "Integer idBoMon, Integer idChuyenMon, MonHoc monHoc"
+    },
+    {
+      "line": 801,
+      "name": "capNhatMonHoc",
+      "returnType": "ApiResponse<MonHoc>",
+      "params": "Integer idMh, MonHoc monHoc"
+    },
+    {
+      "line": 818,
+      "name": "xoaMonHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer idMh"
+    },
+    {
+      "line": 841,
+      "name": "timKhoaHocTheoLop",
+      "returnType": "ApiResponse<List<KhoaHoc>>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 856,
+      "name": "timKhoaHocTheoId",
+      "returnType": "ApiResponse<KhoaHoc>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 881,
+      "name": "luuKhoaHoc",
+      "returnType": "ApiResponse<KhoaHoc>",
+      "params": "KhoaHoc kh"
+    },
+    {
+      "line": 960,
+      "name": "luuKhoaHoc",
+      "returnType": "ApiResponse<KhoaHoc>",
+      "params": "Integer idBoMon, Integer idLop, Integer idMh, KhoaHoc kh"
+    },
+    {
+      "line": 969,
+      "name": "luuKhoaHoc",
+      "returnType": "ApiResponse<KhoaHoc>",
+      "params": "Integer idBoMon, Integer idLop, KhoaHoc kh"
+    },
+    {
+      "line": 977,
+      "name": "luuKhoaHoc",
+      "returnType": "ApiResponse<KhoaHoc>",
+      "params": "Integer idBoMon, KhoaHoc kh"
+    },
+    {
+      "line": 984,
+      "name": "capNhatKhoaHoc",
+      "returnType": "ApiResponse<KhoaHoc>",
+      "params": "Integer idKhoaHoc, KhoaHoc kh"
+    },
+    {
+      "line": 1023,
+      "name": "xoaKhoaHoc",
+      "returnType": "ApiResponse<Void>",
+      "params": "Integer id"
+    },
+    {
+      "line": 1038,
+      "name": "timKhoaHocTheoMonHoc",
+      "returnType": "ApiResponse<List<KhoaHoc>>",
+      "params": "Integer idMh"
+    },
+    {
+      "line": 1043,
+      "name": "timTatCaBoMon",
+      "returnType": "ApiResponse<List<BoMon>>",
+      "params": ""
+    },
+    {
+      "line": 1047,
+      "name": "timKhoaHocTheoBoMon",
+      "returnType": "ApiResponse<List<KhoaHoc>>",
+      "params": "Integer idBoMon"
+    },
+    {
+      "line": 1052,
+      "name": "timLopHocTheoKhoaHoc",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idKhoaHoc"
+    },
+    {
+      "line": 1061,
+      "name": "timTatCaNamHoc",
+      "returnType": "ApiResponse<List<NamHoc>>",
+      "params": ""
+    },
+    {
+      "line": 1065,
+      "name": "timTatCaNamHoc",
+      "returnType": "ApiResponse<List<NamHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 1072,
+      "name": "timTatCaKyHoc",
+      "returnType": "ApiResponse<List<KyHoc>>",
+      "params": ""
+    },
+    {
+      "line": 1076,
+      "name": "timTatCaKyHoc",
+      "returnType": "ApiResponse<List<KyHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 1083,
+      "name": "timKyHocTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<KyHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 1088,
+      "name": "timLopHocTheoId",
+      "returnType": "ApiResponse<LopHoc>",
+      "params": "Integer idLop"
+    },
+    {
+      "line": 1094,
+      "name": "timLopHocTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 1099,
+      "name": "timLopHocTheoChiNhanh",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idCn"
+    },
+    {
+      "line": 1104,
+      "name": "timLopHocTheoGiaoVien",
+      "returnType": "ApiResponse<List<LopHoc>>",
+      "params": "Integer idGv"
+    },
+    {
+      "line": 1109,
+      "name": "timKhoaHocTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<KhoaHoc>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 1122,
+      "name": "phanCongGiaoVienVaoLop",
+      "returnType": "ApiResponse<LopHoc>",
+      "params": "Integer idLop, Integer idGv"
+    },
+    {
+      "line": 1141,
+      "name": "luuLopHoc",
+      "returnType": "ApiResponse<LopHoc>",
+      "params": "Integer idCn, Integer idKy, LopHoc lop"
+    },
+    {
+      "line": 1152,
+      "name": "timChiNhanhTheoDoanhNghiep",
+      "returnType": "ApiResponse<List<ChiNhanh>>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 1157,
+      "name": "timKhoaHocTheoChiNhanhVaKyHoc",
+      "returnType": "ApiResponse<List<KhoaHoc>>",
+      "params": "Integer idCn, Integer idKh"
+    },
+    {
+      "line": 1163,
+      "name": "layCayPhanCapDaoTao",
+      "returnType": "ApiResponse<com.example.project.dto.daotao.CayPhanCapDaoTaoDto>",
+      "params": "Integer idDn"
+    },
+    {
+      "line": 1175,
+      "name": "timGiaoVienTheoBoMon",
+      "returnType": "ApiResponse<List<GiaoVienBoMonDto>>",
+      "params": "Integer idBoMon, Integer idDn"
+    },
+    {
+      "line": 1183,
+      "name": "layThongKeBoMon",
+      "returnType": "ApiResponse<ThongKeBoMonDto>",
+      "params": "Integer idBoMon, Integer idDn"
+    },
+    {
+      "line": 1225,
+      "name": "taoNhanhLopVaKhoaHocTheoBoMon",
+      "returnType": "ApiResponse<KhoaHoc>",
+      "params": "TaoLopTheoBoMonRequest req, Integer idDn"
+    },
+    {
+      "line": 1296,
+      "name": "layDanhSachChuyenMonTheoBoMon",
+      "returnType": "ApiResponse<List<ChuyenMonBoMonDto>>",
+      "params": "Integer idBoMon, Integer idDn"
+    },
+    {
+      "line": 1304,
+      "name": "layDanhSachGiaoVienTheoChuyenMon",
+      "returnType": "ApiResponse<List<GiaoVienBoMonDto>>",
+      "params": "Integer idCm, Integer idDn"
+    },
+    {
+      "line": 1312,
+      "name": "layDanhSachMonHocTheoBoMonVaChuyenMon",
+      "returnType": "ApiResponse<List<MonHoc>>",
+      "params": "Integer idBoMon, Integer idCm"
+    }
+  ]
+}

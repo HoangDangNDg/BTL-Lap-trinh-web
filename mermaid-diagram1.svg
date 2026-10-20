@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3446.366 286.70000000000005" width="3446.366" height="286.70000000000005" style="--bg:#1F1F1F;--fg:#CCCCCC;--line:#CCCCCC;--accent:#0078D4;--muted:#CCCCCCCC;--surface:#181818;--border:#CCCCCC;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="Auth" data-to="Login" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="213.58374999999998,149.8 213.58374999999998,167.8 112.104,167.8 112.104,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Auth" data-to="Profile" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="213.58374999999998,149.8 213.58374999999998,167.8 315.0635000000001,167.8 315.0635000000001,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Dash" data-to="Metric" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="605.7942499999999,149.8 605.7942499999999,167.8 519.8754999999999,167.8 519.8754999999999,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Dash" data-to="QuickAct" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="605.7942499999999,149.8 605.7942499999999,167.8 691.7129999999999,167.8 691.7129999999999,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Org" data-to="Branch" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1072.8084999999999,149.8 1072.8084999999999,167.8 873.9245000000001,167.8 873.9245000000001,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Org" data-to="Room" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1072.8084999999999,149.8 1072.8084999999999,167.8 1072.8085,167.8 1072.8085,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Org" data-to="CoDong" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1072.8084999999999,149.8 1072.8084999999999,167.8 1263.171,167.8 1263.171,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Edu" data-to="Course" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1729.259,149.8 1729.259,167.8 1447.2350000000001,167.8 1447.2350000000001,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Edu" data-to="ClassList" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1729.259,149.8 1729.259,167.8 1634.6334999999997,167.8 1634.6334999999997,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Edu" data-to="Schedule" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1729.259,149.8 1729.259,167.8 1823.8845000000001,167.8 1823.8845000000001,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Edu" data-to="Attend" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1729.259,149.8 1729.259,167.8 2013.8764999999999,167.8 2013.8764999999999,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Person" data-to="Teacher" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="2452.029,149.8 2452.029,167.8 2232.0265,167.8 2232.0265,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Person" data-to="Student" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="2452.029,149.8 2452.029,167.8 2452.029,167.8 2452.029,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Person" data-to="Reserve" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="2452.029,149.8 2452.029,167.8 2649.4309999999996,167.8 2649.4309999999996,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Finance" data-to="Tuition" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="3079.062,149.8 3079.062,167.8 2854.984,167.8 2854.984,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Finance" data-to="TeacherPay" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="3079.062,149.8 3079.062,167.8 3079.062,167.8 3079.062,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Finance" data-to="CashBook" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="3079.062,149.8 3079.062,167.8 3309.8089999999997,167.8 3309.8089999999997,185.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Root" data-to="Auth" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1441.24725,76.9 1441.24725,94.9 213.58374999999998,94.9 213.58374999999998,112.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Root" data-to="Dash" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1441.24725,76.9 1441.24725,94.9 605.7942499999999,94.9 605.7942499999999,112.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Root" data-to="Org" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1441.24725,76.9 1441.24725,94.9 1072.8084999999999,94.9 1072.8084999999999,112.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Root" data-to="Edu" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1441.24725,76.9 1441.24725,94.9 1729.259,94.9 1729.259,112.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Root" data-to="Person" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1441.24725,76.9 1441.24725,94.9 2452.029,94.9 2452.029,112.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Root" data-to="Finance" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1441.24725,76.9 1441.24725,94.9 3079.062,94.9 3079.062,112.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="node" data-id="Root" data-label="HỆ THỐNG QUẢN LÝ TRUNG TÂM GIÁO DỤC" data-shape="rectangle">
+  <rect x="1295.04325" y="40" width="292.40799999999996" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1441.24725" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">HỆ THỐNG QUẢN LÝ TRUNG TÂM GIÁO DỤC</text>
+</g>
+<g class="node" data-id="Auth" data-label="Xác Thực" data-shape="rectangle">
+  <rect x="164.08024999999998" y="112.9" width="99.007" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="213.58374999999998" y="131.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Xác Thực</text>
+</g>
+<g class="node" data-id="Login" data-label="Trang Đăng Nhập" data-shape="rectangle">
+  <rect x="40" y="185.8" width="144.208" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="112.104" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Trang Đăng Nhập</text>
+</g>
+<g class="node" data-id="Profile" data-label="Thông Tin Cá Nhân &amp; Đổi MK" data-shape="rectangle">
+  <rect x="212.20800000000008" y="185.8" width="205.71099999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="315.0635000000001" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Thông Tin Cá Nhân &amp; Đổi MK</text>
+</g>
+<g class="node" data-id="Dash" data-label="Bảng Điều Khiển (Dashboard)" data-shape="rectangle">
+  <rect x="499.2337499999999" y="112.9" width="213.12099999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="605.7942499999999" y="131.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Bảng Điều Khiển (Dashboard)</text>
+</g>
+<g class="node" data-id="Metric" data-label="Thẻ KPI Thống Kê" data-shape="rectangle">
+  <rect x="445.91899999999987" y="185.8" width="147.913" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="519.8754999999999" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Thẻ KPI Thống Kê</text>
+</g>
+<g class="node" data-id="QuickAct" data-label="Thao Tác Nhanh" data-shape="rectangle">
+  <rect x="621.8319999999999" y="185.8" width="139.762" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="691.7129999999999" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Thao Tác Nhanh</text>
+</g>
+<g class="node" data-id="Org" data-label="Quản Trị Tổ Chức" data-shape="rectangle">
+  <rect x="998.1109999999999" y="112.9" width="149.39499999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1072.8084999999999" y="131.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Quản Trị Tổ Chức</text>
+</g>
+<g class="node" data-id="Branch" data-label="Danh Sách Chi Nhánh" data-shape="rectangle">
+  <rect x="789.594" y="185.8" width="168.661" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="873.9245000000001" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Danh Sách Chi Nhánh</text>
+</g>
+<g class="node" data-id="Room" data-label="Danh Sách Phòng Học" data-shape="rectangle">
+  <rect x="986.2550000000001" y="185.8" width="173.10699999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1072.8085" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Danh Sách Phòng Học</text>
+</g>
+<g class="node" data-id="CoDong" data-label="Cổ Đông &amp; Góp Vốn" data-shape="rectangle">
+  <rect x="1187.362" y="185.8" width="151.618" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1263.171" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Cổ Đông &amp; Góp Vốn</text>
+</g>
+<g class="node" data-id="Edu" data-label="Quản Lý Đào Tạo" data-shape="rectangle">
+  <rect x="1658.2665" y="112.9" width="141.985" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1729.259" y="131.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Quản Lý Đào Tạo</text>
+</g>
+<g class="node" data-id="Course" data-label="Danh Mục Khóa Học" data-shape="rectangle">
+  <rect x="1366.98" y="185.8" width="160.51" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1447.2350000000001" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Danh Mục Khóa Học</text>
+</g>
+<g class="node" data-id="ClassList" data-label="Danh Sách Lớp Học" data-shape="rectangle">
+  <rect x="1555.4899999999998" y="185.8" width="158.28699999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1634.6334999999997" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Danh Sách Lớp Học</text>
+</g>
+<g class="node" data-id="Schedule" data-label="Thời Khóa Biểu Tuần" data-shape="rectangle">
+  <rect x="1741.777" y="185.8" width="164.21499999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1823.8845000000001" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Thời Khóa Biểu Tuần</text>
+</g>
+<g class="node" data-id="Attend" data-label="Giao Diện Điểm Danh" data-shape="rectangle">
+  <rect x="1933.9919999999997" y="185.8" width="159.769" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="2013.8764999999999" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Giao Diện Điểm Danh</text>
+</g>
+<g class="node" data-id="Person" data-label="Quản Lý Nhân Sự &amp; Học Viên" data-shape="rectangle">
+  <rect x="2348.062" y="112.9" width="207.93399999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="2452.029" y="131.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Quản Lý Nhân Sự &amp; Học Viên</text>
+</g>
+<g class="node" data-id="Teacher" data-label="Hồ Sơ Giáo Viên &amp; Chuyên Môn" data-shape="rectangle">
+  <rect x="2121.761" y="185.8" width="220.531" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="2232.0265" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Hồ Sơ Giáo Viên &amp; Chuyên Môn</text>
+</g>
+<g class="node" data-id="Student" data-label="Hồ Sơ Học Sinh 360°" data-shape="rectangle">
+  <rect x="2370.292" y="185.8" width="163.474" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="2452.029" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Hồ Sơ Học Sinh 360°</text>
+</g>
+<g class="node" data-id="Reserve" data-label="Đơn Bảo Lưu Khóa Học" data-shape="rectangle">
+  <rect x="2561.7659999999996" y="185.8" width="175.32999999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="2649.4309999999996" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Đơn Bảo Lưu Khóa Học</text>
+</g>
+<g class="node" data-id="Finance" data-label="Tài Chính &amp; Kế Toán" data-shape="rectangle">
+  <rect x="2997.325" y="112.9" width="163.474" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="3079.062" y="131.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Tài Chính &amp; Kế Toán</text>
+</g>
+<g class="node" data-id="Tuition" data-label="Lập Phiếu Thu Học Phí" data-shape="rectangle">
+  <rect x="2765.096" y="185.8" width="179.77599999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="2854.984" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Lập Phiếu Thu Học Phí</text>
+</g>
+<g class="node" data-id="TeacherPay" data-label="Thanh Toán Lương Giáo Viên" data-shape="rectangle">
+  <rect x="2972.872" y="185.8" width="212.37999999999994" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="3079.062" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Thanh Toán Lương Giáo Viên</text>
+</g>
+<g class="node" data-id="CashBook" data-label="Sổ Quỹ Thu Chi &amp; Báo Cáo" data-shape="rectangle">
+  <rect x="3213.252" y="185.8" width="193.11399999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="3309.8089999999997" y="204.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Sổ Quỹ Thu Chi &amp; Báo Cáo</text>
+</g>
+</svg>

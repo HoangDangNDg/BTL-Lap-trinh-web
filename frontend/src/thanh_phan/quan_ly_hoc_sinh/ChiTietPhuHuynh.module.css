@@ -1,0 +1,544 @@
+/* ChiTietPhuHuynh.module.css - Stylesheet cho Chi Tiết Phụ Huynh */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Banner Điều Hướng & Hành Động */
+.headerBanner {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 4px 14px -3px rgba(15, 23, 42, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.btnBack {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnBack:hover {
+  background-color: #EFF6FF;
+  border-color: #93C5FD;
+  color: #2563EB;
+}
+
+.headerIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background-color: #ECFDF5;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.headerTitle {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.headerBadge {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  background-color: #F1F5F9;
+  color: #475569;
+  font-weight: 700;
+}
+
+.headerSubtitle {
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.btnEditParent {
+  height: 40px;
+  padding: 0 1.15rem;
+  border-radius: 10px;
+  border: 1px solid #A7F3D0;
+  background-color: #ECFDF5;
+  color: #047857;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+}
+
+.btnEditParent:hover {
+  background-color: #D1FAE5;
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.15);
+}
+
+/* Thẻ 1: Hồ sơ chi tiết */
+.infoCard {
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid #E2E8F0;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.infoCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-bottom: 1px solid #F1F5F9;
+  padding-bottom: 0.75rem;
+}
+
+.infoCardTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.infoLabel {
+  font-size: 0.75rem;
+  color: #64748B;
+  display: block;
+}
+
+.infoValue {
+  font-size: 1rem;
+  color: #0F172A;
+}
+
+.infoValueBlue {
+  font-size: 1rem;
+  color: #0284C7;
+}
+
+.infoValueCccd {
+  font-size: 1rem;
+  color: #334155;
+  letter-spacing: 0.04em;
+}
+
+.infoFullRow {
+  grid-column: 1 / -1;
+}
+
+/* Thẻ 2: Danh sách học sinh trực thuộc */
+.childrenCard {
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid #BBF7D0;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.childrenCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-bottom: 1px solid #ECFDF5;
+  padding-bottom: 0.85rem;
+}
+
+.childrenTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.childrenIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #ECFDF5;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.childrenTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #065F46;
+  margin: 0;
+}
+
+.childrenSubtitle {
+  margin: 0.15rem 0 0;
+  font-size: 0.775rem;
+  color: #047857;
+}
+
+.btnAddChild {
+  height: 38px;
+  padding: 0 1.15rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #059669;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: 0 3px 10px rgba(5, 150, 105, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btnAddChild:hover {
+  background-color: #047857;
+}
+
+.loadingBox {
+  padding: 2.5rem;
+  text-align: center;
+  color: #059669;
+}
+
+.emptyChildrenBox {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background-color: #F8FAFC;
+  border-radius: 14px;
+  border: 1.5px dashed #CBD5E1;
+}
+
+.emptyChildrenTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.emptyChildrenDesc {
+  margin: 0.35rem 0 1rem;
+  font-size: 0.825rem;
+  color: #64748B;
+}
+
+.childrenGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.childCard {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.childCard:hover {
+  border-color: #0095F6;
+  box-shadow: 0 8px 20px rgba(0, 149, 246, 0.12);
+}
+
+.childCardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.childAvatarFemale {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background-color: #FDF2F8;
+  color: #DB2777;
+  border: 1px solid #FBCFE8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.childAvatarMale {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background-color: #EFF6FF;
+  color: #2563EB;
+  border: 1px solid #BFDBFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.childRelationBadge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  background-color: #ECFDF5;
+  color: #059669;
+  font-weight: 700;
+  border: 1px solid #A7F3D0;
+}
+
+.childDetailsBox {
+  font-size: 0.8rem;
+  color: #475569;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.65rem 0.85rem;
+  background-color: #F8FAFC;
+  border-radius: 10px;
+}
+
+.childCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #F1F5F9;
+}
+
+.btnUnlink {
+  height: 32px;
+  padding: 0 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #FECACA;
+  background-color: #FEF2F2;
+  color: #DC2626;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.btnView360 {
+  height: 32px;
+  padding: 0 0.85rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #0284C7;
+  color: #FFFFFF;
+  font-size: 0.775rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Modal liên kết */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 520px;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.35);
+  border: 1px solid #E2E8F0;
+  overflow: hidden;
+}
+
+.modalHeader {
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+  border-bottom: 1px solid #BBF7D0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalCloseBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #047857;
+}
+
+.modalBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modalErrorAlert {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background-color: #FEF2F2;
+  border: 1px solid #FCA5A5;
+  color: #B91C1C;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+.modalSearchRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.modalSearchInput {
+  flex: 1;
+  height: 42px;
+  padding: 0 0.85rem;
+  border-radius: 10px;
+  border: 1.5px solid #CBD5E1;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.modalBtnSearch {
+  height: 42px;
+  padding: 0 1.25rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #0284C7;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.modalSearchResults {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.modalStudentItem {
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.15s ease;
+}
+
+.modalStudentItemSelected {
+  border: 2px solid #059669;
+  background-color: #ECFDF5;
+}
+
+.modalSelect {
+  width: 100%;
+  height: 40px;
+  padding: 0 0.85rem;
+  border-radius: 10px;
+  border: 1.5px solid #CBD5E1;
+  font-size: 0.875rem;
+  outline: none;
+  background-color: #FFFFFF;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #F1F5F9;
+}
+
+.modalBtnClose {
+  height: 38px;
+  padding: 0 1rem;
+  border-radius: 8px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modalBtnConfirm {
+  height: 38px;
+  padding: 0 1.25rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #059669;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}

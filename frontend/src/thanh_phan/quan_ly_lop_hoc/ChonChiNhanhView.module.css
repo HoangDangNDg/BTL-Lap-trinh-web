@@ -1,0 +1,150 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.headerCard {
+  padding: 1.35rem 1.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 18px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerIconBox {
+  width: 48px;
+  height: 48px;
+  background-color: #ECFDF5;
+  color: #10B981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #A7F3D0;
+  flex-shrink: 0;
+}
+
+.headerTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.02em;
+}
+
+.headerSubtitle {
+  margin: 0.2rem 0 0;
+  font-size: 0.825rem;
+  color: #64748B;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 280px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.45rem 0.75rem 0.45rem 2.2rem;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  background-color: #F8FAFC;
+  color: #1E293B;
+  font-size: 0.825rem;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.searchInput:focus {
+  border-color: #0095F6;
+  box-shadow: 0 0 0 2px rgba(0, 149, 246, 0.15);
+  background-color: #FFFFFF;
+}
+
+.stateCard {
+  padding: 3.5rem;
+  text-align: center;
+  color: #64748B;
+  border-radius: 18px;
+  background-color: #FFFFFF;
+}
+
+.loadingSpinner {
+  margin: 0 auto 0.75rem;
+  color: #0284C7;
+}
+
+.loadingText {
+  font-weight: 600;
+  font-size: 0.925rem;
+}
+
+.emptyCard {
+  padding: 3rem;
+  text-align: center;
+  color: #64748B;
+  border-radius: 18px;
+  background-color: #FFFFFF;
+}
+
+.emptyIcon {
+  margin: 0 auto 0.75rem;
+  color: #CBD5E1;
+}
+
+.emptyTitle {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0F172A;
+  margin: 0 0 0.35rem;
+}
+
+.emptySubtitle {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.branchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.cardItemWrapper {
+  position: relative;
+}
+
+.actionBadge {
+  position: absolute;
+  bottom: 1.15rem;
+  right: 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0095F6;
+  pointer-events: none;
+  z-index: 2;
+}

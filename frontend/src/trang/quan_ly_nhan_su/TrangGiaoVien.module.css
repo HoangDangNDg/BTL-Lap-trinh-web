@@ -1,0 +1,1463 @@
+/* TrangGiaoVien.module.css - Scoped styles cho Quản lý & Phân phối Giáo viên */
+
+/* ========================================================================= */
+/* ── 1. CONTAINER & LAYOUT CHUNG ── */
+/* ========================================================================= */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+.containerDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+/* ========================================================================= */
+/* ── 2. GIAO DIỆN 1: MÀN HÌNH CHỌN KHỐI CHI NHÁNH CƠ SỞ ── */
+/* ========================================================================= */
+.headerBanner {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 20px;
+}
+
+.headerInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerIcon {
+  width: 52px;
+  height: 52px;
+  background-color: #E0F2FE;
+  color: #0284C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.headerTitle {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.025em;
+}
+
+.headerSubtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: #64748B;
+}
+
+.btnRefreshBranch {
+  height: 46px;
+  padding: 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #0F172A;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.loadingCard {
+  padding: 3.5rem;
+  text-align: center;
+  color: #64748B;
+}
+
+.loadingSpinner {
+  margin: 0 auto 0.75rem;
+  color: #0284C7;
+}
+
+.loadingText {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.branchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Thẻ Toàn Hệ Thống */
+.allBranchCard {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  border-radius: 22px;
+  cursor: pointer;
+  border: 2px solid #0284C7;
+  background-color: #F0F9FF;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.15);
+}
+
+.allBranchTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.allBranchIcon {
+  width: 52px;
+  height: 52px;
+  background-color: #0284C7;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.allBranchBadge {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.785rem;
+}
+
+.allBranchBody {
+  margin-top: 1.1rem;
+}
+
+.allBranchTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0369A1;
+}
+
+.allBranchDesc {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: #64748B;
+  line-height: 1.4;
+}
+
+.allBranchFooter {
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(2, 132, 199, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #0284C7;
+  font-weight: 800;
+  font-size: 0.875rem;
+}
+
+/* Thẻ Chi Nhánh Từng Cơ Sở */
+.branchNodeCard {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.branchNodeTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branchNodeIcon {
+  width: 48px;
+  height: 48px;
+  background-color: #ECFDF5;
+  color: #10B981;
+  border: 1px solid #A7F3D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.branchNodeBadge {
+  padding: 0.3rem 0.65rem;
+}
+
+.branchNodeBody {
+  margin-top: 1rem;
+}
+
+.branchNodeTitle {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.branchNodeAddress {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin-top: 0.5rem;
+  color: #64748B;
+  font-size: 0.825rem;
+}
+
+.mapPinIcon {
+  color: #0284C7;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.addressText {
+  line-height: 1.4;
+}
+
+.branchNodeContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.phoneIcon {
+  color: #10B981;
+}
+
+.mailIcon {
+  color: #0284C7;
+}
+
+.branchNodeFooter {
+  padding-top: 0.85rem;
+  border-top: 1px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #0F172A;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.branchActionText {
+  color: #0284C7;
+}
+
+.branchActionIcon {
+  color: #0284C7;
+}
+
+/* ========================================================================= */
+/* ── 3. GIAO DIỆN 2: THANH ĐIỀU HƯỚNG & HÀNH ĐỘNG HỢP NHẤT ── */
+/* ========================================================================= */
+.navPanel {
+  padding: 1.25rem 1.65rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.navRowTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.branchInfoCluster {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  min-width: 0;
+  flex: 1;
+}
+
+.btnBack {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #065F46;
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.branchTextGroup {
+  border-left: 2px solid #E2E8F0;
+  padding-left: 1rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.branchTitleFlex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.branchHeading {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0F172A;
+  word-break: break-word;
+}
+
+.branchSubheading {
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  color: #64748B;
+  word-break: break-word;
+}
+
+.actionButtonsCluster {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btnAddTeacher {
+  height: 42px;
+  padding: 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  color: #065F46;
+  font-size: 0.825rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btnBulkExcel {
+  height: 42px;
+  padding: 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  color: #1D4ED8;
+  background-color: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  font-size: 0.825rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.excelIcon {
+  color: #2563EB;
+}
+
+/* Switcher chế độ xem Thẻ / Bảng */
+.viewModePill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  background-color: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  border-radius: 9999px;
+  gap: 2px;
+  height: 42px;
+}
+
+.viewModeBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #64748B;
+  box-shadow: none;
+  transition: all 0.2s;
+}
+
+.viewModeBtnActive {
+  background-color: #FFFFFF;
+  color: #059669;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.22), inset 0 1px 1px #fff;
+}
+
+.btnRefreshTeacher {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.subtleDivider {
+  height: 1px;
+  background-color: rgba(226, 232, 240, 0.8);
+}
+
+.navRowBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.filtersGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 250px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+}
+
+.searchInput {
+  width: 100%;
+  height: 38px;
+  padding: 0 0.85rem 0 2.25rem;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  font-size: 0.825rem;
+  font-weight: 500;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.selectGenderWrapper {
+  width: 135px;
+}
+
+.selectStatusWrapper {
+  width: 150px;
+}
+
+.filterSelect {
+  width: 100%;
+  height: 38px;
+  padding: 0 0.75rem;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  font-size: 0.8rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.btnResetFilter {
+  height: 38px;
+  padding: 0 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #EF4444;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid #FEE2E2;
+  background-color: #FEF2F2;
+  cursor: pointer;
+}
+
+.statsMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.statsMetaBlue {
+  color: #0284C7;
+}
+
+.statsMetaGreen {
+  color: #10B981;
+}
+
+.statsMetaDivider {
+  width: 1px;
+  height: 14px;
+  background-color: #CBD5E1;
+}
+
+.statsMetaSub {
+  font-size: 0.775rem;
+}
+
+/* ========================================================================= */
+/* ── 4. CONTENT VIEWS (GRID, EMPTY, TABLE) ── */
+/* ========================================================================= */
+.emptyStateCard {
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  border: 1px dashed #CBD5E1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emptyStateIcon {
+  color: #94A3B8;
+}
+
+.emptyStateTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.emptyStateDesc {
+  font-size: 0.85rem;
+  color: #64748B;
+  margin-top: 0.35rem;
+}
+
+.btnEmptyAdd {
+  height: 44px;
+  padding: 0 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #065F46;
+  cursor: pointer;
+}
+
+/* Lưới các thẻ giảng viên */
+.teacherGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.teacherCard {
+  padding: 1.65rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.teacherCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.teacherAvatarRow {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.teacherAvatar {
+  width: 46px;
+  height: 46px;
+  background-color: #F1F5F9;
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+}
+
+.teacherName {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.015em;
+}
+
+.teacherRole {
+  font-size: 0.75rem;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.statusDotWrapper {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.statusDotActive {
+  background-color: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.22);
+}
+
+.statusDotInactive {
+  background-color: #94A3B8;
+  box-shadow: none;
+}
+
+.teacherCardFields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 1.35rem;
+  font-size: 0.825rem;
+}
+
+.teacherFieldRow {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #64748B;
+}
+
+.teacherFieldRowPhone {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.fieldIcon {
+  color: #94A3B8;
+  flex-shrink: 0;
+}
+
+.ellipsisText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Thẻ thêm nhanh & thẻ Excel trong Grid */
+.addTeacherCardQuick {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px dashed #0284C7;
+  background-color: rgba(239, 246, 255, 0.6);
+  min-height: 260px;
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.addTeacherCircle {
+  width: 56px;
+  height: 56px;
+  background-color: #0284C7;
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+}
+
+.addTeacherTitle {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0369A1;
+}
+
+.addTeacherDesc {
+  margin: 0.25rem 0 0;
+  font-size: 0.825rem;
+  color: #64748B;
+}
+
+.bulkTeacherCardQuick {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px dashed #059669;
+  background-color: rgba(236, 253, 245, 0.6);
+  min-height: 260px;
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.bulkTeacherCircle {
+  width: 56px;
+  height: 56px;
+  background-color: #059669;
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+}
+
+.bulkTeacherTitle {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #065F46;
+}
+
+.bulkTeacherDesc {
+  margin: 0.25rem 0 0;
+  font-size: 0.825rem;
+  color: #64748B;
+}
+
+/* Bảng Danh Sách Giáo Viên */
+.tableCard {
+  padding: 0.5rem;
+  border-radius: 20px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.tableHeadRow {
+  border-bottom: 1px solid #E2E8F0;
+  text-align: left;
+}
+
+.th {
+  padding: 1rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.thStt {
+  padding: 1rem;
+  font-weight: 800;
+  color: #0F172A;
+  width: 60px;
+}
+
+.thAction {
+  padding: 1rem;
+  font-weight: 800;
+  color: #0F172A;
+  text-align: center;
+}
+
+.tableBodyRow {
+  border-bottom: 1px solid #F1F5F9;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tableBodyRow:hover {
+  background-color: #F0FDF4;
+}
+
+.td {
+  padding: 1rem;
+  color: #64748B;
+}
+
+.tdStt {
+  padding: 1rem;
+  font-weight: 700;
+  color: #64748B;
+}
+
+.tdName {
+  padding: 1rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.tdAction {
+  padding: 1rem;
+  text-align: center;
+}
+
+.btnViewDetail {
+  padding: 0.4rem 0.95rem;
+  font-size: 0.785rem;
+  font-weight: 700;
+  color: #0284C7;
+  cursor: pointer;
+}
+
+/* ========================================================================= */
+/* ── 5. MODAL THÊM GIÁO VIÊN ── */
+/* ========================================================================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modalCard {
+  width: 100%;
+  max-width: 640px;
+  height: 620px;
+  max-height: 90vh;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.3);
+  border: 1px solid #E2E8F0;
+}
+
+.modalHeaderBar {
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid #F1F5F9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.btnCloseModal {
+  width: 36px;
+  height: 36px;
+  color: #64748B;
+  border: 1px solid #E2E8F0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.modalIcon {
+  width: 44px;
+  height: 44px;
+  background-color: #E0F2FE;
+  color: #0284C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+}
+
+.modalTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.modalSubtitle {
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.modalTabsBar {
+  padding: 0.75rem 1.75rem;
+  background-color: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.tabCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.errorBox {
+  padding: 0.5rem 0.85rem;
+  background-color: #FEF2F2;
+  border: 1px solid #FEE2E2;
+  border-radius: 10px;
+  color: #EF4444;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+.successBox {
+  padding: 0.5rem 0.85rem;
+  background-color: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  border-radius: 10px;
+  color: #065F46;
+  font-size: 0.825rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modalContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  overscroll-behavior: contain;
+  max-height: 460px;
+}
+
+/* Tìm theo SĐT */
+.searchPhoneForm {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.phoneInputWrapper {
+  position: relative;
+  flex: 1;
+}
+
+.phoneSearchIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+}
+
+.phoneSearchInput {
+  width: 100%;
+  height: 44px;
+  padding: 0 1rem 0 2.5rem;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  font-size: 0.875rem;
+  font-weight: 500;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.btnSearchSubmit {
+  height: 44px;
+  padding: 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 800;
+  font-size: 0.875rem;
+  color: #065F46;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.searchResultsContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchingPhoneState {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  color: #64748B;
+}
+
+.searchingPhoneSpinner {
+  margin: 0 auto 0.5rem;
+  color: #0284C7;
+}
+
+.searchingPhoneText {
+  font-size: 0.85rem;
+}
+
+.emptyPhoneResult {
+  flex: 1;
+  min-height: 180px;
+  background-color: #F8FAFC;
+  border-radius: 16px;
+  border: 1px dashed #CBD5E1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  gap: 0.75rem;
+}
+
+.emptyPhoneText {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748B;
+}
+
+.btnSwitchCreate {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #0284C7;
+  border: 1px solid #BAE6FD;
+  background-color: #F0F9FF;
+  cursor: pointer;
+}
+
+.searchResultsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.searchResultsLabel {
+  font-size: 0.8rem;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.searchResultItem {
+  padding: 1rem 1.25rem;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.searchResultLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.searchResultAvatar {
+  width: 44px;
+  height: 44px;
+  background-color: #E0F2FE;
+  color: #0284C7;
+  font-size: 0.95rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+}
+
+.searchResultNameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.searchResultName {
+  margin: 0;
+  font-size: 0.975rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.searchResultMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: #64748B;
+  margin-top: 0.2rem;
+}
+
+.phoneHighlight {
+  color: #0284C7;
+}
+
+.badgeAssigned {
+  padding: 0.4rem 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.btnAssign {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.825rem;
+  font-weight: 800;
+  color: #065F46;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.searchPromptBox {
+  flex: 1;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem 1.5rem;
+  background-color: #F8FAFC;
+  border-radius: 20px;
+  border: 1px dashed #CBD5E1;
+  text-align: center;
+}
+
+.searchPromptIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background-color: #EFF6FF;
+  color: #0284C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchPromptTitle {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1E293B;
+}
+
+.searchPromptDesc {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: #64748B;
+  max-width: 340px;
+}
+
+/* Tạo mới hoàn toàn */
+.createTeacherForm {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.createTeacherScrollBody {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overscroll-behavior: contain;
+  max-height: 460px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  display: block;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.formLabelBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.labelSubtext {
+  font-size: 0.75rem;
+  color: #94A3B8;
+}
+
+.formGrid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.formInput {
+  width: 100%;
+  height: 44px;
+  padding: 0 1rem;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  font-size: 0.875rem;
+  font-weight: 500;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.formSelect {
+  width: 100%;
+  height: 44px;
+  padding: 0 1rem;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  font-size: 0.875rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+/* Cấp tài khoản */
+.accountBox {
+  padding: 1.15rem 1.25rem;
+  background-color: #F8FAFC;
+  border-radius: 18px;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.accountHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accountCheckboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkboxInput {
+  width: 18px;
+  height: 18px;
+  accent-color: #0284C7;
+  cursor: pointer;
+}
+
+.accountTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.shieldIcon {
+  color: #0284C7;
+}
+
+.accountTitle {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.accountBadge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+}
+
+.accountFields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.loginAccountHint {
+  font-size: 0.75rem;
+  color: #0284C7;
+  font-weight: 600;
+}
+
+.readOnlyInputWrapper {
+  position: relative;
+}
+
+.readOnlyIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0284C7;
+}
+
+.readOnlyInput {
+  width: 100%;
+  height: 42px;
+  padding: 0 1rem 0 2.4rem;
+  border: 1px solid #BAE6FD;
+  color: #0369A1;
+  font-size: 0.875rem;
+  font-weight: 700;
+  outline: none;
+  background-color: #F0F9FF;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+.readOnlyInputEmpty {
+  color: #94A3B8;
+}
+
+.passwordInputWrapper {
+  position: relative;
+}
+
+.lockIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+}
+
+.passwordInput {
+  width: 100%;
+  height: 42px;
+  padding: 0 2.5rem 0 2.4rem;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  font-size: 0.875rem;
+  font-weight: 600;
+  outline: none;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.btnToggleEye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94A3B8;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.accountTip {
+  margin: 0;
+  font-size: 0.775rem;
+  color: #64748B;
+  line-height: 1.4;
+}
+
+/* Nút footer cố định của Modal Form */
+.formActionsFooter {
+  padding: 0.85rem 1.75rem;
+  border-top: 1px solid #E2E8F0;
+  background-color: #F8FAFC;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.btnCancel {
+  height: 42px;
+  padding: 0 1.25rem;
+  font-weight: 700;
+  color: #64748B;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.btnSubmit {
+  height: 42px;
+  padding: 0 1.75rem;
+  font-weight: 800;
+  color: #065F46;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+

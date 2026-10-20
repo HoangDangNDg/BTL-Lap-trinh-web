@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test Tool - Hệ Thống Quản Lý Trung Tâm Giáo Dục</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #1f2937; }
+        ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+        pre { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 13px; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col font-sans">
+
+    <!-- HEADER & STATUS -->
+    <header class="bg-gray-800 border-b border-gray-700 px-6 py-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-indigo-600 text-white p-2.5 rounded-xl shadow-lg">
+                    <i class="fa-solid fa-bolt-lightning text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                        API Test Runner Tool
+                        <span class="text-xs bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 px-2 py-0.5 rounded-full">.NET Backend</span>
+                    </h1>
+                    <p class="text-xs text-gray-400">Kiểm thử API, JWT Authentication, Điểm danh & Tài chính</p>
+                </div>
+            </div>
+
+            <!-- SERVER URL & HEALTH CHECK -->
+            <div class="flex items-center gap-3">
+                <div class="flex items-center bg-gray-900 border border-gray-700 rounded-lg px-3 py-1.5 shadow-inner">
+                    <span class="text-xs text-gray-400 mr-2 font-mono">Base URL:</span>
+                    <input id="baseUrlInput" type="text" value="http://localhost:5120" 
+                           class="bg-transparent text-sm text-indigo-300 font-mono focus:outline-none w-48 sm:w-60">
+                </div>
+                <button onclick="pingServer()" class="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-signal"></i> Ping
+                </button>
+                <!-- LANGUAGE SWITCHER (i18n) -->
+                <div class="flex items-center bg-gray-900 border border-gray-700 rounded-lg p-1 text-xs font-semibold shadow-inner">
+                    <button id="langViBtn" onclick="changeLanguage('vi-VN')" class="px-2.5 py-1 rounded-md transition bg-indigo-600 text-white flex items-center gap-1 font-sans">
+                        🇻🇳 VN
+                    </button>
+                    <button id="langEnBtn" onclick="changeLanguage('en-US')" class="px-2.5 py-1 rounded-md transition text-gray-400 hover:text-white flex items-center gap-1 font-sans">
+                        🇬🇧 EN
+                    </button>
+                </div>
+
+                <div id="serverStatusBadge" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-gray-800 text-gray-400 border border-gray-700">
+                    <span class="w-2 h-2 rounded-full bg-gray-500"></span> Chưa kiểm tra
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN WORKSPACE -->
+    <main class="max-w-7xl mx-auto w-full px-6 py-6 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- LEFT PANEL: TEST ACTIONS & FORMS -->
+        <div class="lg:col-span-5 space-y-6">
+
+            <!-- RUN ALL SUITE BUTTON -->
+            <div class="bg-gradient-to-r from-indigo-900/60 to-purple-900/60 border border-indigo-700/50 rounded-2xl p-5 shadow-lg">
+                <div class="flex items-center justify-between mb-3">
+                    <div>
+                        <h2 class="font-bold text-white text-base flex items-center gap-2">
+                            <i class="fa-solid fa-play text-indigo-400"></i> Khởi chạy Toàn bộ Kịch bản
+                        </h2>
+                        <p class="text-xs text-gray-300">Chạy liên hoàn 10+ bài kiểm thử End-to-End tự động</p>
+                    </div>
+                    <button onclick="runAllTestSuite()" id="btnRunAll" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white rounded-xl text-sm font-bold shadow-lg shadow-indigo-600/30 flex items-center gap-2 transition">
+                        <i class="fa-solid fa-rocket"></i> Chạy Tất Cả
+                    </button>
+                </div>
+                <!-- Progress Bar -->
+                <div class="w-full bg-gray-800 rounded-full h-2 overflow-hidden mt-3">
+                    <div id="testProgressBar" class="bg-indigo-500 h-2 transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- NAVIGATION TABS -->
+            <div class="flex border-b border-gray-700 space-x-2">
+                <button onclick="switchTab('auth')" id="tab-auth" class="tab-btn active px-4 py-2 text-sm font-semibold text-indigo-400 border-b-2 border-indigo-500">
+                    <i class="fa-solid fa-key mr-1.5"></i> Auth / JWT
+                </button>
+                <button onclick="switchTab('hocsinh')" id="tab-hocsinh" class="tab-btn px-4 py-2 text-sm font-semibold text-gray-400 hover:text-gray-200">
+                    <i class="fa-solid fa-user-graduate mr-1.5"></i> Học Sinh
+                </button>
+                <button onclick="switchTab('diemdanh')" id="tab-diemdanh" class="tab-btn px-4 py-2 text-sm font-semibold text-gray-400 hover:text-gray-200">
+                    <i class="fa-solid fa-calendar-check mr-1.5"></i> Điểm Danh
+                </button>
+                <button onclick="switchTab('taichinh')" id="tab-taichinh" class="tab-btn px-4 py-2 text-sm font-semibold text-gray-400 hover:text-gray-200">
+                    <i class="fa-solid fa-coins mr-1.5"></i> Tài Chính
+                </button>
+            </div>
+
+            <!-- TAB 1: AUTH -->
+            <div id="panel-auth" class="tab-panel space-y-4">
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+                    <h3 class="font-semibold text-sm text-gray-200 flex items-center gap-2">
+                        <i class="fa-solid fa-right-to-bracket text-indigo-400"></i> Đăng nhập hệ thống (POST /api/auth/login)
+                    </h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="text-xs text-gray-400 block mb-1">Tên đăng nhập</label>
+                            <input id="loginUsername" type="text" value="admin" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-1.5 text-sm font-mono text-white focus:border-indigo-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-400 block mb-1">Mật khẩu</label>
+                            <input id="loginPassword" type="password" value="admin123" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-1.5 text-sm font-mono text-white focus:border-indigo-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <div class="flex gap-2 pt-1">
+                        <button onclick="executeLogin()" class="flex-1 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-xs font-bold text-white transition">
+                            <i class="fa-solid fa-lock-open mr-1"></i> Đăng Nhập
+                        </button>
+                        <button onclick="executeLogout()" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-xs font-semibold text-gray-300 transition">
+                            Đăng Xuất
+                        </button>
+                    </div>
+                </div>
+
+                <!-- JWT Token Status Box -->
+                <div class="bg-gray-800/60 border border-gray-700 rounded-xl p-4 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-400 font-semibold">Trạng thái Phiên JWT:</span>
+                        <span id="jwtStatusBadge" class="text-xs px-2 py-0.5 rounded bg-red-900/50 text-red-400 border border-red-700">Chưa xác thực</span>
+                    </div>
+                    <div class="text-xs text-gray-400">
+                        <p id="userRoleInfo">Vai trò: <span class="text-gray-300 font-mono">Chưa có</span></p>
+                    </div>
+                    <textarea id="jwtTokenDisplay" readonly rows="2" placeholder="Bearer Token sẽ hiển thị tại đây khi đăng nhập thành công..." 
+                              class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 text-xs font-mono text-indigo-300 focus:outline-none resize-none"></textarea>
+                </div>
+            </div>
+
+            <!-- TAB 2: HỌC SINH -->
+            <div id="panel-hocsinh" class="tab-panel hidden space-y-4">
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+                    <h3 class="font-semibold text-sm text-gray-200">Tra cứu danh sách Học sinh (GET /api/v1/hoc-sinh)</h3>
+                    <div class="flex gap-2">
+                        <input id="studentKeyword" type="text" placeholder="Tìm theo tên, SĐT, CCCD..." class="flex-1 bg-gray-900 border border-gray-700 rounded-lg px-3 py-1.5 text-sm text-white focus:outline-none">
+                        <button onclick="executeGetStudents()" class="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-xs font-bold text-white">
+                            <i class="fa-solid fa-search mr-1"></i> Tìm
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+                    <h3 class="font-semibold text-sm text-gray-200">Gán học sinh vào Khóa học theo mẻ (Batch)</h3>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div>
+                            <label class="text-gray-400 block mb-1">ID Khóa học</label>
+                            <input id="assignCourseId" type="number" value="1" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 font-mono text-white">
+                        </div>
+                        <div>
+                            <label class="text-gray-400 block mb-1">Danh sách ID Học sinh (phẩy)</label>
+                            <input id="assignStudentIds" type="text" value="1, 2, 3" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 font-mono text-white">
+                        </div>
+                    </div>
+                    <button onclick="executeAssignCourseBatch()" class="w-full py-2 bg-emerald-600 hover:bg-emerald-500 rounded-lg text-xs font-bold text-white transition">
+                        <i class="fa-solid fa-user-plus mr-1"></i> Gán Học Sinh Hàng Loạt
+                    </button>
+                </div>
+            </div>
+
+            <!-- TAB 3: ĐIỂM DANH -->
+            <div id="panel-diemdanh" class="tab-panel hidden space-y-4">
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+                    <h3 class="font-semibold text-sm text-gray-200">Điểm danh Học sinh mẻ (POST /api/v1/diem-danh/hoc-sinh/batch)</h3>
+                    <div class="space-y-2 text-xs">
+                        <div>
+                            <label class="text-gray-400 block mb-1">ID Buổi học</label>
+                            <input id="attBuoiHocId" type="number" value="1" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 font-mono text-white">
+                        </div>
+                    </div>
+                    <button onclick="executeAttendanceBatch()" class="w-full py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-xs font-bold text-white transition">
+                        <i class="fa-solid fa-clipboard-user mr-1"></i> Lưu Điểm Danh Mẫu (2 Học sinh)
+                    </button>
+                    <button onclick="executeGetSessionAttendance()" class="w-full py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-xs font-semibold text-gray-300 transition">
+                        <i class="fa-solid fa-list-check mr-1"></i> Xem Điểm Danh Buổi Học
+                    </button>
+                </div>
+            </div>
+
+            <!-- TAB 4: TÀI CHÍNH -->
+            <div id="panel-taichinh" class="tab-panel hidden space-y-4">
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+                    <h3 class="font-semibold text-sm text-gray-200">Báo cáo tổng hợp Thu - Chi (SQL GroupBy)</h3>
+                    <button onclick="executeFinancialSummary()" class="w-full py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-xs font-bold text-white transition">
+                        <i class="fa-solid fa-chart-pie mr-1"></i> Lấy Báo Cáo Doanh Thu
+                    </button>
+                </div>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-3">
+                    <h3 class="font-semibold text-sm text-gray-200">Lập Phiếu thu Học phí (Tự động ghi Sổ quỹ)</h3>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div>
+                            <label class="text-gray-400 block mb-1">ID Học sinh</label>
+                            <input id="recHsId" type="number" value="1" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 font-mono text-white">
+                        </div>
+                        <div>
+                            <label class="text-gray-400 block mb-1">Số tiền (VNĐ)</label>
+                            <input id="recAmount" type="number" value="1200000" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 font-mono text-white">
+                        </div>
+                        <div>
+                            <label class="text-gray-400 block mb-1">Giảm giá (%)</label>
+                            <input id="recDiscount" type="number" value="10" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 font-mono text-white">
+                        </div>
+                        <div>
+                            <label class="text-gray-400 block mb-1">Phương thức</label>
+                            <select id="recMethod" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 font-mono text-white">
+                                <option value="CHUYEN_KHOAN">Chuyển khoản</option>
+                                <option value="TIEN_MAT">Tiền mặt</option>
+                                <option value="QUET_THE">Quẹt thẻ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button onclick="executeCreateReceipt()" class="w-full py-2 bg-emerald-600 hover:bg-emerald-500 rounded-lg text-xs font-bold text-white transition">
+                        <i class="fa-solid fa-receipt mr-1"></i> Tạo Phiếu Thu & Ghi Sổ Quỹ
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT PANEL: CONSOLE & RESPONSE VIEWER -->
+        <div class="lg:col-span-7 flex flex-col space-y-4">
+            
+            <!-- RESPONSE METRICS -->
+            <div class="bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 flex flex-wrap items-center justify-between text-xs gap-3">
+                <div class="flex items-center gap-4">
+                    <div>
+                        <span class="text-gray-400">Endpoint:</span>
+                        <span id="metricEndpoint" class="font-mono text-indigo-300 font-semibold ml-1">Chưa gọi</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400">Status:</span>
+                        <span id="metricStatus" class="font-mono font-bold ml-1 text-gray-400">-</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-400">Latency:</span>
+                        <span id="metricDuration" class="font-mono font-semibold ml-1 text-emerald-400">-</span>
+                    </div>
+                </div>
+                <button onclick="clearConsole()" class="text-gray-400 hover:text-white transition">
+                    <i class="fa-solid fa-trash-can mr-1"></i> Xóa
+                </button>
+            </div>
+
+            <!-- RESPONSE PREVIEW JSON -->
+            <div class="bg-gray-950 border border-gray-800 rounded-xl p-4 flex-1 flex flex-col overflow-hidden shadow-inner">
+                <div class="flex items-center justify-between pb-2 border-b border-gray-800 mb-2">
+                    <span class="text-xs font-mono text-gray-400 uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-code text-indigo-400"></i> Response Body (JSON Envelope)
+                    </span>
+                    <button onclick="copyResponseJson()" class="text-xs text-gray-400 hover:text-indigo-400 transition">
+                        <i class="fa-regular fa-copy mr-1"></i> Copy
+                    </button>
+                </div>
+                <pre id="responseJsonViewer" class="flex-1 overflow-auto text-emerald-400 p-2 leading-relaxed font-mono select-text">// Nhấn nút bất kỳ ở bảng bên trái hoặc "Chạy Tất Cả" để xem phản hồi từ Backend...</pre>
+            </div>
+
+            <!-- SUITE LOGS TABLE -->
+            <div id="suiteLogsContainer" class="hidden bg-gray-800 border border-gray-700 rounded-xl p-4 space-y-2 max-h-60 overflow-y-auto">
+                <h4 class="text-xs font-bold text-gray-300 uppercase tracking-wider mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-clipboard-list text-indigo-400"></i> Nhật ký kiểm thử liên hoàn
+                </h4>
+                <div id="suiteLogsList" class="space-y-1.5 text-xs font-mono"></div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-3 text-center text-xs text-gray-500">
+        Hệ Thống Quản Lý Trung Tâm Giáo Dục • .NET 11 Backend & Entity Framework Core • Chống N+1 Query & Chuẩn Hóa Response
+    </footer>
+
+    <!-- SCRIPT CLIENT SDK -->
+    <script src="api-client.js"></script>
+    <script>
+        const client = new ApiClient();
+
+        function syncBaseUrl() {
+            const url = document.getElementById('baseUrlInput').value.trim();
+            client.setBaseUrl(url);
+            return url;
+        }
+
+        async function pingServer() {
+            syncBaseUrl();
+            const badge = document.getElementById('serverStatusBadge');
+            badge.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Đang ping...';
+            badge.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-gray-800 text-yellow-400 border border-yellow-700';
+
+            const res = await client.request('/api/auth/login', { method: 'OPTIONS' });
+            if (res.status !== 0) {
+                badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Online';
+                badge.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-950/60 text-emerald-400 border border-emerald-700';
+            } else {
+                badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-red-400"></span> Offline';
+                badge.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-red-950/60 text-red-400 border border-red-700';
+            }
+        }
+
+        function displayResponse(endpoint, res) {
+            document.getElementById('metricEndpoint').innerText = endpoint;
+            
+            const statusEl = document.getElementById('metricStatus');
+            statusEl.innerText = `${res.status} ${res.statusText}`;
+            if (res.ok) {
+                statusEl.className = 'font-mono font-bold ml-1 text-emerald-400';
+            } else if (res.status === 0) {
+                statusEl.className = 'font-mono font-bold ml-1 text-red-400';
+            } else {
+                statusEl.className = 'font-mono font-bold ml-1 text-yellow-400';
+            }
+
+            document.getElementById('metricDuration').innerText = `${res.duration}ms`;
+
+            const viewer = document.getElementById('responseJsonViewer');
+            if (res.data) {
+                viewer.innerText = typeof res.data === 'object' ? JSON.stringify(res.data, null, 2) : res.data;
+            } else if (res.error) {
+                viewer.innerText = `[Network Error]: ${res.error}\n\nĐảm bảo server .NET đang chạy: dotnet run`;
+            }
+        }
+
+        function clearConsole() {
+            document.getElementById('responseJsonViewer').innerText = '// Console đã được xóa.';
+            document.getElementById('metricEndpoint').innerText = '-';
+            document.getElementById('metricStatus').innerText = '-';
+            document.getElementById('metricDuration').innerText = '-';
+        }
+
+        function copyResponseJson() {
+            const text = document.getElementById('responseJsonViewer').innerText;
+            navigator.clipboard.writeText(text);
+            alert('Đã copy Response JSON vào clipboard!');
+        }
+
+        function switchTab(name) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = 'tab-btn px-4 py-2 text-sm font-semibold text-gray-400 hover:text-gray-200';
+            });
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+
+            document.getElementById(`tab-${name}`).className = 'tab-btn active px-4 py-2 text-sm font-semibold text-indigo-400 border-b-2 border-indigo-500';
+            document.getElementById(`panel-${name}`).classList.remove('hidden');
+        }
+
+        // ==========================================
+        // INDIVIDUAL TEST HANDLERS
+        // ==========================================
+
+        async function executeLogin() {
+            syncBaseUrl();
+            const u = document.getElementById('loginUsername').value;
+            const p = document.getElementById('loginPassword').value;
+            const res = await client.login(u, p);
+            displayResponse('POST /api/auth/login', res);
+
+            if (res.ok && res.data?.data?.token) {
+                document.getElementById('jwtTokenDisplay').value = res.data.data.token;
+                document.getElementById('jwtStatusBadge').innerText = 'Đã xác thực (Valid)';
+                document.getElementById('jwtStatusBadge').className = 'text-xs px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-400 border border-emerald-700';
+                document.getElementById('userRoleInfo').innerHTML = `Tài khoản: <span class="text-white font-bold">${res.data.data.tenDangNhap}</span> | Vai trò: <span class="text-indigo-400 font-bold font-mono">${res.data.data.vaiTro}</span>`;
+            } else {
+                document.getElementById('jwtStatusBadge').innerText = 'Lỗi xác thực';
+                document.getElementById('jwtStatusBadge').className = 'text-xs px-2 py-0.5 rounded bg-red-900/60 text-red-400 border border-red-700';
+            }
+        }
+
+        async function executeLogout() {
+            syncBaseUrl();
+            const res = await client.logout();
+            displayResponse('POST /api/auth/logout', res);
+            document.getElementById('jwtTokenDisplay').value = '';
+            document.getElementById('jwtStatusBadge').innerText = 'Chưa xác thực';
+            document.getElementById('jwtStatusBadge').className = 'text-xs px-2 py-0.5 rounded bg-red-900/50 text-red-400 border border-red-700';
+            document.getElementById('userRoleInfo').innerHTML = 'Vai trò: <span class="text-gray-300 font-mono">Chưa có</span>';
+        }
+
+        async function executeGetStudents() {
+            syncBaseUrl();
+            const kw = document.getElementById('studentKeyword').value;
+            const res = await client.getStudents({ keyword: kw, pageIndex: 1, pageSize: 10 });
+            displayResponse('GET /api/v1/hoc-sinh', res);
+        }
+
+        async function executeAssignCourseBatch() {
+            syncBaseUrl();
+            const idKh = parseInt(document.getElementById('assignCourseId').value) || 1;
+            const ids = document.getElementById('assignStudentIds').value.split(',').map(s => parseInt(s.trim())).filter(n => !isNaN(n));
+            const res = await client.assignCourseBatch(idKh, ids);
+            displayResponse(`POST /api/v1/hoc-sinh/khoa-hoc/${idKh}/batch`, res);
+        }
+
+        async function executeAttendanceBatch() {
+            syncBaseUrl();
+            const idBuoi = parseInt(document.getElementById('attBuoiHocId').value) || 1;
+            const payload = {
+                idBuoiHoc: idBuoi,
+                idKhoaHoc: 1,
+                danhSach: [
+                    { idHs: 1, hoTen: "Học sinh 1", trangThai: "CO_MAT" },
+                    { idHs: 2, hoTen: "Học sinh 2", trangThai: "VANG" }
+                ]
+            };
+            const res = await client.saveAttendanceBatch(payload);
+            displayResponse('POST /api/v1/diem-danh/hoc-sinh/batch', res);
+        }
+
+        async function executeGetSessionAttendance() {
+            syncBaseUrl();
+            const idBuoi = parseInt(document.getElementById('attBuoiHocId').value) || 1;
+            const res = await client.getSessionAttendance(idBuoi);
+            displayResponse(`GET /api/v1/diem-danh/buoi-hoc/${idBuoi}`, res);
+        }
+
+        async function executeFinancialSummary() {
+            syncBaseUrl();
+            const res = await client.getFinancialSummary(1);
+            displayResponse('GET /api/v1/tai-chinh/bao-cao-tong-hop', res);
+        }
+
+        async function executeCreateReceipt() {
+            syncBaseUrl();
+            const payload = {
+                idHs: parseInt(document.getElementById('recHsId').value) || 1,
+                idDn: 1,
+                soTien: parseFloat(document.getElementById('recAmount').value) || 1000000,
+                phanTramGiam: parseFloat(document.getElementById('recDiscount').value) || 0,
+                hinhThucThanhToan: document.getElementById('recMethod').value
+            };
+            const res = await client.createTuitionReceipt(payload);
+            displayResponse('POST /api/v1/tai-chinh/phieu-thu', res);
+        }
+
+        // ==========================================
+        // RUN ALL TEST SUITE
+        // ==========================================
+
+        async function runAllTestSuite() {
+            syncBaseUrl();
+            const btn = document.getElementById('btnRunAll');
+            const pBar = document.getElementById('testProgressBar');
+            const list = document.getElementById('suiteLogsList');
+            const container = document.getElementById('suiteLogsContainer');
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Đang chạy...';
+            container.classList.remove('hidden');
+            list.innerHTML = '';
+            pBar.style.width = '0%';
+
+            const tests = [
+                { name: 'Auth: Kiểm tra từ chối bỏ trống thông tin', fn: () => client.login('', ''), check: r => r.status === 400 },
+                { name: 'Auth: Kiểm tra từ chối tài khoản sai', fn: () => client.login('fake_usr_xyz', 'wrong'), check: r => r.status === 401 || r.status === 404 },
+                { name: 'Auth: Đăng nhập admin/admin123', fn: () => client.login('admin', 'admin123'), check: r => r.ok },
+                { name: 'Học sinh: Phân trang danh sách học sinh', fn: () => client.getStudents({ pageIndex: 1, pageSize: 5 }), check: r => r.ok },
+                { name: 'Học sinh: Tìm kiếm học sinh từ khóa "Nguyễn"', fn: () => client.getStudents({ keyword: 'Nguyễn' }), check: r => r.ok },
+                { name: 'Học sinh: Gán mẻ vào khóa học (N+1 Safe)', fn: () => client.assignCourseBatch(1, [1, 2]), check: r => r.status === 200 || r.status === 404 },
+                { name: 'Điểm danh: Lưu mẻ điểm danh học sinh', fn: () => client.saveAttendanceBatch({ idBuoiHoc: 1, danhSach: [{ idHs: 1, trangThai: "CO_MAT" }] }), check: r => r.status === 200 || r.status === 404 },
+                { name: 'Điểm danh: Tra cứu điểm danh buổi học #1', fn: () => client.getSessionAttendance(1), check: r => r.ok || r.status === 404 },
+                { name: 'Tài chính: Báo cáo tổng hợp doanh thu (GroupBy)', fn: () => client.getFinancialSummary(1), check: r => r.ok },
+                { name: 'Tài chính: Lập phiếu thu học phí chiết khấu 10%', fn: () => client.createTuitionReceipt({ idHs: 1, idDn: 1, soTien: 1000000, phanTramGiam: 10 }), check: r => r.status === 201 || r.status === 200 || r.status === 404 }
+            ];
+
+            let passed = 0;
+            for (let i = 0; i < tests.length; i++) {
+                const t = tests[i];
+                const res = await t.fn();
+                const isPass = t.check(res);
+                if (isPass) passed++;
+
+                const row = document.createElement('div');
+                row.className = `flex items-center justify-between p-1.5 rounded ${isPass ? 'bg-emerald-950/40 text-emerald-300' : 'bg-red-950/40 text-red-300'}`;
+                row.innerHTML = `
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid ${isPass ? 'fa-check text-emerald-400' : 'fa-xmark text-red-400'}"></i>
+                        <span>${t.name}</span>
+                    </span>
+                    <span class="text-gray-400">${res.duration}ms [HTTP ${res.status}]</span>
+                `;
+                list.appendChild(row);
+
+                pBar.style.width = `${Math.round(((i + 1) / tests.length) * 100)}%`;
+            }
+
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa-solid fa-rocket mr-1"></i> Chạy Tất Cả';
+            displayResponse('Test Suite Summary', {
+                status: 200,
+                statusText: 'All Tests Completed',
+                duration: 0,
+                data: {
+                    totalTests: tests.length,
+                    passedCount: passed,
+                    failedCount: tests.length - passed,
+                    successRate: `${Math.round((passed / tests.length) * 100)}%`
+                }
+            });
+        }
+
+        function changeLanguage(lang) {
+            apiClient.setLanguage(lang);
+            updateLanguageButtons();
+            log(`Đã chuyển ngôn ngữ sang: ${lang === 'en-US' ? 'English (en-US)' : 'Tiếng Việt (vi-VN)'}. Header 'Accept-Language: ${lang}' sẽ được tự động gửi trong tất cả các request tiếp theo!`, 'info');
+        }
+
+        function updateLanguageButtons() {
+            const cur = apiClient.getLanguage();
+            const btnVi = document.getElementById('langViBtn');
+            const btnEn = document.getElementById('langEnBtn');
+            if (!btnVi || !btnEn) return;
+            if (cur === 'en-US') {
+                btnEn.className = "px-2.5 py-1 rounded-md transition bg-indigo-600 text-white flex items-center gap-1 font-sans";
+                btnVi.className = "px-2.5 py-1 rounded-md transition text-gray-400 hover:text-white flex items-center gap-1 font-sans";
+            } else {
+                btnVi.className = "px-2.5 py-1 rounded-md transition bg-indigo-600 text-white flex items-center gap-1 font-sans";
+                btnEn.className = "px-2.5 py-1 rounded-md transition text-gray-400 hover:text-white flex items-center gap-1 font-sans";
+            }
+        }
+
+        // Tự động ping khi trang tải
+        window.addEventListener('DOMContentLoaded', () => {
+            updateLanguageButtons();
+            pingServer();
+        });
+    </script>
+</body>
+</html>

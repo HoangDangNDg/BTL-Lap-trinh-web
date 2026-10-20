@@ -1,0 +1,507 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Alert Notification */
+.alertBanner {
+  padding: 0.85rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.alertSuccess {
+  background-color: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #065F46;
+}
+
+.alertError {
+  background-color: #FEF2F2;
+  border: 1px solid #FECACA;
+  color: #991B1B;
+}
+
+/* Header Banner */
+.headerCard {
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.headerTopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.headerMainInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.headerIconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background-color: #EFF6FF;
+  color: #0095F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #BFDBFE;
+  flex-shrink: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.headerTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.badgeClassName {
+  font-weight: 700;
+}
+
+.headerSubtitle {
+  font-size: 0.825rem;
+  color: #64748B;
+  margin: 0.2rem 0 0;
+}
+
+.headerDarkText {
+  color: #0F172A;
+}
+
+.btnRefresh {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0F172A;
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnRefresh:hover {
+  background-color: #F8FAFC;
+  border-color: #94A3B8;
+}
+
+/* Stats Card / Capacity Tracker */
+.capacityBox {
+  background-color: #F8FAFC;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  border: 1px solid #E2E8F0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.capacityCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.capacityHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.capacityLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748B;
+}
+
+.statusPill {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+
+.statusPillFull {
+  background-color: #FEE2E2;
+  color: #DC2626;
+}
+
+.statusPillAvailable {
+  background-color: #DCFCE7;
+  color: #16A34A;
+}
+
+.countGroup {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.currentCount {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.maxCount {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #64748B;
+}
+
+/* Progress bar section */
+.progressSection {
+  flex: 1;
+}
+
+.progressLabelRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #64748B;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.progressPercentageFull {
+  color: #DC2626;
+  font-weight: 700;
+}
+
+.progressPercentageNormal {
+  color: #0095F6;
+  font-weight: 700;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background-color: #E2E8F0;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.progressFillFull {
+  background-color: #EF4444;
+}
+
+.progressFillWarning {
+  background-color: #F59E0B;
+}
+
+.progressFillNormal {
+  background-color: #0095F6;
+}
+
+/* Search input */
+.searchWrapper {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.45rem 0.75rem 0.45rem 2.1rem;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1E293B;
+  font-size: 0.825rem;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.searchInput:focus {
+  border-color: #0095F6;
+  box-shadow: 0 0 0 2px rgba(0, 149, 246, 0.15);
+}
+
+/* State cards */
+.stateCard {
+  padding: 3.5rem;
+  text-align: center;
+  color: #64748B;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+}
+
+.stateIcon {
+  margin: 0 auto 0.75rem;
+}
+
+.loadingSpinner {
+  margin: 0 auto 0.75rem;
+  color: #0095F6;
+}
+
+.emptyIcon {
+  margin: 0 auto 0.75rem;
+  color: #CBD5E1;
+}
+
+.loadingText {
+  font-weight: 600;
+  font-size: 0.925rem;
+}
+
+.stateTitle {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0F172A;
+  margin: 0 0 0.35rem;
+}
+
+.stateSubtitle {
+  font-size: 0.85rem;
+  margin: 0 0 1.25rem;
+}
+
+.btnAddFirst {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: 12px;
+  background-color: #0284C7;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.28);
+  transition: all 0.15s ease;
+}
+
+.btnAddFirst:hover {
+  background-color: #0369A1;
+}
+
+/* Student Grid & Tile Component */
+.studentsListWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.studentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.85rem;
+}
+
+.studentCard {
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  border: 1.5px solid #E2E8F0;
+  padding: 0.85rem 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  user-select: none;
+}
+
+.studentCard:hover {
+  border-color: #0095F6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 149, 246, 0.12);
+  background-color: #F8FAFC;
+}
+
+.studentCardLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.avatarInitial {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.studentTextInfo {
+  min-width: 0;
+  flex: 1;
+}
+
+.studentName {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0F172A;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.studentMeta {
+  font-size: 0.72rem;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.1rem;
+}
+
+.studentMetaHighlight {
+  color: #0284C7;
+  font-weight: 600;
+}
+
+.studentCardRight {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.btnDeleteStudent {
+  padding: 0.35rem;
+  border-radius: 8px;
+  border: none;
+  background-color: transparent;
+  color: #94A3B8;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.btnDeleteStudent:hover:not(:disabled) {
+  color: #DC2626;
+  background-color: #FEE2E2;
+}
+
+.btnDeleteStudent:disabled {
+  cursor: not-allowed;
+}
+
+.arrowRightIcon {
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+}
+
+/* Nút thêm học sinh dashed dưới cùng */
+.btnAddNewStudentDashed {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  border: 2px dashed #93C5FD;
+  background-color: #F0F9FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #0284C7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.btnAddNewStudentDashed:hover {
+  background-color: #E0F2FE;
+  border-color: #0284C7;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.12);
+}
+
+.plusIconBox {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background-color: #0284C7;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);
+}
+
+.btnTextGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.btnMainLabel {
+  font-size: 0.925rem;
+  font-weight: 800;
+}
+
+.btnSlotsBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background-color: #BAE6FD;
+  color: #0369A1;
+}
+
+/* Avatar preset styles */
+.avatarBlue { background-color: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
+.avatarGreen { background-color: #F0FDF4; color: #15803D; border: 1px solid #BBF7D0; }
+.avatarPurple { background-color: #FAF5FF; color: #7E22CE; border: 1px solid #E9D5FF; }
+.avatarOrange { background-color: #FFF7ED; color: #C2410C; border: 1px solid #FFEDD5; }
+.avatarPink { background-color: #FDF2F8; color: #BE185D; border: 1px solid #FBCFE8; }
+.avatarTeal { background-color: #F0FDFA; color: #0F766E; border: 1px solid #99F6E4; }

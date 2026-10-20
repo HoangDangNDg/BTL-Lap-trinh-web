@@ -1,0 +1,343 @@
+﻿/* TrangNamHoc.module.css - Stylesheet module cho Quản lý Năm học & Tuần học */
+
+.container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Header Banner */
+.headerCard {
+  padding: 1.75rem 2rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.95) 0%, rgba(240, 253, 250, 0.95) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.headerInfo {
+  min-width: 0;
+}
+
+.headerTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.headerIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background-color: #EFF6FF;
+  color: #2563EB;
+}
+
+.headerTitle {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.headerDesc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748B;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Alerts */
+.alertError {
+  padding: 0.85rem 1.25rem;
+  border-radius: 16px;
+  background-color: #FEF2F2;
+  border: 1px solid #FEE2E2;
+  color: #B91C1C;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.alertSuccess {
+  padding: 0.85rem 1.25rem;
+  border-radius: 16px;
+  background-color: #F0FDF4;
+  border: 1px solid #DCFCE7;
+  color: #15803D;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.alertText {
+  flex: 1;
+}
+
+.alertCloseBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+/* Danh Sách Năm Học */
+.yearSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.emptyState {
+  padding: 3rem;
+  text-align: center;
+  color: #64748B;
+}
+
+.yearCard {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.yearCardExpanded {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid #93C5FD;
+  box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.08);
+}
+
+.yearCardHeader {
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.yearCardHeaderExpanded {
+  background-color: rgba(239, 246, 255, 0.45);
+}
+
+.yearInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 240px;
+}
+
+.yearIconActive {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
+  color: #1D4ED8;
+  font-weight: 800;
+}
+
+.yearIconDone {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
+  color: #64748B;
+  font-weight: 800;
+}
+
+.yearTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.yearTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.statusActive {
+  background-color: #ECFDF5;
+  color: #059669;
+  font-size: 0.725rem;
+  font-weight: 700;
+}
+
+.statusDone {
+  background-color: #F1F5F9;
+  color: #64748B;
+  font-size: 0.725rem;
+  font-weight: 700;
+}
+
+.yearMeta {
+  font-size: 0.8rem;
+  color: #64748B;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.yearActions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.btnGenerateWeeks {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #065F46;
+  background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+  border: 1px solid #A7F3D0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btnToggleStatus {
+  padding: 0.45rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid #E2E8F0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.btnDelete {
+  padding: 0.45rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  background-color: #FEF2F2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+}
+
+.btnExpand {
+  width: 32px;
+  height: 32px;
+  color: #64748B;
+  border: 1px solid #E2E8F0;
+}
+
+/* Expanded Weeks Details */
+.weeksDetail {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.7);
+  background-color: rgba(248, 250, 252, 0.8);
+}
+
+.weeksDetailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.weeksDetailTitle {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #1E293B;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weeksEmpty {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  border: 1px dashed #CBD5E1;
+  color: #64748B;
+  font-size: 0.85rem;
+}
+
+.weeksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 0.75rem;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.weekCard {
+  padding: 0.75rem 1rem;
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.weekCard:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+}
+
+.weekName {
+  font-size: 0.825rem;
+  font-weight: 800;
+  color: #1E293B;
+}
+
+.weekKy {
+  font-size: 0.7rem;
+  color: #0284C7;
+  font-weight: 600;
+}
+
+.weekBadge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background-color: #EFF6FF;
+  color: #2563EB;
+}

@@ -1,0 +1,637 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 2rem;
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* ========================================================================= */
+/* ── 1. HEADER GIÁO VIÊN & TABS HỢP NHẤT ── */
+/* ========================================================================= */
+.headerCard {
+  padding: 0;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.level1Row {
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.teacherInfoLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.teacherAvatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid #0284C7;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+.avatarFallback {
+  width: 54px;
+  height: 54px;
+  background-color: #E0F2FE;
+  color: #0284C7;
+  font-size: 1.25rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.teacherNameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.teacherHeading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.teacherSubtitle {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: #64748B;
+}
+
+.teacherBranchHighlight {
+  color: #0284C7;
+}
+
+.headerActionsRight {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btnSchedule {
+  height: 42px;
+  padding: 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #0369A1;
+  background-color: #E0F2FE;
+  border: 1px solid #BAE6FD;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.12);
+  transition: all 0.2s ease;
+}
+
+.scheduleIcon {
+  color: #0284C7;
+}
+
+.btnBack {
+  height: 42px;
+  padding: 0 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.subtleDivider {
+  height: 1px;
+  background-color: rgba(226, 232, 240, 0.8);
+}
+
+.level2TabsRow {
+  padding: 0.65rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(248, 250, 252, 0.5);
+}
+
+/* ========================================================================= */
+/* ── 2. KHUNG NỘI DUNG THEO TAB ── */
+/* ========================================================================= */
+.contentCard {
+  padding: 1.75rem;
+  border-radius: 22px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* ── TAB 1: HỒ SƠ CHI TIẾT ── */
+.profileGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.profileFieldCard {
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+}
+
+.profileFieldCardFull {
+  grid-column: 1 / -1;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+}
+
+.fieldLabel {
+  font-size: 0.75rem;
+  color: #64748B;
+  font-weight: 600;
+  display: block;
+}
+
+.fieldValueRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  font-weight: 700;
+  color: #0F172A;
+  font-size: 0.95rem;
+}
+
+.fieldValueRowUrl {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  font-weight: 600;
+  color: #0284C7;
+  font-size: 0.85rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.iconCreditCard {
+  color: #0284C7;
+  flex-shrink: 0;
+}
+
+.iconPhone {
+  color: #0284C7;
+  flex-shrink: 0;
+}
+
+.iconHeart {
+  color: #EF4444;
+  flex-shrink: 0;
+}
+
+.iconPhoneAlert {
+  color: #EF4444;
+  flex-shrink: 0;
+}
+
+.iconMail {
+  color: #0284C7;
+  flex-shrink: 0;
+}
+
+.iconCalendar {
+  color: #F59E0B;
+  flex-shrink: 0;
+}
+
+.iconGraduation {
+  color: #8B5CF6;
+  flex-shrink: 0;
+}
+
+.iconBriefcase {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+.iconImage {
+  color: #0284C7;
+  flex-shrink: 0;
+}
+
+.iconLocation {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+/* ── TAB 2: CHI NHÁNH CÔNG TÁC ── */
+.branchContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.branchListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.branchListTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.branchListSubtitle {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.btnAddBranch {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.alertSuccess {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  border-radius: 14px;
+  color: #065F46;
+  fontSize: 0.85rem;
+  font-weight: 600;
+}
+
+.alertError {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 14px;
+  color: #991B1B;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.alertContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.alertIconSuccess {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+.alertIconError {
+  color: #EF4444;
+  flex-shrink: 0;
+}
+
+.alertCloseBtnSuccess {
+  background: none;
+  border: none;
+  color: #065F46;
+  cursor: pointer;
+  padding: 0;
+}
+
+.alertCloseBtnError {
+  background: none;
+  border: none;
+  color: #991B1B;
+  cursor: pointer;
+  padding: 0;
+}
+
+.loadingState {
+  padding: 2rem;
+  text-align: center;
+  color: #64748B;
+}
+
+.emptyState {
+  padding: 2.5rem;
+  text-align: center;
+  background-color: #F8FAFC;
+  border-radius: 16px;
+  border: 1px dashed #E2E8F0;
+}
+
+.emptyIcon {
+  color: #94A3B8;
+  margin: 0 auto 0.5rem;
+}
+
+.emptyText {
+  color: #64748B;
+  font-size: 0.9rem;
+  margin-bottom: 0.85rem;
+}
+
+.btnAssignNow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.branchList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.branchItemCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.35rem;
+  border-radius: 16px;
+  gap: 1rem;
+}
+
+.branchItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.branchPinIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #E0F2FE;
+  color: #0284C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.branchItemName {
+  font-weight: 700;
+  color: #0F172A;
+  font-size: 0.95rem;
+}
+
+.branchItemAddress {
+  font-size: 0.775rem;
+  color: #64748B;
+}
+
+.branchItemRight {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.branchBadge {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.775rem;
+}
+
+.btnDeleteBranch {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid #FEE2E2;
+  background-color: #FEF2F2;
+  color: #EF4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnDeleteBranch:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Modal Thêm Chi Nhánh */
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.modalBuildingIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background-color: #ECFDF5;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.modalSubtitle {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.modalErrorBox {
+  padding: 0.65rem 0.85rem;
+  background-color: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 12px;
+  color: #991B1B;
+  font-size: 0.825rem;
+  margin-bottom: 1rem;
+}
+
+.modalLoading {
+  padding: 2rem;
+  text-align: center;
+  color: #64748B;
+}
+
+.modalEmptyNotice {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #F8FAFC;
+  border-radius: 14px;
+  color: #64748B;
+  font-size: 0.875rem;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modalFormLabel {
+  display: block;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 0.4rem;
+}
+
+.modalFormSelect {
+  width: 100%;
+  height: 44px;
+  padding: 0 1rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  color: #0F172A;
+  font-size: 0.875rem;
+  font-weight: 600;
+  outline: none;
+  background-color: #FFFFFF;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.btnModalCancel {
+  padding: 0.65rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #64748B;
+  cursor: pointer;
+}
+
+.btnModalSubmit {
+  padding: 0.65rem 1.35rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btnModalSubmit:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ── TAB 3: CHUYÊN MÔN & CHỨNG CHỈ ── */
+.specialtyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionHeading {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.75rem;
+}
+
+.sectionEmptyNotice {
+  padding: 1.5rem;
+  background-color: #F8FAFC;
+  border-radius: 14px;
+  text-align: center;
+  color: #64748B;
+  font-size: 0.85rem;
+}
+
+.specialtyTagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.specialtyPill {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0284C7;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.certificatesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.certificateItem {
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 14px;
+}
+
+.certificateItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.certificateIcon {
+  color: #F59E0B;
+}
+
+.certificateName {
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.certificateDate {
+  font-size: 0.75rem;
+  color: #64748B;
+}

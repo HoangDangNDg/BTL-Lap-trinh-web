@@ -1,0 +1,293 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.headerCard {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.headerIconBoxMonHoc {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background-color: #EFF6FF;
+  color: #0284C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #BFDBFE;
+  flex-shrink: 0;
+}
+
+.headerIconBoxChiNhanh {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background-color: #F0FDF4;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #A7F3D0;
+  flex-shrink: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.headerTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.badgeClassName {
+  font-weight: 700;
+}
+
+.badgeKyHoc {
+  font-size: 0.725rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  background-color: #FEF3C7;
+  color: #B45309;
+  border: 1px solid #FDE68A;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.headerSubtitle {
+  font-size: 0.8rem;
+  color: #64748B;
+  margin: 0.2rem 0 0;
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.btnOpenClass {
+  height: 38px;
+  padding: 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #0284C7;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3);
+  transition: all 0.15s ease;
+}
+
+.btnOpenClass:hover {
+  background-color: #0369A1;
+}
+
+.selectKyHoc {
+  height: 38px;
+  padding: 0 0.85rem;
+  border-radius: 10px;
+  border: 1.5px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #0F172A;
+  font-size: 0.825rem;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.selectKyHoc:focus {
+  border-color: #0095F6;
+  box-shadow: 0 0 0 2px rgba(0, 149, 246, 0.15);
+}
+
+.searchWrapper {
+  position: relative;
+  width: 220px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.45rem 0.75rem 0.45rem 2.1rem;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  background-color: #F8FAFC;
+  color: #1E293B;
+  font-size: 0.825rem;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.searchInput:focus {
+  border-color: #0095F6;
+  box-shadow: 0 0 0 2px rgba(0, 149, 246, 0.15);
+  background-color: #FFFFFF;
+}
+
+.selectFilter {
+  padding: 0.45rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  background-color: #F8FAFC;
+  color: #1E293B;
+  font-size: 0.825rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.selectFilter:focus {
+  border-color: #0095F6;
+  box-shadow: 0 0 0 2px rgba(0, 149, 246, 0.15);
+  background-color: #FFFFFF;
+}
+
+.btnRefresh {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0F172A;
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnRefresh:hover {
+  background-color: #F8FAFC;
+  border-color: #94A3B8;
+}
+
+.resultsMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.25rem;
+}
+
+.resultsMetaText {
+  font-size: 0.85rem;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.resultsCountHighlight {
+  color: #0095F6;
+}
+
+.stateCard {
+  padding: 3.5rem;
+  text-align: center;
+  color: #64748B;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+}
+
+.loadingSpinner {
+  margin: 0 auto 0.75rem;
+  color: #0095F6;
+}
+
+.loadingText {
+  font-weight: 600;
+  font-size: 0.925rem;
+}
+
+.emptyCard {
+  padding: 3rem;
+  text-align: center;
+  color: #64748B;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+}
+
+.emptyIcon {
+  margin: 0 auto 0.75rem;
+  color: #CBD5E1;
+}
+
+.emptyTitle {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0F172A;
+  margin: 0 0 0.35rem;
+}
+
+.emptySubtitle {
+  font-size: 0.85rem;
+  margin: 0 0 1rem;
+  color: #64748B;
+}
+
+.btnOpenFirstClass {
+  height: 40px;
+  padding: 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #0284C7;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnOpenFirstClass:hover {
+  background-color: #0369A1;
+}
+
+.classGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}

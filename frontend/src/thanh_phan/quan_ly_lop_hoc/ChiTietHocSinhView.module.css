@@ -1,0 +1,778 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.notFoundCard {
+  padding: 3rem;
+  text-align: center;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+
+.notFoundText {
+  color: #64748B;
+  margin-bottom: 1rem;
+}
+
+/* ── HEADER BANNER HỌC SINH ── */
+.headerCard {
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerAvatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border: 2px solid #BFDBFE;
+}
+
+.headerTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.headerTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.headerBadge {
+  font-weight: 700;
+}
+
+.headerSub {
+  font-size: 0.825rem;
+  color: #64748B;
+  margin: 0.2rem 0 0;
+}
+
+.headerSubStrong {
+  color: #0F172A;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.btnToggleCourses {
+  height: 40px;
+  padding: 0 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  background-color: #0095F6;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 149, 246, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btnToggleCourses:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.btnToggleCoursesActive {
+  background-color: #7C3AED;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25);
+}
+
+.btnEdit {
+  height: 40px;
+  padding: 0 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0284C7;
+  background-color: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnEdit:hover {
+  background-color: #E0F2FE;
+}
+
+.btnBack {
+  height: 40px;
+  padding: 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0F172A;
+  background-color: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnBack:hover {
+  background-color: #F1F5F9;
+}
+
+/* ── THẺ 1: HỒ SƠ CHI TIẾT ── */
+.profileCard {
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cardSectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-bottom: 1px solid #F1F5F9;
+  padding-bottom: 0.75rem;
+}
+
+.userIcon {
+  color: #0095F6;
+}
+
+.sectionTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.fieldCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldColFull {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldLabel {
+  font-size: 0.75rem;
+  color: #64748B;
+  display: block;
+}
+
+.fieldValue {
+  font-size: 0.95rem;
+  color: #0F172A;
+}
+
+.fieldValueCccd {
+  font-size: 0.95rem;
+  color: #0F172A;
+  letter-spacing: 0.04em;
+}
+
+.fieldValuePhone {
+  font-size: 0.95rem;
+  color: #0095F6;
+}
+
+/* ── THẺ 2: PHỤ HUYNH CỦA HỌC SINH ── */
+.parentCard {
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid #BBF7D0;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.parentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ECFDF5;
+  padding-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.parentHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.parentIconBox {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #ECFDF5;
+  color: #10B981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parentTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #065F46;
+  margin: 0;
+}
+
+.parentSub {
+  margin: 0.1rem 0 0;
+  font-size: 0.775rem;
+  color: #047857;
+}
+
+.parentHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.parentBadge {
+  font-weight: 700;
+}
+
+.btnAddParent {
+  height: 34px;
+  padding: 0 0.85rem;
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #047857;
+  background-color: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.btnAddParent:hover {
+  background-color: #D1FAE5;
+}
+
+.parentDetailContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.parentDetailGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  background-color: #F0FDF4;
+  padding: 1.25rem;
+  border-radius: 14px;
+  border: 1px solid #DCFCE7;
+}
+
+.parentFieldLabel {
+  font-size: 0.75rem;
+  color: #166534;
+  display: block;
+}
+
+.parentFieldValue {
+  font-size: 1.05rem;
+  color: #14532D;
+}
+
+.parentFieldPhone {
+  font-size: 1.05rem;
+  color: #0284C7;
+}
+
+.parentFieldRel {
+  font-size: 0.95rem;
+  color: #15803D;
+}
+
+.parentFieldJob {
+  font-size: 0.95rem;
+  color: #14532D;
+}
+
+.parentFieldAddressFull {
+  grid-column: 1 / -1;
+}
+
+.parentAddressVal {
+  font-size: 0.9rem;
+  color: #14532D;
+}
+
+/* ── DANH SÁCH CON CÁI LIÊN KẾT ── */
+.parentStudentsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid #ECFDF5;
+  padding-top: 1rem;
+}
+
+.parentStudentsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.parentStudentsTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.925rem;
+  font-weight: 800;
+  color: #065F46;
+}
+
+.parentStudentsTitleIcon {
+  color: #10B981;
+}
+
+.parentStudentsNote {
+  font-size: 0.75rem;
+  color: #047857;
+}
+
+.parentStudentsLoading {
+  padding: 1.25rem;
+  text-align: center;
+  color: #059669;
+  font-size: 0.825rem;
+}
+
+.loadingSpinner {
+  margin: 0 auto 0.35rem;
+}
+
+.parentStudentsEmpty {
+  padding: 0.85rem;
+  background-color: #F8FAFC;
+  border-radius: 10px;
+  font-size: 0.825rem;
+  color: #64748B;
+}
+
+.parentStudentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+}
+
+.parentStudentCard {
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: all 0.15s ease;
+}
+
+.parentStudentCard:hover {
+  background-color: #F8FAFC;
+  border-color: #0095F6;
+}
+
+.parentStudentCardCurrent {
+  border: 1.5px solid #10B981;
+  background-color: #ECFDF5;
+  cursor: default;
+}
+
+.parentStudentCardCurrent:hover {
+  background-color: #ECFDF5;
+  border-color: #10B981;
+}
+
+.studentCardLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.studentAvatarMale {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #EFF6FF;
+  color: #2563EB;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.825rem;
+}
+
+.studentAvatarFemale {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #FDF2F8;
+  color: #DB2777;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.825rem;
+}
+
+.studentItemName {
+  font-weight: 800;
+  font-size: 0.875rem;
+  color: #0F172A;
+}
+
+.studentItemSub {
+  font-size: 0.725rem;
+  color: #64748B;
+}
+
+.studentCurrentBadge {
+  font-size: 0.7rem;
+}
+
+.studentNavBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background-color: #F1F5F9;
+  color: #0095F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.parentStudentCard:hover .studentNavBtn {
+  background-color: #0095F6;
+  color: #FFFFFF;
+}
+
+/* ── KHI CHƯA CÓ THÔNG TIN PHỤ HUYNH ── */
+.emptyParentBox {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background-color: #F0FDF4;
+  border-radius: 16px;
+  border: 2px dashed #86EFAC;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.emptyParentBox:hover {
+  background-color: #DCFCE7;
+  border-color: #22C55E;
+}
+
+.emptyParentIconCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background-color: #FFFFFF;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.emptyParentTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #065F46;
+}
+
+.emptyParentSub {
+  margin: 0.35rem 0 0;
+  font-size: 0.825rem;
+  color: #047857;
+}
+
+.emptyParentBtn {
+  height: 40px;
+  padding: 0 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #065F46;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  margin-top: 0.25rem;
+}
+
+/* ── THẺ 3: KHÓA HỌC CỦA HỌC SINH TRONG TẤT CẢ KỲ ── */
+.coursesCard {
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid #DDD6FE;
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.coursesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-bottom: 1px solid #F3E8FF;
+  padding-bottom: 0.75rem;
+}
+
+.coursesHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.coursesIconBox {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #F3E8FF;
+  color: #7C3AED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coursesTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #5B21B6;
+  margin: 0;
+}
+
+.coursesSub {
+  margin: 0.1rem 0 0;
+  font-size: 0.775rem;
+  color: #6D28D9;
+}
+
+.btnRefreshCourses {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #7C3AED;
+  background-color: #F5F3FF;
+  border: 1px solid #DDD6FE;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnRefreshCourses:hover {
+  background-color: #EDE9FE;
+}
+
+.coursesLoadingBox {
+  padding: 2.5rem;
+  text-align: center;
+  color: #64748B;
+}
+
+.coursesLoadingSpinner {
+  margin: 0 auto 0.5rem;
+  color: #7C3AED;
+}
+
+.coursesLoadingText {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.coursesEmptyBox {
+  padding: 2.5rem;
+  text-align: center;
+  color: #64748B;
+  background-color: #F8FAFC;
+  border-radius: 14px;
+}
+
+.coursesEmptyIcon {
+  color: #CBD5E1;
+  margin: 0 auto 0.5rem;
+}
+
+.coursesEmptyTitle {
+  font-weight: 700;
+  margin: 0;
+  color: #0F172A;
+}
+
+.coursesEmptySub {
+  font-size: 0.8rem;
+}
+
+.coursesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.courseItemCard {
+  background-color: #FAFAFA;
+  border-radius: 14px;
+  border: 1px solid #E2E8F0;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.15s ease;
+}
+
+.courseItemCard:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.courseItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.courseCapIconBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #EDE9FE;
+  color: #7C3AED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.courseItemTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.courseItemTitle {
+  font-size: 0.95rem;
+  color: #0F172A;
+}
+
+.courseItemBadge {
+  font-size: 0.7rem;
+}
+
+.courseItemSub {
+  font-size: 0.775rem;
+  color: #64748B;
+  margin-top: 0.15rem;
+}
+
+.courseItemSub strong {
+  color: #0F172A;
+}
+
+.courseItemRight {
+  text-align: right;
+}
+
+.paymentStatusBadgePaid {
+  font-size: 0.725rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background-color: #DCFCE7;
+  color: #15803D;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.paymentStatusBadgeUnpaid {
+  font-size: 0.725rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background-color: #FEF3C7;
+  color: #B45309;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.courseFeeAmount {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #D97706;
+  margin-top: 0.2rem;
+}

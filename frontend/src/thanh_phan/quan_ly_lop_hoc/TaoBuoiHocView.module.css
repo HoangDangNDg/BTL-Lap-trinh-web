@@ -1,0 +1,354 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── HEADER CARD ── */
+.headerCard {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerMainInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.headerIconBox {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background-color: #EFF6FF;
+  color: #0095F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #BFDBFE;
+  flex-shrink: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.headerTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.badgeClassName {
+  font-weight: 700;
+}
+
+.headerSubtitle {
+  font-size: 0.8rem;
+  color: #64748B;
+  margin: 0.2rem 0 0;
+}
+
+.headerDarkText {
+  color: #0F172A;
+}
+
+.headerAccentText {
+  color: #0095F6;
+}
+
+.btnBack {
+  height: 38px;
+  padding: 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748B;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnBack:hover {
+  background-color: #F1F5F9;
+  color: #0F172A;
+  border-color: #CBD5E1;
+}
+
+/* ── THÔNG BÁO TRẠNG THÁI ── */
+.alertBanner {
+  padding: 0.85rem 1.15rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.alertSuccess {
+  background-color: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  color: #15803D;
+}
+
+.alertError {
+  background-color: #FEF2F2;
+  border: 1px solid #FECACA;
+  color: #DC2626;
+}
+
+/* ── FORM CARD ── */
+.formCard {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.75rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldLabelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.fieldLabel {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #334155;
+  display: block;
+}
+
+.lockBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748B;
+  background-color: #F1F5F9;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.staticInputBox {
+  display: flex;
+  align-items: center;
+  background-color: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+}
+
+.staticIconBlue {
+  color: #0095F6;
+  margin-right: 0.6rem;
+  flex-shrink: 0;
+}
+
+.staticIconGreen {
+  color: #16A34A;
+  margin-right: 0.6rem;
+  flex-shrink: 0;
+}
+
+.staticText {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0F172A;
+  flex: 1;
+}
+
+.livePill {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #15803D;
+  background-color: #DCFCE7;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+}
+
+/* ── CA HỌC GRID ── */
+.caGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.65rem;
+}
+
+.caCard {
+  padding: 0.75rem 0.85rem;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  background-color: #F8FAFC;
+  color: #94A3B8;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-align: center;
+  position: relative;
+  opacity: 0.45;
+  box-shadow: none;
+  user-select: none;
+  cursor: not-allowed;
+  transition: all 0.15s ease;
+}
+
+.caCardSelected {
+  border: 2px solid #0095F6;
+  background-color: #EFF6FF;
+  color: #0095F6;
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0, 149, 246, 0.15);
+}
+
+.caBadgeCurrent {
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  background-color: #0095F6;
+  color: #FFFFFF;
+  font-size: 0.625rem;
+  font-weight: 800;
+  padding: 0.1rem 0.45rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.caLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.caLabelSelected {
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.caTime {
+  font-size: 0.725rem;
+  opacity: 0.7;
+  margin-top: 0.2rem;
+}
+
+.caTimeSelected {
+  font-size: 0.725rem;
+  opacity: 0.9;
+  margin-top: 0.2rem;
+}
+
+/* ── FORM INPUTS ── */
+.selectInput {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  font-size: 0.875rem;
+  color: #0F172A;
+  font-weight: 600;
+  outline: none;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.selectInput:focus {
+  border-color: #0095F6;
+  box-shadow: 0 0 0 2px rgba(0, 149, 246, 0.15);
+}
+
+.textInput {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  font-size: 0.875rem;
+  color: #0F172A;
+  font-weight: 500;
+  outline: none;
+  background-color: #FFFFFF;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.textInput:focus {
+  border-color: #0095F6;
+  box-shadow: 0 0 0 2px rgba(0, 149, 246, 0.15);
+}
+
+/* ── FORM ACTIONS FOOTER ── */
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #F1F5F9;
+}
+
+.btnSubmit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0095F6;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0.75rem 1.35rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 149, 246, 0.25);
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s ease;
+}
+
+.btnSubmit:hover:not(:disabled) {
+  background-color: #0081d6;
+  box-shadow: 0 6px 16px rgba(0, 149, 246, 0.35);
+  transform: translateY(-1px);
+}
+
+.btnSubmitDisabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

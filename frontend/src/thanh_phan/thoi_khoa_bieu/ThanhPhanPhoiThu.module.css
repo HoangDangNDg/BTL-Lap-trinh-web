@@ -1,0 +1,175 @@
+.container {
+  padding: 0.65rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  border-radius: 16px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.calendarIcon {
+  color: #0095f6;
+}
+
+.titleLabel {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.branchText {
+  font-size: 0.825rem;
+  color: #64748b;
+}
+
+.branchName {
+  color: #0095f6;
+}
+
+.btnReturnToday {
+  margin-left: 0.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid #bbf7d0;
+  background-color: #f0fdf4;
+  color: #15803d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.daysScrollWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 2px;
+}
+
+.dayBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.825rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dayBtnActive {
+  border: 2px solid #0095f6;
+  background-color: #0095f6;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 149, 246, 0.28);
+}
+
+.dayBtnToday {
+  border: 1.5px dashed #0284c7;
+  background-color: #f0f9ff;
+  color: #0284c7;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.dayBtnPast {
+  border: 1px solid #e2e8f0;
+  background-color: #fafafa;
+  color: #64748b;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.dayBtnDefault {
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.dayBtnSunday {
+  color: #dc2626;
+}
+
+.badgeTodayActive {
+  font-size: 0.625rem;
+  padding: 0.05rem 0.35rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.badgeTodayNormal {
+  font-size: 0.625rem;
+  padding: 0.05rem 0.35rem;
+  border-radius: 9999px;
+  background-color: #dcfce7;
+  color: #15803d;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.badgePastActive {
+  font-size: 0.625rem;
+  padding: 0.05rem 0.35rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.badgePastNormal {
+  font-size: 0.625rem;
+  padding: 0.05rem 0.35rem;
+  border-radius: 9999px;
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.countBadgeActive {
+  font-size: 0.675rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.countBadgeHasItems {
+  font-size: 0.675rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 9999px;
+  background-color: #e0f2fe;
+  color: #0284c7;
+  font-weight: 700;
+}
+
+.countBadgeEmpty {
+  font-size: 0.675rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 9999px;
+  background-color: #f1f5f9;
+  color: #64748b;
+  font-weight: 700;
+}

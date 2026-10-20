@@ -1,0 +1,238 @@
+﻿/* TrangDiemDanh.module.css - Stylesheet module cho TrangDiemDanh */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  width: 100%;
+  padding-bottom: 3.5rem;
+}
+
+.errorContainer {
+  padding: 2rem 1rem;
+}
+
+.wFull {
+  width: 100%;
+}
+
+/* Header */
+.headerCard {
+  padding: 1.4rem 1.75rem;
+  border-radius: 24px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.headerTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background-color: #F0FDF4;
+  color: #16A34A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.15);
+  flex-shrink: 0;
+}
+
+.headerTitle {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btnBack {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 12px;
+  border: 1px solid #CBD5E1;
+  background-color: #F8FAFC;
+  color: #0F172A;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnBack:hover {
+  background-color: #F1F5F9;
+}
+
+.btnRefresh {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  background-color: #F8FAFC;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnRefresh:hover {
+  background-color: #F1F5F9;
+}
+
+/* Student Detail Sub-Nav */
+.studentDetailContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.studentSubNav {
+  padding: 0.85rem 1.25rem;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.studentSubNavLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btnBackSmall {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  background-color: #F8FAFC;
+  color: #0F172A;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnBackSmall:hover {
+  background-color: #F1F5F9;
+}
+
+.divider {
+  color: #CBD5E1;
+}
+
+.studentNameGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.studentCapIcon {
+  color: #2563EB;
+}
+
+.btnExternalLink {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: 10px;
+  border: 1px solid #BFDBFE;
+  background-color: #EFF6FF;
+  color: #2563EB;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnExternalLink:hover {
+  background-color: #DBEAFE;
+}
+
+/* Empty States */
+.emptyCourseCard {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-radius: 24px;
+  background-color: #FFFFFF;
+  border: 1px dashed #CBD5E1;
+}
+
+.emptyIconCourse {
+  color: #0284C7;
+  margin-bottom: 0.5rem;
+}
+
+.emptyTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 0.4rem 0;
+}
+
+.emptyDesc {
+  font-size: 0.85rem;
+  color: #64748B;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.emptyClassCard {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 24px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+}
+
+.emptyIconClass {
+  color: #94A3B8;
+  margin-bottom: 0.75rem;
+}
+
+.emptyTitleClass {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1E293B;
+  margin: 0 0 0.5rem 0;
+}
+
+.emptyDescClass {
+  font-size: 0.85rem;
+  color: #64748B;
+  max-width: 420px;
+  margin: 0 auto;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "api-test-tool",
+  "version": "1.0.0",
+  "description": "Bộ công cụ JavaScript kiểm thử API hệ thống Quản lý Trung tâm Giáo dục",
+  "main": "api-client.js",
+  "scripts": {
+    "test": "node test-runner.js",
+    "test:dotnet": "node test-runner.js http://localhost:5120",
+    "test:java": "node test-runner.js http://localhost:10000"
+  },
+  "keywords": ["api", "testing", "dotnet", "jwt", "batch"],
+  "author": "Antigravity",
+  "license": "MIT"
+}

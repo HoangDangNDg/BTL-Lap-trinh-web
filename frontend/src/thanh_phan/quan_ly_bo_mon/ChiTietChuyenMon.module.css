@@ -1,0 +1,552 @@
+﻿/* ChiTietChuyenMon.module.css - Stylesheet module cho ChiTietChuyenMonView */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Header Banner */
+.headerBanner {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.headerIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background-color: #ECFDF5;
+  color: #10B981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #A7F3D0;
+  flex-shrink: 0;
+}
+
+.headerTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.headerTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.headerBadge {
+  font-size: 0.725rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #BFDBFE;
+}
+
+.headerDescription {
+  font-size: 0.825rem;
+  color: #64748B;
+  margin: 0.2rem 0 0;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.btnAddSubject {
+  height: 38px;
+  padding: 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #0284C7;
+  background-color: #EFF6FF;
+  border: 1px solid #BAE6FD;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnAddSubject:hover {
+  background-color: #E0F2FE;
+}
+
+.btnQuickClass {
+  height: 38px;
+  padding: 0 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.825rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  background-color: #0284C7;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btnQuickClass:hover {
+  background-color: #0369A1;
+}
+
+.btnRefresh {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0F172A;
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnRefresh:hover {
+  background-color: #F8FAFC;
+}
+
+/* Tab Toolbar & Search */
+.tabToolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tabGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tabBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  background-color: #FFFFFF;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.tabBtnActiveMonHoc {
+  border-color: #BFDBFE;
+  background-color: #EFF6FF;
+  color: #0284C7;
+  font-weight: 800;
+}
+
+.tabBtnActiveGiaoVien {
+  border-color: #A7F3D0;
+  background-color: #ECFDF5;
+  color: #059669;
+  font-weight: 800;
+}
+
+.tabBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.45rem;
+  border-radius: 9999px;
+}
+
+.tabBadgeMonHocActive {
+  background-color: #DBEAFE;
+  color: #1D4ED8;
+}
+
+.tabBadgeGiaoVienActive {
+  background-color: #D1FAE5;
+  color: #047857;
+}
+
+.tabBadgeInactive {
+  background-color: #F1F5F9;
+  color: #475569;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 240px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.45rem 0.75rem 0.45rem 2.1rem;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #1E293B;
+  font-size: 0.825rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.searchInput:focus {
+  border-color: #0284C7;
+}
+
+/* States */
+.loadingCard {
+  padding: 3.5rem;
+  text-align: center;
+  color: #64748B;
+}
+
+.emptyCard {
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  border: 1px dashed #CBD5E1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emptyTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.emptyDesc {
+  font-size: 0.85rem;
+  color: #64748B;
+  margin-top: 0.35rem;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Môn học Card */
+.subjectCard {
+  padding: 1.5rem;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subjectCardInteractive {
+  cursor: pointer;
+}
+
+.subjectCardInteractive:hover {
+  border-color: #0284C7;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12);
+  transform: translateY(-2px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.subjectBadge {
+  font-size: 0.725rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #BFDBFE;
+}
+
+.viewClassHint {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  background-color: #F8FAFC;
+  color: #64748B;
+  border: 1px solid #E2E8F0;
+  margin-left: 0.45rem;
+}
+
+.btnDelete {
+  border: none;
+  background-color: transparent;
+  color: #94A3B8;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.btnDelete:hover {
+  color: #EF4444;
+  background-color: #FEF2F2;
+}
+
+.cardTitle {
+  margin: 0.65rem 0 0.35rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.cardDesc {
+  margin: 0;
+  font-size: 0.825rem;
+  color: #64748B;
+  line-height: 1.45;
+}
+
+.cardFooter {
+  padding-top: 0.75rem;
+  border-top: 1px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btnOpenClass {
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #BAE6FD;
+  background-color: #F0F9FF;
+  color: #0284C7;
+  font-size: 0.775rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.15s ease;
+}
+
+.btnOpenClass:hover {
+  background-color: #E0F2FE;
+}
+
+.btnViewClasses {
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #BFDBFE;
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  font-size: 0.775rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.15s ease;
+}
+
+.btnViewClasses:hover {
+  background-color: #DBEAFE;
+}
+
+/* Giáo Viên Card */
+.teacherCard {
+  padding: 1.5rem;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  min-height: 210px;
+}
+
+.teacherCard:hover {
+  border-color: #10B981;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
+  transform: translateY(-2px);
+}
+
+.teacherAvatar {
+  width: 46px;
+  height: 46px;
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  font-size: 0.95rem;
+  font-weight: 800;
+  border: 1.5px solid #BFDBFE;
+}
+
+.teacherName {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.teacherRole {
+  font-size: 0.75rem;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.statusBadgeActive {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  background-color: #ECFDF5;
+  color: #059669;
+  border: 1px solid #A7F3D0;
+}
+
+.statusBadgeInactive {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  background-color: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+}
+
+.teacherContact {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.teacherContactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.teacherContactEllipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.specialtyTagGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.65rem;
+}
+
+.specialtyTagCurrent {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  background-color: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #86EFAC;
+}
+
+.specialtyTagOther {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  background-color: #F1F5F9;
+  color: #475569;
+  border: 1px solid #E2E8F0;
+}
+
+.teacherFooter {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.teacherClassCount {
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.teacherClassCountHigh {
+  color: #EA580C;
+}
+
+.teacherClassCountMed {
+  color: #0284C7;
+}
+
+.teacherClassCountLow {
+  color: #64748B;
+}
+
+.btnViewProfile {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.785rem;
+  font-weight: 800;
+  color: #059669;
+}

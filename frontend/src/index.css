@@ -1,0 +1,1281 @@
+@import "tailwindcss";
+
+:root {
+  /* Ambient Mint/Teal Canvas Palette */
+  --bg-app: #E6F4F1;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-surface-glass: rgba(255, 255, 255, 0.9);
+  --bg-hover: #F0FDF4;
+  --bg-input: #FFFFFF;
+
+  /* Typography Colors */
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --text-subtle: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+  /* Brand Accents */
+  --primary: #0284C7;
+  --primary-hover: #0369A1;
+  --primary-light: #E0F2FE;
+
+  --accent-mint: #10B981;
+  --accent-mint-light: #DCFCE7;
+  --accent-mint-active: #A7F3D0;
+
+  --warning: #F59E0B;
+  --warning-light: #FEF3C7;
+  --danger: #EF4444;
+  --danger-light: #FEE2E2;
+
+  --border: #E2E8F0;
+  --border-light: #F1F5F9;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #E2F5F3 0%, #EBF8F7 35%, #F0FAF8 70%, #E8F5F3 100%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.55;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Headings Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', sans-serif;
+  font-weight: 700;
+  color: #0F172A;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+/* =========================================================================
+   WATER DROPLET (GIỌT NƯỚC) BOX-SHADOW SYSTEM
+   Sử dụng cơ chế đa tầng quang học (Inner specular highlight + Ambient glow + Caustic depth)
+   ========================================================================= */
+
+/* 1. Large Water Droplet Card (Thẻ giọt nước) */
+.droplet-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.85) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 
+    0 10px 25px -4px rgba(15, 23, 42, 0.06),
+    0 4px 10px -2px rgba(15, 23, 42, 0.03),
+    inset 3px 3px 6px 0px rgba(255, 255, 255, 0.98),
+    inset 1px 1px 2px 0px rgba(255, 255, 255, 1.0),
+    inset -3px -3px 6px 0px rgba(0, 0, 0, 0.05),
+    inset -1px -1px 2px 0px rgba(0, 0, 0, 0.03),
+    inset 0 0 16px 2px rgba(255, 255, 255, 0.6);
+  transition: transform 0.48s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.48s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.48s ease, background 0.48s ease;
+  position: relative;
+}
+
+.droplet-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 16px 32px -6px rgba(15, 23, 42, 0.1),
+    0 6px 14px -2px rgba(15, 23, 42, 0.05),
+    inset 4px 4px 8px 0px rgba(255, 255, 255, 1.0),
+    inset -3px -3px 6px 0px rgba(0, 0, 0, 0.06),
+    inset 0 0 20px 3px rgba(255, 255, 255, 0.75);
+}
+
+/* 2. Water Droplet Pill / Button (Nút viên thuốc giọt nước) */
+.droplet-pill {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.88) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 9999px;
+  box-shadow: 
+    0 4px 12px -2px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02),
+    inset 2.5px 2.5px 4px 0px rgba(255, 255, 255, 1.0),
+    inset 1px 1px 1.5px 0px rgba(255, 255, 255, 1.0),
+    inset -2.5px -2.5px 4px 0px rgba(0, 0, 0, 0.06),
+    inset -1px -1px 1.5px 0px rgba(0, 0, 0, 0.03),
+    inset 0 0 8px 1px rgba(255, 255, 255, 0.7);
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.45s cubic-bezier(0.25, 1, 0.5, 1), background 0.45s ease, color 0.45s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.droplet-pill:hover {
+  transform: translateY(-1px) scale(1.015);
+  box-shadow: 
+    0 6px 16px -2px rgba(0, 0, 0, 0.08),
+    inset 3px 3px 5px 0px rgba(255, 255, 255, 1.0),
+    inset -2px -2px 4px 0px rgba(0, 0, 0, 0.05),
+    inset 0 0 10px 2px rgba(255, 255, 255, 0.8);
+}
+
+.droplet-pill:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    inset 1.5px 1.5px 3px 0px rgba(0, 0, 0, 0.08),
+    inset -1.5px -1.5px 3px 0px rgba(255, 255, 255, 0.7);
+}
+
+/* 3. Mint Droplet (Giọt nước xanh ngọc) */
+.droplet-pill-mint {
+  background: linear-gradient(135deg, #A7F3D0 0%, #6EE7B7 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.95) !important;
+  color: #065F46 !important;
+  box-shadow: 
+    0 6px 16px -2px rgba(16, 185, 129, 0.28),
+    0 2px 6px -1px rgba(16, 185, 129, 0.15),
+    inset 2.5px 2.5px 4px 0px rgba(255, 255, 255, 0.95),
+    inset -2.5px -2.5px 4px 0px rgba(4, 120, 87, 0.25),
+    inset 0 0 10px 1px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* 4. Coral / Red Droplet (Giọt nước hồng san hô) */
+.droplet-pill-coral {
+  background: linear-gradient(135deg, #FECDD3 0%, #FDA4AF 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.95) !important;
+  color: #BE123C !important;
+  box-shadow: 
+    0 6px 14px -2px rgba(244, 63, 94, 0.25),
+    inset 2.5px 2.5px 4px 0px rgba(255, 255, 255, 0.95),
+    inset -2.5px -2.5px 4px 0px rgba(190, 18, 60, 0.2),
+    inset 0 0 8px 1px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* 5. Circular Droplet (Nút tròn giọt nước) */
+.droplet-circle {
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 4px 10px -2px rgba(0, 0, 0, 0.06),
+    inset 2px 2px 4px 0px rgba(255, 255, 255, 1.0),
+    inset -2px -2px 4px 0px rgba(0, 0, 0, 0.06),
+    inset 0 0 8px 1px rgba(255, 255, 255, 0.5);
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.45s cubic-bezier(0.25, 1, 0.5, 1), background 0.45s ease, color 0.45s ease;
+  display: flex;
+  align-items: center;
+  justifyContent: center;
+  cursor: pointer;
+}
+
+.droplet-circle:hover {
+  transform: translateY(-1px) scale(1.04);
+  box-shadow: 
+    0 6px 14px -2px rgba(0, 0, 0, 0.09),
+    inset 2.5px 2.5px 5px 0px rgba(255, 255, 255, 1.0),
+    inset -2px -2px 4px 0px rgba(0, 0, 0, 0.06),
+    inset 0 0 10px 2px rgba(255, 255, 255, 0.7);
+}
+
+/* 6. Droplet Sidebar Container (Khối thanh điều hướng) */
+.droplet-sidebar {
+  background: linear-gradient(145deg, rgba(235, 240, 245, 0.85) 0%, rgba(225, 232, 240, 0.75) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  box-shadow: 
+    0 12px 30px -4px rgba(15, 23, 42, 0.06),
+    inset 2px 2px 4px 0px rgba(255, 255, 255, 0.9),
+    inset -2px -2px 4px 0px rgba(0, 0, 0, 0.04);
+  /* Ẩn hoàn toàn thanh cuộn (scrollbar) theo yêu cầu người dùng, vẫn cuộn mượt bằng chuột/touch */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE / Edge */
+}
+
+.droplet-sidebar::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Edge, Opera */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Tiện ích ẩn thanh cuộn chung cho toàn dự án */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-success { background-color: #DCFCE7; color: #15803D; }
+.badge-info { background-color: #E0F2FE; color: #0369A1; }
+.badge-warning { background-color: #FEF3C7; color: #B45309; }
+.badge-danger { background-color: #FEE2E2; color: #B91C1C; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+.animate-fade-in { animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+/* 6. Node Đối Tượng Giáo Viên (Hover chuyển màu xanh nhẹ êm dịu) */
+.teacher-card-node {
+  transition: transform 0.38s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.38s cubic-bezier(0.25, 1, 0.5, 1), 
+              background 0.38s ease, 
+              border-color 0.38s ease !important;
+  border: 1px solid rgba(226, 232, 240, 0.85);
+}
+
+.teacher-card-node:hover {
+  transform: translateY(-4px) scale(1.008);
+  background: linear-gradient(145deg, #F0FDF4 0%, #ECFDF5 100%) !important;
+  border-color: #A7F3D0 !important;
+  box-shadow: 
+    0 18px 36px -6px rgba(16, 185, 129, 0.16),
+    0 8px 18px -2px rgba(16, 185, 129, 0.08),
+    inset 3px 3px 6px 0px rgba(255, 255, 255, 1.0),
+    inset -2px -2px 4px 0px rgba(16, 185, 129, 0.05),
+    inset 0 0 18px 2px rgba(255, 255, 255, 0.85) !important;
+}
+
+.teacher-card-node:hover .teacher-avatar-circle {
+  background-color: #D1FAE5 !important;
+  color: #059669 !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.22) !important;
+}
+
+/* 7. Nút chuyển chế độ xem chỉ dùng icon (Thẻ / Bảng), hover đổi sang màu xanh ngọc */
+.view-mode-icon-btn {
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.view-mode-icon-btn:hover {
+  background-color: #ECFDF5 !important;
+  color: #059669 !important;
+  transform: scale(1.08);
+}
+
+.refresh-btn-green-hover {
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.refresh-btn-green-hover:hover {
+  background-color: #ECFDF5 !important;
+  color: #059669 !important;
+  border-color: #A7F3D0 !important;
+}
+
+.refresh-btn-green-hover:hover svg {
+  color: #059669 !important;
+}
+
+/* 8. Nút Giọt Nước Xanh Dương Chủ Đạo (Primary Blue Droplet Button) */
+.droplet-pill-primary {
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  color: #FFFFFF !important;
+  box-shadow: 
+    0 8px 20px -2px rgba(2, 132, 199, 0.35),
+    0 3px 8px -1px rgba(2, 132, 199, 0.2),
+    inset 2.5px 2.5px 4px 0px rgba(255, 255, 255, 0.65),
+    inset -2.5px -2.5px 4px 0px rgba(2, 44, 67, 0.35),
+    inset 0 0 12px 1px rgba(255, 255, 255, 0.4) !important;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              background 0.3s ease !important;
+}
+
+.droplet-pill-primary:hover {
+  transform: translateY(-2px) scale(1.015);
+  background: linear-gradient(135deg, #0369A1 0%, #075985 100%) !important;
+  box-shadow: 
+    0 12px 26px -2px rgba(2, 132, 199, 0.45),
+    inset 3px 3px 5px 0px rgba(255, 255, 255, 0.8),
+    inset -2px -2px 4px 0px rgba(2, 44, 67, 0.4),
+    inset 0 0 14px 2px rgba(255, 255, 255, 0.5) !important;
+}
+
+.droplet-pill-primary:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 
+    0 2px 6px rgba(2, 132, 199, 0.3),
+    inset 2px 2px 4px 0px rgba(2, 44, 67, 0.5) !important;
+}
+
+/* 9. Ô Nhập Liệu Thủy Tinh Giọt Nước (Droplet Input) */
+.droplet-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.droplet-input {
+  width: 100%;
+  height: 46px;
+  padding: 0 1rem 0 2.65rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid #E2E8F0;
+  color: #0F172A;
+  font-size: 0.875rem;
+  font-weight: 500;
+  outline: none;
+  box-shadow: inset 1.5px 1.5px 3px rgba(0, 0, 0, 0.03), inset -1px -1px 2px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.droplet-input:focus {
+  background: #FFFFFF;
+  border-color: #38BDF8;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.18), inset 1px 1px 2px rgba(255, 255, 255, 1);
+}
+
+/* 10. Keyframe Animations for Modals and Drawers */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* =========================================================================
+   11. PRINT STYLESHEET (ĐỊNH DẠNG BẢN IN THỜI KHÓA BIỂU & TÀI LIỆU TRUNG TÂM)
+   Tối ưu in ra giấy A4 ngang (Landscape) và xuất PDF sắc nét
+   ========================================================================= */
+@media print {
+  @page {
+    size: landscape;
+    margin: 8mm 8mm 8mm 8mm;
+  }
+
+  /* Reset toàn bộ layout cố định màn hình */
+  html, body, #root {
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Ẩn triệt để các thành phần giao diện không in */
+  .no-print,
+  nav,
+  aside,
+  header,
+  .vung-dieu-huong-chuc-nang,
+  #sidebar,
+  button,
+  .btn,
+  .droplet-pill,
+  input,
+  select,
+  .thong-bao-loi-container,
+  .bo-thong-bao-container,
+  .animate-spin {
+    display: none !important;
+  }
+
+  /* Mở rộng toàn bộ vùng nội dung chính */
+  main,
+  .vung-noi-dung-chinh {
+    overflow: visible !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Giữ màu sắc trung thực khi in */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Hiển thị tiêu đề in chuyên biệt */
+  .tkb-print-header {
+    display: block !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Căn chỉnh bảng ma trận thời khóa biểu khi in */
+  .tkb-table-print-container {
+    width: 100% !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 8px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .tkb-table-print-container table,
+  .tkb-print-table {
+    width: 100% !important;
+    min-width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+  }
+
+  .tkb-table-print-container th,
+  .tkb-table-print-container td {
+    border: 1px solid #CBD5E1 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Ô trống xếp lịch khi in chuyển sang dạng ô trống tối giản */
+  .o-trong-xep-lich {
+    border: 1px dashed #E2E8F0 !important;
+    background: transparent !important;
+    min-height: 48px !important;
+    cursor: default !important;
+  }
+
+  .o-trong-xep-lich * {
+    display: none !important;
+  }
+
+  /* Thẻ lịch học trong ô khi in */
+  .tkb-card-item {
+    box-shadow: none !important;
+    transform: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+/* =========================================================================
+   12. HỆ THỐNG GIAO DIỆN THEME THEO TỪNG LOẠI THẺ COMPONENT (LOCALSTORAGE)
+   Chế độ "Đen chữ trắng" cho cả nền toàn trang và các nhóm đoạn thẻ
+   ========================================================================= */
+
+/* ── 12.0. Nền toàn trang ứng dụng (Full Page Dark Canvas Background) ── */
+html.theme-bg-dark,
+body.theme-bg-dark,
+html[data-card-theme="dark"],
+body[data-card-theme="dark"] {
+  background: radial-gradient(circle at 50% 0%, #151D2F 0%, #0B0F19 60%, #06090F 100%) !important;
+  background-attachment: fixed !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-bg-dark #root,
+body.theme-bg-dark main,
+body.theme-bg-dark .vung-noi-dung-chinh {
+  background-color: transparent !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-bg-dark h1,
+body.theme-bg-dark h2,
+body.theme-bg-dark h3,
+body.theme-bg-dark h4,
+body.theme-bg-dark h5,
+body.theme-bg-dark h6 {
+  color: #FFFFFF !important;
+}
+
+body.theme-bg-dark p,
+body.theme-bg-dark span:not(.badge):not(.droplet-pill):not([class*="text-"]):not([class*="bg-"]),
+body.theme-bg-dark label {
+  color: #CBD5E1;
+}
+
+/* =========================================================================
+   BO CHON NAM KY HOC (HEADER CAPSULES & DROPDOWNS) - DARK THEME
+   ========================================================================= */
+body.theme-header-dark .bo-chon-nam-ky-container,
+[data-card-theme="dark"] .bo-chon-nam-ky-container {
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  border-color: #334155 !important;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.theme-header-dark .bo-chon-divider,
+[data-card-theme="dark"] .bo-chon-divider {
+  background-color: #334155 !important;
+}
+
+body.theme-header-dark .bo-chon-capsule-btn,
+[data-card-theme="dark"] .bo-chon-capsule-btn {
+  background-color: #1E293B !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-header-dark .bo-chon-capsule-btn.is-open,
+[data-card-theme="dark"] .bo-chon-capsule-btn.is-open {
+  background-color: #26334A !important;
+  border-color: #38BDF8 !important;
+}
+
+body.theme-header-dark .bo-chon-capsule-btn:hover,
+[data-card-theme="dark"] .bo-chon-capsule-btn:hover {
+  background-color: #26334A !important;
+  border-color: #475569 !important;
+}
+
+body.theme-header-dark .bo-chon-capsule-btn span,
+[data-card-theme="dark"] .bo-chon-capsule-btn span {
+  color: #F8FAFC !important;
+}
+
+body.theme-header-dark .bo-chon-capsule-btn span[style*="color: #64748B"],
+body.theme-header-dark .bo-chon-capsule-btn span[style*="color: rgb(100, 116, 139)"],
+[data-card-theme="dark"] .bo-chon-capsule-btn span[style*="color: #64748B"],
+[data-card-theme="dark"] .bo-chon-capsule-btn span[style*="color: rgb(100, 116, 139)"] {
+  color: #94A3B8 !important;
+}
+
+body.theme-header-dark .bo-chon-refresh-btn,
+[data-card-theme="dark"] .bo-chon-refresh-btn {
+  background-color: #1E293B !important;
+  border-color: #334155 !important;
+  color: #94A3B8 !important;
+}
+
+body.theme-header-dark .bo-chon-refresh-btn:hover,
+[data-card-theme="dark"] .bo-chon-refresh-btn:hover {
+  background-color: #26334A !important;
+  color: #38BDF8 !important;
+  border-color: #38BDF8 !important;
+}
+
+body.theme-header-dark .bo-chon-tag-current,
+[data-card-theme="dark"] .bo-chon-tag-current {
+  background-color: #064E3B !important;
+  color: #34D399 !important;
+  border: 1px solid #059669 !important;
+}
+
+body.theme-header-dark .bo-chon-tag-today,
+[data-card-theme="dark"] .bo-chon-tag-today {
+  background-color: #78350F !important;
+  color: #FBBF24 !important;
+  border: 1px solid #D97706 !important;
+}
+
+body.theme-header-dark .bo-chon-dropdown-menu,
+[data-card-theme="dark"] .bo-chon-dropdown-menu {
+  background-color: #0F172A !important;
+  border: 1px solid #334155 !important;
+  box-shadow: 0 20px 40px -4px rgba(0, 0, 0, 0.8) !important;
+}
+
+body.theme-header-dark .bo-chon-dropdown-menu div[style*="text-transform: uppercase"],
+[data-card-theme="dark"] .bo-chon-dropdown-menu div[style*="text-transform: uppercase"] {
+  color: #94A3B8 !important;
+}
+
+body.theme-header-dark .bo-chon-quick-btn,
+[data-card-theme="dark"] .bo-chon-quick-btn {
+  background-color: #1E293B !important;
+  border: 1px dashed #38BDF8 !important;
+  color: #38BDF8 !important;
+}
+
+body.theme-header-dark .bo-chon-item,
+[data-card-theme="dark"] .bo-chon-item {
+  color: #CBD5E1 !important;
+  background-color: transparent !important;
+}
+
+body.theme-header-dark .bo-chon-item span,
+[data-card-theme="dark"] .bo-chon-item span {
+  color: #CBD5E1 !important;
+}
+
+body.theme-header-dark .bo-chon-item:hover,
+[data-card-theme="dark"] .bo-chon-item:hover {
+  background-color: #1E293B !important;
+  color: #FFFFFF !important;
+}
+
+body.theme-header-dark .bo-chon-item:hover span,
+[data-card-theme="dark"] .bo-chon-item:hover span {
+  color: #FFFFFF !important;
+}
+
+/* Mục ĐANG CHỌN (selected item) trong popup dropdown */
+body.theme-header-dark .bo-chon-item.is-selected,
+[data-card-theme="dark"] .bo-chon-item.is-selected {
+  background-color: #1E293B !important;
+  border: 1.5px solid #38BDF8 !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.25) !important;
+}
+
+body.theme-header-dark .bo-chon-item.is-selected span,
+[data-card-theme="dark"] .bo-chon-item.is-selected span,
+body.theme-header-dark header.droplet-card .bo-chon-item.is-selected span,
+[data-card-theme="dark"] header.droplet-card .bo-chon-item.is-selected span {
+  color: #38BDF8 !important;
+  font-weight: 800 !important;
+}
+
+body.theme-header-dark .bo-chon-item.is-selected svg,
+[data-card-theme="dark"] .bo-chon-item.is-selected svg {
+  color: #38BDF8 !important;
+}
+
+/* Số liệu thống kê trong Card (Stat Metric Value) */
+.stat-metric-value {
+  color: #0F172A;
+}
+
+body.theme-cards-dark .stat-metric-value,
+[data-card-theme="dark"] .stat-metric-value {
+  color: #FFFFFF !important;
+}
+
+/* ── 12.1. Thẻ nội dung chính (.droplet-card & các khối card dữ liệu) ── */
+body.theme-cards-dark .droplet-card:not(header):not(.droplet-sidebar),
+body.theme-cards-dark .teacher-card-node {
+  background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%) !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+  box-shadow: 
+    0 10px 25px -4px rgba(0, 0, 0, 0.45),
+    0 4px 10px -2px rgba(0, 0, 0, 0.3),
+    inset 1.5px 1.5px 3px 0px rgba(255, 255, 255, 0.08),
+    inset -1.5px -1.5px 3px 0px rgba(0, 0, 0, 0.35) !important;
+}
+
+body.theme-cards-dark .droplet-card:not(header):not(.droplet-sidebar):hover,
+body.theme-cards-dark .teacher-card-node:hover {
+  border-color: #475569 !important;
+  box-shadow: 
+    0 16px 32px -6px rgba(0, 0, 0, 0.55),
+    inset 2px 2px 4px 0px rgba(255, 255, 255, 0.12),
+    inset -2px -2px 4px 0px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.theme-cards-dark .droplet-card h1,
+body.theme-cards-dark .droplet-card h2,
+body.theme-cards-dark .droplet-card h3,
+body.theme-cards-dark .droplet-card h4,
+body.theme-cards-dark .droplet-card h5,
+body.theme-cards-dark .droplet-card h6,
+body.theme-cards-dark .droplet-card strong,
+body.theme-cards-dark .droplet-card b {
+  color: #FFFFFF !important;
+}
+
+body.theme-cards-dark .droplet-card p,
+body.theme-cards-dark .droplet-card span:not(.badge):not(.droplet-pill):not([class*="text-"]):not([class*="bg-"]),
+body.theme-cards-dark .droplet-card label {
+  color: #CBD5E1;
+}
+
+body.theme-cards-dark .droplet-card .text-slate-500,
+body.theme-cards-dark .droplet-card .text-slate-600,
+body.theme-cards-dark .droplet-card .text-gray-500,
+body.theme-cards-dark .droplet-card .text-gray-600 {
+  color: #94A3B8 !important;
+}
+
+body.theme-cards-dark .droplet-card .text-slate-700,
+body.theme-cards-dark .droplet-card .text-slate-800,
+body.theme-cards-dark .droplet-card .text-gray-700,
+body.theme-cards-dark .droplet-card .text-gray-800 {
+  color: #F1F5F9 !important;
+}
+
+/* Ghi đè màu chữ inline trong các thẻ droplet-card khi ở theme tối */
+body.theme-cards-dark .droplet-card [style*="color: #0F172A"],
+body.theme-cards-dark .droplet-card [style*="color:#0F172A"],
+body.theme-cards-dark .droplet-card [style*="color: rgb(15, 23, 42)"],
+body.theme-cards-dark .droplet-card [style*="color: #1E293B"],
+body.theme-cards-dark .droplet-card [style*="color:#1E293B"],
+body.theme-cards-dark .droplet-card [style*="color: rgb(30, 41, 59)"],
+body.theme-cards-dark .droplet-card div[style*="font-weight: 800"],
+body.theme-cards-dark .droplet-card div[style*="font-weight: 700"],
+body.theme-cards-dark .droplet-card span[style*="font-weight: 800"] {
+  color: #FFFFFF !important;
+}
+
+body.theme-cards-dark .droplet-card [style*="color: #64748B"],
+body.theme-cards-dark .droplet-card [style*="color:#64748B"],
+body.theme-cards-dark .droplet-card [style*="color: rgb(100, 116, 139)"],
+body.theme-cards-dark .droplet-card [style*="color: #475569"],
+body.theme-cards-dark .droplet-card [style*="color:#475569"] {
+  color: #94A3B8 !important;
+}
+
+body.theme-cards-dark .droplet-card [style*="color: #334155"],
+body.theme-cards-dark .droplet-card [style*="color:#334155"],
+body.theme-cards-dark .droplet-card [style*="color: rgb(51, 65, 85)"] {
+  color: #E2E8F0 !important;
+}
+
+/* Biểu tượng droplet-circle bên trong card tối */
+body.theme-cards-dark .droplet-card .droplet-circle {
+  background: #0F172A !important;
+  border-color: #334155 !important;
+}
+
+/* Thẻ người dùng trên thanh Sidebar */
+body.theme-sidebar-dark .droplet-sidebar .droplet-card {
+  background: #0F172A !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar .droplet-circle {
+  background: #1E293B !important;
+  border-color: #334155 !important;
+  color: #FFFFFF !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar h4 {
+  color: #FFFFFF !important;
+}
+
+/* Ô nhập liệu & bảng biểu bên trong card tối */
+body.theme-cards-dark .droplet-card input:not([type="checkbox"]):not([type="radio"]),
+body.theme-cards-dark .droplet-card select,
+body.theme-cards-dark .droplet-card textarea {
+  background-color: #0F172A !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-cards-dark .droplet-card input::placeholder,
+body.theme-cards-dark .droplet-card textarea::placeholder {
+  color: #64748B !important;
+}
+
+body.theme-cards-dark .droplet-card table {
+  color: #F8FAFC !important;
+}
+
+body.theme-cards-dark .droplet-card th {
+  background-color: #1E293B !important;
+  color: #94A3B8 !important;
+  border-color: #334155 !important;
+}
+
+body.theme-cards-dark .droplet-card td {
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+/* ── 12.2. Thanh đầu trang (Header) ── */
+body.theme-header-dark header.droplet-card {
+  background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%) !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+  box-shadow: 
+    0 8px 24px -4px rgba(0, 0, 0, 0.45),
+    inset 1px 1px 2px 0px rgba(255, 255, 255, 0.08) !important;
+}
+
+body.theme-header-dark header.droplet-card h1,
+body.theme-header-dark header.droplet-card h2,
+body.theme-header-dark header.droplet-card h3,
+body.theme-header-dark header.droplet-card span:not([class*="text-"]),
+body.theme-header-dark header.droplet-card select {
+  color: #F8FAFC !important;
+}
+
+body.theme-header-dark header.droplet-card select {
+  background-color: #0F172A !important;
+  border-color: #334155 !important;
+}
+
+body.theme-header-dark header.droplet-card .droplet-circle {
+  background: #0F172A !important;
+  border-color: #334155 !important;
+  color: #CBD5E1 !important;
+}
+
+body.theme-header-dark header.droplet-card .droplet-circle:hover {
+  background: #1E293B !important;
+  color: #38BDF8 !important;
+  border-color: #38BDF8 !important;
+}
+
+/* ── 12.3. Thanh menu điều hướng bên (Sidebar) ── */
+body.theme-sidebar-dark .droplet-sidebar {
+  background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%) !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+  box-shadow: 
+    0 12px 32px -4px rgba(0, 0, 0, 0.55),
+    inset 1px 1px 2px 0px rgba(255, 255, 255, 0.08) !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar span,
+body.theme-sidebar-dark .droplet-sidebar a:not(.active),
+body.theme-sidebar-dark .droplet-sidebar button:not(.active) {
+  color: #CBD5E1 !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar a:hover:not(.active),
+body.theme-sidebar-dark .droplet-sidebar button:hover:not(.active) {
+  background: #334155 !important;
+  color: #38BDF8 !important;
+}
+
+/* ── 12.4. Nút bấm & Nút tròn (.droplet-pill & .droplet-circle) ── */
+body.theme-pills-dark .droplet-pill:not(.droplet-pill-primary):not(.droplet-pill-mint):not(.droplet-pill-coral) {
+  background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%) !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+  box-shadow: 
+    0 4px 12px -2px rgba(0, 0, 0, 0.4),
+    inset 1px 1px 2px 0px rgba(255, 255, 255, 0.08),
+    inset -1px -1px 2px 0px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.theme-pills-dark .droplet-pill:not(.droplet-pill-primary):not(.droplet-pill-mint):not(.droplet-pill-coral):hover {
+  background: #334155 !important;
+  border-color: #38BDF8 !important;
+  color: #38BDF8 !important;
+}
+
+body.theme-pills-dark .droplet-circle {
+  background: #1E293B !important;
+  border-color: #334155 !important;
+  color: #CBD5E1 !important;
+}
+
+body.theme-pills-dark .droplet-circle:hover,
+[data-card-theme="dark"] .droplet-circle:hover {
+  background: #334155 !important;
+  border-color: #38BDF8 !important;
+  color: #38BDF8 !important;
+}
+
+body.theme-pills-dark .droplet-pill span,
+[data-card-theme="dark"] .droplet-pill span {
+  color: #F8FAFC !important;
+}
+
+body.theme-pills-dark .droplet-pill:hover span,
+[data-card-theme="dark"] .droplet-pill:hover span {
+  color: #38BDF8 !important;
+}
+
+body.theme-pills-dark .droplet-pill[style*="color: #0F172A"],
+body.theme-pills-dark .droplet-pill[style*="color:#0F172A"],
+[data-card-theme="dark"] .droplet-pill[style*="color: #0F172A"],
+[data-card-theme="dark"] .droplet-pill[style*="color:#0F172A"] {
+  color: #F8FAFC !important;
+}
+
+/* =========================================================================
+   12.5. TOÀN DIỆN: SIDEBAR MENU NAVIGATION (NÚT CHỨC NĂNG & PROFILE)
+   Khắc phục triệt để các ô trắng chói khi chưa active trên Sidebar
+   ========================================================================= */
+body.theme-sidebar-dark .droplet-sidebar,
+[data-card-theme="dark"] .droplet-sidebar {
+  background: linear-gradient(145deg, #151D2F 0%, #0B0F19 100%) !important;
+  border-color: #334155 !important;
+  box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.7) !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar .droplet-card,
+[data-card-theme="dark"] .droplet-sidebar .droplet-card {
+  background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%) !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar .droplet-card h4,
+[data-card-theme="dark"] .droplet-sidebar .droplet-card h4 {
+  color: #FFFFFF !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar .droplet-circle,
+[data-card-theme="dark"] .droplet-sidebar .droplet-circle {
+  background-color: #1E293B !important;
+  border-color: #334155 !important;
+  color: #CBD5E1 !important;
+}
+
+/* Nút NavLink trên Sidebar ở trạng thái BÌNH THƯỜNG (không active) */
+body.theme-sidebar-dark .droplet-sidebar nav button,
+[data-card-theme="dark"] .droplet-sidebar nav button,
+body.theme-sidebar-dark .droplet-sidebar .droplet-pill,
+[data-card-theme="dark"] .droplet-sidebar .droplet-pill {
+  background-color: #1E293B !important;
+  border-color: #334155 !important;
+  color: #CBD5E1 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar nav button span,
+[data-card-theme="dark"] .droplet-sidebar nav button span,
+body.theme-sidebar-dark .droplet-sidebar nav button svg,
+[data-card-theme="dark"] .droplet-sidebar nav button svg {
+  color: #CBD5E1 !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar nav button:hover,
+[data-card-theme="dark"] .droplet-sidebar nav button:hover {
+  background-color: #26334A !important;
+  border-color: #475569 !important;
+  color: #38BDF8 !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar nav button:hover span,
+[data-card-theme="dark"] .droplet-sidebar nav button:hover span,
+body.theme-sidebar-dark .droplet-sidebar nav button:hover svg,
+[data-card-theme="dark"] .droplet-sidebar nav button:hover svg {
+  color: #38BDF8 !important;
+}
+
+/* Nút NavLink trên Sidebar ở trạng thái ĐANG CHỌN (Active) */
+body.theme-sidebar-dark .droplet-sidebar a.active button,
+[data-card-theme="dark"] .droplet-sidebar a.active button,
+body.theme-sidebar-dark .droplet-sidebar nav button[style*="rgb(239, 246, 255)"],
+body.theme-sidebar-dark .droplet-sidebar nav button[style*="#EFF6FF"],
+[data-card-theme="dark"] .droplet-sidebar nav button[style*="rgb(239, 246, 255)"],
+[data-card-theme="dark"] .droplet-sidebar nav button[style*="#EFF6FF"] {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.3) 0%, rgba(15, 23, 42, 0.95) 100%) !important;
+  border: 1.5px solid #38BDF8 !important;
+  color: #38BDF8 !important;
+  box-shadow: 0 4px 16px -2px rgba(56, 189, 248, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar a.active button span,
+[data-card-theme="dark"] .droplet-sidebar a.active button span,
+body.theme-sidebar-dark .droplet-sidebar a.active button svg,
+[data-card-theme="dark"] .droplet-sidebar a.active button svg {
+  color: #38BDF8 !important;
+}
+
+/* Nút Đăng Xuất trên Sidebar */
+body.theme-sidebar-dark .droplet-sidebar div[style*="borderTop"] button,
+[data-card-theme="dark"] .droplet-sidebar div[style*="borderTop"] button {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+  color: #F87171 !important;
+}
+
+body.theme-sidebar-dark .droplet-sidebar div[style*="borderTop"] button span,
+[data-card-theme="dark"] .droplet-sidebar div[style*="borderTop"] button span,
+body.theme-sidebar-dark .droplet-sidebar div[style*="borderTop"] button svg,
+[data-card-theme="dark"] .droplet-sidebar div[style*="borderTop"] button svg {
+  color: #F87171 !important;
+}
+
+/* =========================================================================
+   12.6. TOÀN DIỆN: CÁC LOẠI Ô NHẬP LIỆU (INPUTS, SELECTS, TEXTAREAS)
+   ========================================================================= */
+body.theme-cards-dark input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+body.theme-cards-dark select,
+body.theme-cards-dark textarea,
+[data-card-theme="dark"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+[data-card-theme="dark"] select,
+[data-card-theme="dark"] textarea {
+  background-color: #0F172A !important;
+  border: 1px solid #334155 !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-cards-dark select option,
+[data-card-theme="dark"] select option {
+  background-color: #0F172A !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-cards-dark input::placeholder,
+body.theme-cards-dark textarea::placeholder,
+[data-card-theme="dark"] input::placeholder,
+[data-card-theme="dark"] textarea::placeholder {
+  color: #64748B !important;
+}
+
+body.theme-cards-dark input:focus,
+body.theme-cards-dark select:focus,
+body.theme-cards-dark textarea:focus,
+[data-card-theme="dark"] input:focus,
+[data-card-theme="dark"] select:focus,
+[data-card-theme="dark"] textarea:focus {
+  border-color: #38BDF8 !important;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2) !important;
+}
+
+/* =========================================================================
+   12.7. TOÀN DIỆN: BẢNG BIỂU & MA TRẬN DỮ LIỆU (TABLES, THEAD, TH, TD)
+   ========================================================================= */
+body.theme-cards-dark table,
+[data-card-theme="dark"] table {
+  color: #F8FAFC !important;
+  border-color: #334155 !important;
+}
+
+body.theme-cards-dark table thead,
+body.theme-cards-dark table thead tr,
+body.theme-cards-dark table thead th,
+[data-card-theme="dark"] table thead,
+[data-card-theme="dark"] table thead tr,
+[data-card-theme="dark"] table thead th {
+  background-color: #1E293B !important;
+  border-color: #334155 !important;
+  color: #CBD5E1 !important;
+}
+
+body.theme-cards-dark table thead th span,
+[data-card-theme="dark"] table thead th span {
+  color: #CBD5E1 !important;
+}
+
+body.theme-cards-dark table tbody tr,
+[data-card-theme="dark"] table tbody tr {
+  border-color: #334155 !important;
+  background-color: transparent !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-cards-dark table tbody tr:hover,
+[data-card-theme="dark"] table tbody tr:hover {
+  background-color: #1E293B !important;
+}
+
+body.theme-cards-dark table td,
+[data-card-theme="dark"] table td {
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-cards-dark table td strong,
+body.theme-cards-dark table td b,
+[data-card-theme="dark"] table td strong,
+[data-card-theme="dark"] table td b {
+  color: #FFFFFF !important;
+}
+
+/* Các cột cố định (Sticky Columns / Headers) */
+body.theme-cards-dark table th[style*="sticky"],
+body.theme-cards-dark table td[style*="sticky"],
+[data-card-theme="dark"] table th[style*="sticky"],
+[data-card-theme="dark"] table td[style*="sticky"] {
+  background-color: #1E293B !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+/* =========================================================================
+   12.8. TOÀN DIỆN: GHI ĐÈ KHỐI INLINE BACKGROUND TRẮNG & SÁNG TRONG DARK MODE
+   Khắc phục triệt để các khối div, banner, card có style={{ backgroundColor: '#FFFFFF' }}
+   ========================================================================= */
+body.theme-cards-dark div[style*="background-color: #FFFFFF"],
+body.theme-cards-dark div[style*="background-color:#FFFFFF"],
+body.theme-cards-dark div[style*="background-color: rgb(255, 255, 255)"],
+body.theme-cards-dark div[style*="background: #FFFFFF"],
+body.theme-cards-dark div[style*="background:#FFFFFF"],
+[data-card-theme="dark"] div[style*="background-color: #FFFFFF"],
+[data-card-theme="dark"] div[style*="background-color:#FFFFFF"],
+[data-card-theme="dark"] div[style*="background-color: rgb(255, 255, 255)"],
+[data-card-theme="dark"] div[style*="background: #FFFFFF"],
+[data-card-theme="dark"] div[style*="background:#FFFFFF"] {
+  background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%) !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-cards-dark div[style*="background-color: #F8FAFC"],
+body.theme-cards-dark div[style*="background-color:#F8FAFC"],
+body.theme-cards-dark div[style*="background-color: rgb(248, 250, 252)"],
+[data-card-theme="dark"] div[style*="background-color: #F8FAFC"],
+[data-card-theme="dark"] div[style*="background-color:#F8FAFC"],
+[data-card-theme="dark"] div[style*="background-color: rgb(248, 250, 252)"] {
+  background: #0B0F19 !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+/* Banner tiêu đề & Thẻ lọc */
+body.theme-cards-dark div[style*="border: 1px solid #E2E8F0"],
+body.theme-cards-dark div[style*="border: 1px solid #CBD5E1"],
+body.theme-cards-dark div[style*="border: 1px solid #DBDBDB"],
+[data-card-theme="dark"] div[style*="border: 1px solid #E2E8F0"],
+[data-card-theme="dark"] div[style*="border: 1px solid #CBD5E1"],
+[data-card-theme="dark"] div[style*="border: 1px solid #DBDBDB"] {
+  border-color: #334155 !important;
+}
+
+/* Thẻ Lớp Học (.the-lop-hoc-card) */
+body.theme-cards-dark .the-lop-hoc-card,
+[data-card-theme="dark"] .the-lop-hoc-card {
+  background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%) !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-cards-dark .the-lop-hoc-card h4,
+[data-card-theme="dark"] .the-lop-hoc-card h4 {
+  color: #FFFFFF !important;
+}
+
+body.theme-cards-dark .the-lop-hoc-card strong,
+[data-card-theme="dark"] .the-lop-hoc-card strong {
+  color: #FFFFFF !important;
+}
+
+/* Thẻ Chi Nhánh (.the-chi-nhanh-card) */
+body.theme-cards-dark .the-chi-nhanh-card,
+[data-card-theme="dark"] .the-chi-nhanh-card {
+  background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%) !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+body.theme-cards-dark .the-chi-nhanh-card.the-chi-nhanh-selected,
+[data-card-theme="dark"] .the-chi-nhanh-card.the-chi-nhanh-selected {
+  background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%) !important;
+  border-color: #38BDF8 !important;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.25) !important;
+}
+
+/* =========================================================================
+   12.9. TOÀN DIỆN: CÁC THẺ METRIC KPI TÀI CHÍNH & ĐIỂM DANH
+   ========================================================================= */
+/* Thẻ Xanh Dương KPI */
+body.theme-cards-dark div[style*="background-color: #EFF6FF"],
+body.theme-cards-dark div[style*="background-color: rgb(239, 246, 255)"],
+[data-card-theme="dark"] div[style*="background-color: #EFF6FF"],
+[data-card-theme="dark"] div[style*="background-color: rgb(239, 246, 255)"] {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.2) 0%, #0F172A 100%) !important;
+  border-color: #0284C7 !important;
+  color: #F8FAFC !important;
+}
+
+/* Thẻ Xanh Lá KPI */
+body.theme-cards-dark div[style*="background-color: #F0FDF4"],
+body.theme-cards-dark div[style*="background-color: rgb(240, 253, 244)"],
+[data-card-theme="dark"] div[style*="background-color: #F0FDF4"],
+[data-card-theme="dark"] div[style*="background-color: rgb(240, 253, 244)"] {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, #0F172A 100%) !important;
+  border-color: #059669 !important;
+  color: #F8FAFC !important;
+}
+
+/* Thẻ Đỏ KPI */
+body.theme-cards-dark div[style*="background-color: #FEF2F2"],
+body.theme-cards-dark div[style*="background-color: rgb(254, 242, 242)"],
+[data-card-theme="dark"] div[style*="background-color: #FEF2F2"],
+[data-card-theme="dark"] div[style*="background-color: rgb(254, 242, 242)"] {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, #0F172A 100%) !important;
+  border-color: #DC2626 !important;
+  color: #F8FAFC !important;
+}
+
+/* Thẻ Tím KPI */
+body.theme-cards-dark div[style*="background-color: #FAF5FF"],
+body.theme-cards-dark div[style*="background-color: rgb(250, 245, 255)"],
+[data-card-theme="dark"] div[style*="background-color: #FAF5FF"],
+[data-card-theme="dark"] div[style*="background-color: rgb(250, 245, 255)"] {
+  background: linear-gradient(135deg, rgba(147, 51, 234, 0.2) 0%, #0F172A 100%) !important;
+  border-color: #7E22CE !important;
+  color: #F8FAFC !important;
+}
+
+/* Số liệu KPI tài chính */
+body.theme-cards-dark div[style*="color: #1E3A8A"],
+body.theme-cards-dark div[style*="color: #14532D"],
+body.theme-cards-dark div[style*="color: #7F1D1D"],
+[data-card-theme="dark"] div[style*="color: #1E3A8A"],
+[data-card-theme="dark"] div[style*="color: #14532D"],
+[data-card-theme="dark"] div[style*="color: #7F1D1D"] {
+  color: #FFFFFF !important;
+}
+
+/* =========================================================================
+   12.10. TOÀN DIỆN: CỤM TABS LIQUID GLASS & BUTTONS
+   ========================================================================= */
+[data-card-theme="dark"] .LiquidGlassTabs,
+[data-card-theme="dark"] div[class*="rounded-full"][class*="bg-[#EEF2F6]"] {
+  background-color: #0F172A !important;
+  border-color: #334155 !important;
+}
+
+[data-card-theme="dark"] div[class*="rounded-full"] > div > div[class*="bg-white"] {
+  background-color: #1E293B !important;
+  border-color: #38BDF8 !important;
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.25) !important;
+}
+
+[data-card-theme="dark"] button[class*="text-[#0F172A]"] {
+  color: #FFFFFF !important;
+}
+
+/* =========================================================================
+   12.11. TOÀN DIỆN: MODALS & POPUPS
+   ========================================================================= */
+[data-card-theme="dark"] div[style*="position: fixed"][style*="inset: 0"],
+[data-card-theme="dark"] div[style*="position: fixed"][style*="backgroundColor: rgba(15, 23, 42"] {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+[data-card-theme="dark"] div[style*="position: fixed"] .droplet-card,
+[data-card-theme="dark"] div[style*="position: fixed"] div[style*="maxWidth: 850px"],
+[data-card-theme="dark"] div[style*="position: fixed"] div[style*="max-width: 850px"] {
+  background-color: #0F172A !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-card-theme="dark"] div[style*="position: fixed"] div[style*="borderBottom: 1px solid #E2E8F0"],
+[data-card-theme="dark"] div[style*="position: fixed"] div[style*="borderTop: 1px solid #E2E8F0"] {
+  background-color: #1E293B !important;
+  border-color: #334155 !important;
+}
+
+[data-card-theme="dark"] div[style*="position: fixed"] h4 {
+  color: #FFFFFF !important;
+}

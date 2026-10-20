@@ -1,0 +1,128 @@
+.container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #dbdbdb;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.iconWrapper {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background-color: #ebf5fe;
+  color: #0095f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bae6fd;
+  flex-shrink: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.branchBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  background-color: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0.15rem 0 0;
+}
+
+.actionsSection {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.btnChangeBranch {
+  height: 36px;
+  padding: 0 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #334155;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+}
+
+.btnRefresh {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.btnPrint {
+  height: 36px;
+  padding: 0 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnAdd {
+  height: 36px;
+  padding: 0 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.825rem;
+  font-weight: 800;
+}
+
+.btnAddDisabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  filter: grayscale(0.7);
+}

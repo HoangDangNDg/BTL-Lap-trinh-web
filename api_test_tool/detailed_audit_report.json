@@ -1,0 +1,5055 @@
+{
+  "AdminDaoTaoController": {
+    "javaCount": 33,
+    "csCount": 11,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping(\"/bo-mon\")"
+        ],
+        "methodName": "public ApiResponse<List<BoMon>> layTatCaBoMon() {",
+        "signature": "public ApiResponse<List<BoMon>> layTatCaBoMon()"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc/{idKhoaHoc}\")"
+        ],
+        "methodName": "layKhoaHocTheoId",
+        "signature": "public ApiResponse<KhoaHocDto> layKhoaHocTheoId(@PathVariable Integer idKhoaHoc)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/bo-mon/{idBoMon}/khoa-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KhoaHocDto>> layKhoaHocTheoBoMon(@PathVariable Integer idBoMon) {",
+        "signature": "public ApiResponse<List<KhoaHocDto>> layKhoaHocTheoBoMon(@PathVariable Integer idBoMon)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/bo-mon/{idBoMon}/khoa-hoc\")"
+        ],
+        "methodName": "taoKhoaHoc",
+        "signature": "public ApiResponse<KhoaHocDto> taoKhoaHoc(@PathVariable Integer idBoMon, @RequestBody KhoaHoc khoaHoc)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/bo-mon/{idBoMon}/lop-hoc/{idLop}/khoa-hoc\")"
+        ],
+        "methodName": "taoKhoaHoc",
+        "signature": "public ApiResponse<KhoaHocDto> taoKhoaHoc(@PathVariable Integer idBoMon, @PathVariable Integer idLop, @RequestBody KhoaHoc khoaHoc)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/bo-mon/{idBoMon}/lop-hoc/{idLop}/mon-hoc/{idMh}/khoa-hoc\")"
+        ],
+        "methodName": "taoKhoaHoc",
+        "signature": "public ApiResponse<KhoaHocDto> taoKhoaHoc(@PathVariable Integer idBoMon, @PathVariable Integer idLop, @PathVariable Integer idMh, @RequestBody KhoaHoc khoaHoc)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/khoa-hoc/{idKhoaHoc}\")"
+        ],
+        "methodName": "xoaKhoaHoc",
+        "signature": "public ApiResponse<Void> xoaKhoaHoc(@PathVariable Integer idKhoaHoc)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/mon-hoc/{idMh}/khoa-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KhoaHocDto>> layKhoaHocTheoMonHoc(@PathVariable Integer idMh) {",
+        "signature": "public ApiResponse<List<KhoaHocDto>> layKhoaHocTheoMonHoc(@PathVariable Integer idMh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc/{idLop}\")"
+        ],
+        "methodName": "layLopHocTheoId",
+        "signature": "public ApiResponse<LopHocDto> layLopHocTheoId(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chi-nhanh/{idCn}/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoChiNhanh(@PathVariable Integer idCn) {",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoChiNhanh(@PathVariable Integer idCn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc/{idKhoaHoc}/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoKhoaHoc(@PathVariable Integer idKhoaHoc) {",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoKhoaHoc(@PathVariable Integer idKhoaHoc)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/nam-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<NamHoc>> layTatCaNamHoc(@RequestParam(required = false) Integer idDn) {",
+        "signature": "public ApiResponse<List<NamHoc>> layTatCaNamHoc(@RequestParam(required = false) Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/nam-hoc/{idNh}/ky-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KyHoc>> layKyHocTheoNamHoc(@PathVariable Integer idNh) {",
+        "signature": "public ApiResponse<List<KyHoc>> layKyHocTheoNamHoc(@PathVariable Integer idNh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/ky-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KyHoc>> layTatCaKyHoc(",
+        "signature": "public ApiResponse<List<KyHoc>> layTatCaKyHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/ky-hoc/{idKh}/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoKyHoc(@PathVariable Integer idKh) {",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoKyHoc(@PathVariable Integer idKh)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/lop-hoc\")"
+        ],
+        "methodName": "taoLopHoc",
+        "signature": "public ApiResponse<LopHocDto> taoLopHoc(@RequestBody LopHoc lopHoc)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/lop-hoc/{idLop}\")"
+        ],
+        "methodName": "xoaLopHoc",
+        "signature": "public ApiResponse<Void> xoaLopHoc(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc/{idLop}/lich-co-dinh\")"
+        ],
+        "methodName": "public ApiResponse<List<KhungLichHocCoDinhDto>> layLichCoDinhTheoLop(@PathVariable Integer idLop) {",
+        "signature": "public ApiResponse<List<KhungLichHocCoDinhDto>> layLichCoDinhTheoLop(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/lich-co-dinh\")"
+        ],
+        "methodName": "taoLichCoDinh",
+        "signature": "public ApiResponse<KhungLichHocCoDinhDto> taoLichCoDinh(@RequestBody KhungLichHocCoDinh lich)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/lich-co-dinh/{idKhungLich}\")"
+        ],
+        "methodName": "xoaLichCoDinh",
+        "signature": "public ApiResponse<Void> xoaLichCoDinh(@PathVariable Integer idKhungLich)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc/{idLop}/buoi-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<BuoiHocDto>> layBuoiHocTheoLop(@PathVariable Integer idLop) {",
+        "signature": "public ApiResponse<List<BuoiHocDto>> layBuoiHocTheoLop(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/buoi-hoc\")"
+        ],
+        "methodName": "taoBuoiHoc",
+        "signature": "public ApiResponse<BuoiHocDto> taoBuoiHoc(@RequestBody BuoiHoc buoiHoc)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/buoi-hoc/{idBuoiHoc}\")"
+        ],
+        "methodName": "xoaBuoiHoc",
+        "signature": "public ApiResponse<Void> xoaBuoiHoc(@PathVariable Integer idBuoiHoc)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/hoc-sinh/{idHs}/dang-ky-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc/{idLop}/dang-ky-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoLop(@PathVariable Integer idLop) {",
+        "signature": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoLop(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/dang-ky-hoc\")"
+        ],
+        "methodName": "dangKyHoc",
+        "signature": "public ApiResponse<DangKyHoc> dangKyHoc(@RequestBody Map<String, Integer> request)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/dang-ky-hoc/{idDangKy}\")"
+        ],
+        "methodName": "huyDangKyHoc",
+        "signature": "public ApiResponse<Void> huyDangKyHoc(@PathVariable Integer idDangKy)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tuan-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<TuanHoc>> layTatCaTuanHoc() {",
+        "signature": "public ApiResponse<List<TuanHoc>> layTatCaTuanHoc()"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tuan-hoc/ky-hoc/{idKh}\")"
+        ],
+        "methodName": "public ApiResponse<List<TuanHoc>> layTuanHocTheoKy(@PathVariable Integer idKh) {",
+        "signature": "public ApiResponse<List<TuanHoc>> layTuanHocTheoKy(@PathVariable Integer idKh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/thoi-khoa-bieu/tuan/{idTh}\")"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoTuan(@PathVariable Integer idTh) {",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoTuan(@PathVariable Integer idTh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/thoi-khoa-bieu/lop/{idLop}\")"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoLop(@PathVariable Integer idLop) {",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoLop(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/thoi-khoa-bieu\")"
+        ],
+        "methodName": "luuThoiKhoaBieu",
+        "signature": "public ApiResponse<ThoiKhoaBieuTuanDto> luuThoiKhoaBieu(@RequestBody ThoiKhoaBieuTuan tkb)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/thoi-khoa-bieu/{id}\")"
+        ],
+        "methodName": "xoaThoiKhoaBieu",
+        "signature": "public ApiResponse<Void> xoaThoiKhoaBieu(@PathVariable Integer id)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"bo-mon\")]"
+        ],
+        "methodName": "LayTatCaBoMon",
+        "signature": "public async Task<IActionResult> LayTatCaBoMon([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc/{idKhoaHoc}\")]"
+        ],
+        "methodName": "LayKhoaHocTheoId",
+        "signature": "public async Task<IActionResult> LayKhoaHocTheoId(int idKhoaHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"bo-mon/{idBoMon}/khoa-hoc\")]"
+        ],
+        "methodName": "LayKhoaHocTheoBoMon",
+        "signature": "public async Task<IActionResult> LayKhoaHocTheoBoMon(int idBoMon)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"bo-mon/{idBoMon}/khoa-hoc\")]"
+        ],
+        "methodName": "TaoKhoaHoc",
+        "signature": "public async Task<IActionResult> TaoKhoaHoc(int idBoMon, [FromBody] TaoKhoaHocRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"khoa-hoc/{idKhoaHoc}\")]"
+        ],
+        "methodName": "XoaKhoaHoc",
+        "signature": "public async Task<IActionResult> XoaKhoaHoc(int idKhoaHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"mon-hoc/{idMh}/khoa-hoc\")]"
+        ],
+        "methodName": "LayKhoaHocTheoMonHoc",
+        "signature": "public async Task<IActionResult> LayKhoaHocTheoMonHoc(int idMh)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc/{idLop}\")]"
+        ],
+        "methodName": "LayLopHocTheoId",
+        "signature": "public async Task<IActionResult> LayLopHocTheoId(int idLop)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh/{idCn}/lop-hoc\")]"
+        ],
+        "methodName": "LayLopHocTheoChiNhanh",
+        "signature": "public async Task<IActionResult> LayLopHocTheoChiNhanh(int idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc/{idKhoaHoc}/lop-hoc\")]"
+        ],
+        "methodName": "LayLopHocTheoKhoaHoc",
+        "signature": "public async Task<IActionResult> LayLopHocTheoKhoaHoc(int idKhoaHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"nam-hoc\")]"
+        ],
+        "methodName": "LayTatCaNamHoc",
+        "signature": "public async Task<IActionResult> LayTatCaNamHoc([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"nam-hoc/{idNh}/ky-hoc\")]"
+        ],
+        "methodName": "LayKyHocTheoNamHoc",
+        "signature": "public async Task<IActionResult> LayKyHocTheoNamHoc(int idNh)"
+      }
+    ]
+  },
+  "AdminDoanhNghiepController": {
+    "javaCount": 9,
+    "csCount": 9,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping"
+        ],
+        "methodName": "public ApiResponse<List<DoanhNghiep>> layTatCaDoanhNghiep() {",
+        "signature": "public ApiResponse<List<DoanhNghiep>> layTatCaDoanhNghiep()"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/{idDn}\")"
+        ],
+        "methodName": "layDoanhNghiepTheoId",
+        "signature": "public ApiResponse<DoanhNghiep> layDoanhNghiepTheoId(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@PostMapping"
+        ],
+        "methodName": "taoDoanhNghiep",
+        "signature": "public ApiResponse<DoanhNghiep> taoDoanhNghiep(@Valid @RequestBody DoanhNghiep doanhNghiep)"
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/{idDn}\")"
+        ],
+        "methodName": "capNhatDoanhNghiep",
+        "signature": "public ApiResponse<DoanhNghiep> capNhatDoanhNghiep(@PathVariable Integer idDn, @RequestBody DoanhNghiep dn)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/{idDn}\")"
+        ],
+        "methodName": "xoaDoanhNghiep",
+        "signature": "public ApiResponse<Void> xoaDoanhNghiep(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@RequestMapping(value = {\"/{idDn}/khoi-phuc\", \"/{idDn}/restore\"}, method = {RequestMethod.PUT, RequestMethod.POST})"
+        ],
+        "methodName": "khoiPhucDoanhNghiep",
+        "signature": "public ApiResponse<Void> khoiPhucDoanhNghiep(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/chi-nhanh/all\", \"/chi-nhanh\"})"
+        ],
+        "methodName": "public ApiResponse<List<ChiNhanh>> layTatCaChiNhanh() {",
+        "signature": "public ApiResponse<List<ChiNhanh>> layTatCaChiNhanh()"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/chi-nhanh/cap-phat\")"
+        ],
+        "methodName": "capPhatChiNhanh",
+        "signature": "public ApiResponse<ChiNhanh> capPhatChiNhanh(@RequestBody Map<String, Object> payload)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/{idDn}/chi-nhanh\")"
+        ],
+        "methodName": "taoChiNhanhChoDoanhNghiep",
+        "signature": "public ApiResponse<ChiNhanh> taoChiNhanhChoDoanhNghiep(@PathVariable Integer idDn, @RequestBody ChiNhanh chiNhanh)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet]"
+        ],
+        "methodName": "LayTatCaDoanhNghiep",
+        "signature": "public async Task<IActionResult> LayTatCaDoanhNghiep()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"{idDn}\")]"
+        ],
+        "methodName": "LayDoanhNghiepTheoId",
+        "signature": "public async Task<IActionResult> LayDoanhNghiepTheoId(int idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpPost]"
+        ],
+        "methodName": "TaoDoanhNghiep",
+        "signature": "public async Task<IActionResult> TaoDoanhNghiep([FromBody] DoanhNghiep doanhNghiep)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"{idDn}\")]"
+        ],
+        "methodName": "CapNhatDoanhNghiep",
+        "signature": "public async Task<IActionResult> CapNhatDoanhNghiep(int idDn, [FromBody] DoanhNghiep dn)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"{idDn}\")]"
+        ],
+        "methodName": "XoaDoanhNghiep",
+        "signature": "public async Task<IActionResult> XoaDoanhNghiep(int idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"{idDn}/khoi-phuc\")]",
+          "[HttpPut(\"{idDn}/khoi-phuc\")]",
+          "[HttpPost(\"{idDn}/restore\")]"
+        ],
+        "methodName": "KhoiPhucDoanhNghiep",
+        "signature": "public async Task<IActionResult> KhoiPhucDoanhNghiep(int idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh/all\")]",
+          "[HttpGet(\"chi-nhanh\")]"
+        ],
+        "methodName": "LayTatCaChiNhanh",
+        "signature": "public async Task<IActionResult> LayTatCaChiNhanh()"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"chi-nhanh/cap-phat\")]"
+        ],
+        "methodName": "CapPhatChiNhanh",
+        "signature": "public async Task<IActionResult> CapPhatChiNhanh([FromBody] IDictionary<string, object> payload)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"{idDn}/chi-nhanh\")]"
+        ],
+        "methodName": "TaoChiNhanhChoDoanhNghiep",
+        "signature": "public async Task<IActionResult> TaoChiNhanhChoDoanhNghiep(int idDn, [FromBody] TaoChiNhanhRequest request)"
+      }
+    ]
+  },
+  "AdminManagementController": {
+    "javaCount": 6,
+    "csCount": 6,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping"
+        ],
+        "methodName": "public ApiResponse<List<AdminDto>> layDanhSachAdmin() {",
+        "signature": "public ApiResponse<List<AdminDto>> layDanhSachAdmin()"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/{id}\")"
+        ],
+        "methodName": "layAdminTheoId",
+        "signature": "public ApiResponse<AdminDto> layAdminTheoId(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/me\")"
+        ],
+        "methodName": "layAdminHienTai",
+        "signature": "public ApiResponse<AdminDto> layAdminHienTai(@AuthenticationPrincipal JwtUserDetails userDetails)"
+      },
+      {
+        "annotations": [
+          "@PostMapping"
+        ],
+        "methodName": "taoMoiAdmin",
+        "signature": "public ApiResponse<AdminDto> taoMoiAdmin(@RequestBody AdminDto dto)"
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/{id}\")"
+        ],
+        "methodName": "capNhatAdmin",
+        "signature": "public ApiResponse<AdminDto> capNhatAdmin(@PathVariable Integer id, @RequestBody AdminDto dto)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/{id}\")"
+        ],
+        "methodName": "xoaAdmin",
+        "signature": "public ApiResponse<Void> xoaAdmin(@PathVariable Integer id)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet]"
+        ],
+        "methodName": "LayDanhSachAdmin",
+        "signature": "public async Task<IActionResult> LayDanhSachAdmin()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"{id}\")]"
+        ],
+        "methodName": "LayAdminTheoId",
+        "signature": "public async Task<IActionResult> LayAdminTheoId(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"me\")]"
+        ],
+        "methodName": "LayAdminHienTai",
+        "signature": "public async Task<IActionResult> LayAdminHienTai()"
+      },
+      {
+        "attributes": [
+          "[HttpPost]"
+        ],
+        "methodName": "TaoMoiAdmin",
+        "signature": "public async Task<IActionResult> TaoMoiAdmin([FromBody] AdminDto dto)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"{id}\")]"
+        ],
+        "methodName": "CapNhatAdmin",
+        "signature": "public async Task<IActionResult> CapNhatAdmin(int id, [FromBody] AdminDto dto)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"{id}\")]"
+        ],
+        "methodName": "XoaAdmin",
+        "signature": "public async Task<IActionResult> XoaAdmin(int id)"
+      }
+    ]
+  },
+  "AdminOwnerController": {
+    "javaCount": 1,
+    "csCount": 1,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@PostMapping"
+        ],
+        "methodName": "taoTaiKhoanChuDoanhNghiep",
+        "signature": "public ApiResponse<ChuCoDong> taoTaiKhoanChuDoanhNghiep(@Valid @RequestBody TaoChuDoanhNghiepDto dto)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpPost]"
+        ],
+        "methodName": "TaoTaiKhoanChuDoanhNghiep",
+        "signature": "public async Task<IActionResult> TaoTaiKhoanChuDoanhNghiep([FromBody] TaoChuDoanhNghiepDto dto)"
+      }
+    ]
+  },
+  "AdminServerController": {
+    "javaCount": 1,
+    "csCount": 1,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/thong-ke-server\", \"/thong-ke/tong-quan-server\"})"
+        ],
+        "methodName": "layThongKeServer",
+        "signature": "public ApiResponse<ThongKeServerDto> layThongKeServer()"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"thong-ke-server\")]",
+          "[HttpGet(\"thong-ke/tong-quan-server\")]"
+        ],
+        "methodName": "LayThongKeServer",
+        "signature": "public async Task<IActionResult> LayThongKeServer()"
+      }
+    ]
+  },
+  "AdminTokenController": {
+    "javaCount": 3,
+    "csCount": 3,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/api/admin/system/tokens\", \"/api/v1/admin/system/tokens\"})"
+        ],
+        "methodName": "public ApiResponse<List<TokenInfoResponseDto>> layTatCaTokenDangHoatDong() {",
+        "signature": "public ApiResponse<List<TokenInfoResponseDto>> layTatCaTokenDangHoatDong()"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/api/admin/system/tokens/{id}\", \"/api/v1/admin/system/tokens/{id}\"})"
+        ],
+        "methodName": "thuHoiToken",
+        "signature": "public ApiResponse<Void> thuHoiToken(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/api/tai-khoan/{idTk}\")"
+        ],
+        "methodName": "xoaTaiKhoan",
+        "signature": "public ApiResponse<Void> xoaTaiKhoan(@PathVariable Integer idTk)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"api/admin/system/tokens\")]",
+          "[HttpGet(\"api/v1/admin/system/tokens\")]"
+        ],
+        "methodName": "LayTatCaTokenDangHoatDong",
+        "signature": "public async Task<IActionResult> LayTatCaTokenDangHoatDong()"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"api/admin/system/tokens/{id}\")]",
+          "[HttpDelete(\"api/v1/admin/system/tokens/{id}\")]"
+        ],
+        "methodName": "ThuHoiToken",
+        "signature": "public async Task<IActionResult> ThuHoiToken(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"api/tai-khoan/{idTk}\")]"
+        ],
+        "methodName": "XoaTaiKhoan",
+        "signature": "public async Task<IActionResult> XoaTaiKhoan(int idTk)"
+      }
+    ]
+  },
+  "ChuDoanhNghiepChiNhanhController": {
+    "javaCount": 10,
+    "csCount": 10,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep\", \"/v1/owner/enterprises\"})"
+        ],
+        "methodName": "public ApiResponse<List<DoanhNghiep>> layDanhSachDoanhNghiep(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<DoanhNghiep>> layDanhSachDoanhNghiep(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/{idDn}\", \"/v1/owner/enterprises/{idDn}\"})"
+        ],
+        "methodName": "layDoanhNghiepTheoId",
+        "signature": "public ApiResponse<DoanhNghiep> layDoanhNghiepTheoId(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/chi-nhanh\", \"/chi-nhanh\", \"/v1/owner/branches\"})"
+        ],
+        "methodName": "public ApiResponse<List<ChiNhanh>> layDanhSachChiNhanh(",
+        "signature": "public ApiResponse<List<ChiNhanh>> layDanhSachChiNhanh("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/{idDn}/chi-nhanh\", \"/chi-nhanh/doanh-nghiep/{idDn}\"})"
+        ],
+        "methodName": "public ApiResponse<List<ChiNhanh>> layChiNhanhTheoDoanhNghiepPath(@PathVariable Integer idDn) {",
+        "signature": "public ApiResponse<List<ChiNhanh>> layChiNhanhTheoDoanhNghiepPath(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/chi-nhanh/{id}\", \"/doanh-nghiep/chi-nhanh/{id}\"})"
+        ],
+        "methodName": "layChiNhanhTheoId",
+        "signature": "public ApiResponse<ChiNhanh> layChiNhanhTheoId(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/doanh-nghiep/chi-nhanh\", \"/chi-nhanh\", \"/v1/owner/branches\"})"
+        ],
+        "methodName": "taoChiNhanh",
+        "signature": "public ApiResponse<ChiNhanh> taoChiNhanh("
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/doanh-nghiep/{idDn}/chi-nhanh\", \"/chi-nhanh/doanh-nghiep/{idDn}\"})"
+        ],
+        "methodName": "taoChiNhanhTheoDoanhNghiepPath",
+        "signature": "public ApiResponse<ChiNhanh> taoChiNhanhTheoDoanhNghiepPath("
+      },
+      {
+        "annotations": [
+          "@PutMapping({\"/chi-nhanh/{id}\", \"/doanh-nghiep/chi-nhanh/{id}\"})"
+        ],
+        "methodName": "capNhatChiNhanh",
+        "signature": "public ApiResponse<ChiNhanh> capNhatChiNhanh(@PathVariable Integer id, @Valid @RequestBody ChiNhanh cn)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/chi-nhanh/{id}\", \"/doanh-nghiep/chi-nhanh/{id}\"})"
+        ],
+        "methodName": "xoaChiNhanh",
+        "signature": "public ApiResponse<Void> xoaChiNhanh(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/chi-nhanh/{idCn}/bo-nhiem-quan-ly\", \"/doanh-nghiep/chi-nhanh/{idCn}/bo-nhiem-quan-ly\"})"
+        ],
+        "methodName": "public ApiResponse<Map<String, Object>> boNhiemQuanLy(",
+        "signature": "public ApiResponse<Map<String, Object>> boNhiemQuanLy("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep\")]",
+          "[HttpGet(\"v1/owner/enterprises\")]"
+        ],
+        "methodName": "LayDanhSachDoanhNghiep",
+        "signature": "public async Task<IActionResult> LayDanhSachDoanhNghiep([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}\")]",
+          "[HttpGet(\"v1/owner/enterprises/{idDn}\")]"
+        ],
+        "methodName": "LayDoanhNghiepTheoId",
+        "signature": "public async Task<IActionResult> LayDoanhNghiepTheoId(int idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/chi-nhanh\")]",
+          "[HttpGet(\"chi-nhanh\")]",
+          "[HttpGet(\"v1/owner/branches\")]"
+        ],
+        "methodName": "LayDanhSachChiNhanh",
+        "signature": "public async Task<IActionResult> LayDanhSachChiNhanh([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/chi-nhanh\")]",
+          "[HttpGet(\"chi-nhanh/doanh-nghiep/{idDn}\")]"
+        ],
+        "methodName": "LayChiNhanhTheoDoanhNghiepPath",
+        "signature": "public async Task<IActionResult> LayChiNhanhTheoDoanhNghiepPath(int idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh/{id}\")]",
+          "[HttpGet(\"doanh-nghiep/chi-nhanh/{id}\")]"
+        ],
+        "methodName": "LayChiNhanhTheoId",
+        "signature": "public async Task<IActionResult> LayChiNhanhTheoId(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"doanh-nghiep/chi-nhanh\")]",
+          "[HttpPost(\"chi-nhanh\")]",
+          "[HttpPost(\"v1/owner/branches\")]"
+        ],
+        "methodName": "TaoChiNhanh",
+        "signature": "public async Task<IActionResult> TaoChiNhanh([FromQuery] int? idDn, [FromBody] TaoChiNhanhRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"doanh-nghiep/{idDn}/chi-nhanh\")]",
+          "[HttpPost(\"chi-nhanh/doanh-nghiep/{idDn}\")]"
+        ],
+        "methodName": "TaoChiNhanhTheoDoanhNghiepPath",
+        "signature": "public async Task<IActionResult> TaoChiNhanhTheoDoanhNghiepPath(int idDn, [FromBody] TaoChiNhanhRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"chi-nhanh/{id}\")]",
+          "[HttpPut(\"doanh-nghiep/chi-nhanh/{id}\")]"
+        ],
+        "methodName": "CapNhatChiNhanh",
+        "signature": "public async Task<IActionResult> CapNhatChiNhanh(int id, [FromBody] TaoChiNhanhRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"chi-nhanh/{id}\")]",
+          "[HttpDelete(\"doanh-nghiep/chi-nhanh/{id}\")]"
+        ],
+        "methodName": "XoaChiNhanh",
+        "signature": "public async Task<IActionResult> XoaChiNhanh(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"chi-nhanh/{idCn}/bo-nhiem-quan-ly\")]",
+          "[HttpPost(\"doanh-nghiep/chi-nhanh/{idCn}/bo-nhiem-quan-ly\")]"
+        ],
+        "methodName": "BoNhiemQuanLy",
+        "signature": "public IActionResult BoNhiemQuanLy(int idCn, [FromBody] IDictionary<string, object> payload)"
+      }
+    ]
+  },
+  "ChuDoanhNghiepCoDongController": {
+    "javaCount": 13,
+    "csCount": 12,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/chu-co-dong\", \"/chu-co-dong\", \"/v1/owner/shareholders\"})"
+        ],
+        "methodName": "public ApiResponse<List<ChuCoDong>> layDanhSachCoDong(",
+        "signature": "public ApiResponse<List<ChuCoDong>> layDanhSachCoDong("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/chu-co-dong\")"
+        ],
+        "methodName": "public ApiResponse<List<ChuCoDong>> layChuCoDongTheoDoanhNghiep(@PathVariable Integer idDn) {",
+        "signature": "public ApiResponse<List<ChuCoDong>> layChuCoDongTheoDoanhNghiep(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/chu-co-dong/{id}\", \"/chu-co-dong/{id}\"})"
+        ],
+        "methodName": "layChiTietCoDong",
+        "signature": "public ApiResponse<ChuCoDong> layChiTietCoDong(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/doanh-nghiep/chu-co-dong\", \"/chu-co-dong\", \"/v1/owner/shareholders\"})"
+        ],
+        "methodName": "taoCoDong",
+        "signature": "public ApiResponse<ChuCoDong> taoCoDong("
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/doanh-nghiep/{idDn}/chu-co-dong\")"
+        ],
+        "methodName": "taoCoDongTheoDoanhNghiepPath",
+        "signature": "public ApiResponse<ChuCoDong> taoCoDongTheoDoanhNghiepPath("
+      },
+      {
+        "annotations": [
+          "@PutMapping({\"/doanh-nghiep/chu-co-dong/{id}\", \"/chu-co-dong/{id}\"})"
+        ],
+        "methodName": "capNhatCoDong",
+        "signature": "public ApiResponse<ChuCoDong> capNhatCoDong(@PathVariable Integer id, @RequestBody ChuCoDong cd)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/doanh-nghiep/chu-co-dong/{id}\", \"/chu-co-dong/{id}\"})"
+        ],
+        "methodName": "xoaCoDong",
+        "signature": "public ApiResponse<Void> xoaCoDong(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/chu-co-dong/contributions\", \"/gop-von\"})"
+        ],
+        "methodName": "public ApiResponse<List<GopVonSoHuu>> layDanhSachGopVon(",
+        "signature": "public ApiResponse<List<GopVonSoHuu>> layDanhSachGopVon("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/gop-von\")"
+        ],
+        "methodName": "public ApiResponse<List<GopVonSoHuu>> layGopVonTheoDoanhNghiep(@PathVariable Integer idDn) {",
+        "signature": "public ApiResponse<List<GopVonSoHuu>> layGopVonTheoDoanhNghiep(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chu-co-dong/{idCd}/gop-von\")"
+        ],
+        "methodName": "public ApiResponse<List<GopVonSoHuu>> layGopVonTheoChuCoDong(@PathVariable Integer idCd) {",
+        "signature": "public ApiResponse<List<GopVonSoHuu>> layGopVonTheoChuCoDong(@PathVariable Integer idCd)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/doanh-nghiep/chu-co-dong/contributions\", \"/gop-von\"})"
+        ],
+        "methodName": "ghiNhanGopVon",
+        "signature": "public ApiResponse<GopVonSoHuu> ghiNhanGopVon(@Valid @RequestBody GopVonSoHuu gv)"
+      },
+      {
+        "annotations": [
+          "@PutMapping({\"/doanh-nghiep/chu-co-dong/contributions/{id}\", \"/gop-von/{id}\"})"
+        ],
+        "methodName": "capNhatGopVon",
+        "signature": "public ApiResponse<GopVonSoHuu> capNhatGopVon(@PathVariable Integer id, @RequestBody GopVonSoHuu gv)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/doanh-nghiep/chu-co-dong/contributions/{id}\", \"/gop-von/{id}\"})"
+        ],
+        "methodName": "xoaGopVon",
+        "signature": "public ApiResponse<Void> xoaGopVon(@PathVariable Integer id)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/chu-co-dong\")]",
+          "[HttpGet(\"chu-co-dong\")]",
+          "[HttpGet(\"v1/owner/shareholders\")]"
+        ],
+        "methodName": "LayDanhSachCoDong",
+        "signature": "public async Task<IActionResult> LayDanhSachCoDong([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/chu-co-dong\")]"
+        ],
+        "methodName": "LayChuCoDongTheoDoanhNghiep",
+        "signature": "public async Task<IActionResult> LayChuCoDongTheoDoanhNghiep(int idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/chu-co-dong/{id}\")]",
+          "[HttpGet(\"chu-co-dong/{id}\")]"
+        ],
+        "methodName": "LayChiTietCoDong",
+        "signature": "public async Task<IActionResult> LayChiTietCoDong(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"doanh-nghiep/chu-co-dong\")]",
+          "[HttpPost(\"chu-co-dong\")]",
+          "[HttpPost(\"v1/owner/shareholders\")]"
+        ],
+        "methodName": "TaoCoDong",
+        "signature": "public async Task<IActionResult> TaoCoDong([FromQuery] int? idDn, [FromBody] ChuCoDong cd)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"doanh-nghiep/{idDn}/chu-co-dong\")]"
+        ],
+        "methodName": "TaoCoDongTheoDoanhNghiepPath",
+        "signature": "public async Task<IActionResult> TaoCoDongTheoDoanhNghiepPath(int idDn, [FromBody] ChuCoDong cd)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"doanh-nghiep/chu-co-dong/{id}\")]",
+          "[HttpPut(\"chu-co-dong/{id}\")]"
+        ],
+        "methodName": "CapNhatCoDong",
+        "signature": "public async Task<IActionResult> CapNhatCoDong(int id, [FromBody] ChuCoDong cd)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"doanh-nghiep/chu-co-dong/{id}\")]",
+          "[HttpDelete(\"chu-co-dong/{id}\")]"
+        ],
+        "methodName": "XoaCoDong",
+        "signature": "public async Task<IActionResult> XoaCoDong(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/chu-co-dong/contributions\")]",
+          "[HttpGet(\"gop-von\")]"
+        ],
+        "methodName": "LayDanhSachGopVon",
+        "signature": "public async Task<IActionResult> LayDanhSachGopVon([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/gop-von\")]"
+        ],
+        "methodName": "LayGopVonTheoDoanhNghiep",
+        "signature": "public async Task<IActionResult> LayGopVonTheoDoanhNghiep(int idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chu-co-dong/{idCd}/gop-von\")]"
+        ],
+        "methodName": "LayGopVonTheoChuCoDong",
+        "signature": "public async Task<IActionResult> LayGopVonTheoChuCoDong(int idCd)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"doanh-nghiep/chu-co-dong/contributions\")]",
+          "[HttpPost(\"gop-von\")]"
+        ],
+        "methodName": "GhiNhanGopVon",
+        "signature": "public async Task<IActionResult> GhiNhanGopVon([FromBody] GopVonRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"doanh-nghiep/chu-co-dong/contributions/{id}\")]",
+          "[HttpPut(\"gop-von/{id}\")]"
+        ],
+        "methodName": "CapNhatGopVon",
+        "signature": "public async Task<IActionResult> CapNhatGopVon(int id, [FromBody] GopVonSoHuu gv)"
+      }
+    ]
+  },
+  "ChuDoanhNghiepDaoTaoController": {
+    "javaCount": 42,
+    "csCount": 18,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocThuocDoanhNghiep(",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocThuocDoanhNghiep("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc/{id}\")"
+        ],
+        "methodName": "layLopHocTheoId",
+        "signature": "public ApiResponse<LopHoc> layLopHocTheoId(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/lop-hoc\")"
+        ],
+        "methodName": "taoLopHoc",
+        "signature": "public ApiResponse<LopHoc> taoLopHoc("
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/lop-hoc/{id}\")"
+        ],
+        "methodName": "capNhatLopHoc",
+        "signature": "public ApiResponse<LopHoc> capNhatLopHoc(@PathVariable Integer id, @RequestBody LopHoc lop)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/lop-hoc/{id}\")"
+        ],
+        "methodName": "xoaLopHoc",
+        "signature": "public ApiResponse<Void> xoaLopHoc(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/bo-mon\")"
+        ],
+        "methodName": "public ApiResponse<List<BoMon>> layBoMonThuocDoanhNghiep(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<BoMon>> layBoMonThuocDoanhNghiep(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/bo-mon\")"
+        ],
+        "methodName": "taoBoMon",
+        "signature": "public ApiResponse<BoMon> taoBoMon("
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/bo-mon/{id}\")"
+        ],
+        "methodName": "capNhatBoMon",
+        "signature": "public ApiResponse<BoMon> capNhatBoMon(@PathVariable Integer id, @RequestBody BoMon bm)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/bo-mon/{id}\")"
+        ],
+        "methodName": "xoaBoMon",
+        "signature": "public ApiResponse<Void> xoaBoMon(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/mon-hoc\")"
+        ],
+        "methodName": "taoMonHoc",
+        "signature": "public ApiResponse<MonHoc> taoMonHoc("
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/mon-hoc/{id}\")"
+        ],
+        "methodName": "capNhatMonHoc",
+        "signature": "public ApiResponse<MonHoc> capNhatMonHoc(@PathVariable Integer id, @RequestBody MonHoc monHoc)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/mon-hoc/{id}\")"
+        ],
+        "methodName": "xoaMonHoc",
+        "signature": "public ApiResponse<Void> xoaMonHoc(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/chuyen-mon\")"
+        ],
+        "methodName": "taoChuyenMon",
+        "signature": "public ApiResponse<ChuyenMon> taoChuyenMon("
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/lop-hoc/{idLop}/phan-cong-gv\")"
+        ],
+        "methodName": "phanCongGiaoVien",
+        "signature": "public ApiResponse<LopHoc> phanCongGiaoVien("
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/tao-lop-theo-bo-mon\")"
+        ],
+        "methodName": "taoLopTheoBoMon",
+        "signature": "public ApiResponse<KhoaHoc> taoLopTheoBoMon("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KhoaHoc>> layTatCaKhoaHoc(",
+        "signature": "public ApiResponse<List<KhoaHoc>> layTatCaKhoaHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc/{id}\")"
+        ],
+        "methodName": "layKhoaHocTheoId",
+        "signature": "public ApiResponse<KhoaHoc> layKhoaHocTheoId(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/khoa-hoc\")"
+        ],
+        "methodName": "taoKhoaHoc",
+        "signature": "public ApiResponse<KhoaHoc> taoKhoaHoc("
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/khoa-hoc/{id}\")"
+        ],
+        "methodName": "capNhatKhoaHoc",
+        "signature": "public ApiResponse<KhoaHoc> capNhatKhoaHoc(@PathVariable Integer id, @RequestBody KhoaHoc kh)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/khoa-hoc/{id}\")"
+        ],
+        "methodName": "xoaKhoaHoc",
+        "signature": "public ApiResponse<Void> xoaKhoaHoc(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/nam-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<NamHoc>> layDanhSachNamHoc(",
+        "signature": "public ApiResponse<List<NamHoc>> layDanhSachNamHoc("
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/nam-hoc\")"
+        ],
+        "methodName": "taoNamHoc",
+        "signature": "public ApiResponse<NamHoc> taoNamHoc("
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/nam-hoc/{idNh}/tao-tuan-hoc-hang-loat\")"
+        ],
+        "methodName": "public ApiResponse<List<TuanHoc>> taoTuanHocHangLoatTheoNamHoc(@PathVariable Integer idNh) {",
+        "signature": "public ApiResponse<List<TuanHoc>> taoTuanHocHangLoatTheoNamHoc(@PathVariable Integer idNh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/nam-hoc/{idNh}/tuan-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<TuanHoc>> layTuanHocTheoNamHoc(@PathVariable Integer idNh) {",
+        "signature": "public ApiResponse<List<TuanHoc>> layTuanHocTheoNamHoc(@PathVariable Integer idNh)"
+      },
+      {
+        "annotations": [
+          "@PatchMapping(\"/nam-hoc/{id}/trang-thai\")"
+        ],
+        "methodName": "doiTrangThaiHoanThanh",
+        "signature": "public ApiResponse<NamHoc> doiTrangThaiHoanThanh(@PathVariable Integer id, @RequestParam Boolean daHoanThanh)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/nam-hoc/{id}\")"
+        ],
+        "methodName": "xoaNamHoc",
+        "signature": "public ApiResponse<Void> xoaNamHoc(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/ky-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KyHoc>> layKyHocThuocDoanhNghiep(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<KyHoc>> layKyHocThuocDoanhNghiep(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/ky-hoc/{idKh}/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoKyHoc(",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoKyHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/nam-hoc/{idNh}/terms\")"
+        ],
+        "methodName": "public ApiResponse<List<KyHoc>> layKyHocTheoNamHoc(@PathVariable Integer idNh) {",
+        "signature": "public ApiResponse<List<KyHoc>> layKyHocTheoNamHoc(@PathVariable Integer idNh)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/nam-hoc/{idNh}/terms\")"
+        ],
+        "methodName": "taoKyHoc",
+        "signature": "public ApiResponse<KyHoc> taoKyHoc(@PathVariable Integer idNh, @Valid @RequestBody KyHoc kh)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/terms/{id}\")"
+        ],
+        "methodName": "xoaKyHoc",
+        "signature": "public ApiResponse<Void> xoaKyHoc(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tuan-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<TuanHoc>> layTuanHocThuocDoanhNghiep(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<TuanHoc>> layTuanHocThuocDoanhNghiep(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/terms/{idKh}/weeks\")"
+        ],
+        "methodName": "taoTuanHoc",
+        "signature": "public ApiResponse<TuanHoc> taoTuanHoc(@PathVariable Integer idKh, @Valid @RequestBody TuanHoc th)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/weeks/{id}\")"
+        ],
+        "methodName": "xoaTuanHoc",
+        "signature": "public ApiResponse<Void> xoaTuanHoc(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/thoi-khoa-bieu/tuan/{idTh}\")"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoTuan(",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoTuan("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/thoi-khoa-bieu\")"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layTatCaThoiKhoaBieuThuocDoanhNghiep(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layTatCaThoiKhoaBieuThuocDoanhNghiep(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/schedules/fixed\")"
+        ],
+        "methodName": "public ApiResponse<List<KhungLichHocCoDinh>> layLichCoDinhTheoLop(@RequestParam Integer idLop) {",
+        "signature": "public ApiResponse<List<KhungLichHocCoDinh>> layLichCoDinhTheoLop(@RequestParam Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/schedules/fixed\")"
+        ],
+        "methodName": "taoLichCoDinh",
+        "signature": "public ApiResponse<KhungLichHocCoDinh> taoLichCoDinh("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/schedules/fixed/{id}\")"
+        ],
+        "methodName": "xoaLichCoDinh",
+        "signature": "public ApiResponse<Void> xoaLichCoDinh(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/lop-hoc/{idLop}/buoi-hoc\", \"/buoi-hoc/lop-hoc/{idLop}\"})"
+        ],
+        "methodName": "public ApiResponse<List<BuoiHocDto>> layBuoiHocTheoLop(@PathVariable Integer idLop) {",
+        "signature": "public ApiResponse<List<BuoiHocDto>> layBuoiHocTheoLop(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/buoi-hoc\")"
+        ],
+        "methodName": "taoBuoiHoc",
+        "signature": "public ApiResponse<BuoiHocDto> taoBuoiHoc(@RequestBody BuoiHoc buoiHoc)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/buoi-hoc/{idBuoiHoc}\")"
+        ],
+        "methodName": "xoaBuoiHoc",
+        "signature": "public ApiResponse<Void> xoaBuoiHoc(@PathVariable Integer idBuoiHoc)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc\")]"
+        ],
+        "methodName": "LayDanhSachLopHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachLopHoc("
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc/{id}\")]"
+        ],
+        "methodName": "LayLopHocTheoId",
+        "signature": "public async Task<IActionResult> LayLopHocTheoId(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"lop-hoc\")]"
+        ],
+        "methodName": "TaoLopHoc",
+        "signature": "public async Task<IActionResult> TaoLopHoc("
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"lop-hoc/{id}\")]"
+        ],
+        "methodName": "CapNhatLopHoc",
+        "signature": "public async Task<IActionResult> CapNhatLopHoc(int id, [FromBody] CapNhatLopHocRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"lop-hoc/{id}\")]"
+        ],
+        "methodName": "XoaLopHoc",
+        "signature": "public async Task<IActionResult> XoaLopHoc(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"lop-hoc/{idLop}/phan-cong-gv\")]"
+        ],
+        "methodName": "PhanCongGiaoVien",
+        "signature": "public async Task<IActionResult> PhanCongGiaoVien(int idLop, [FromBody] PhanCongGiaoVienRequest req)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"dropdown/chi-nhanh\")]"
+        ],
+        "methodName": "LayDropdownChiNhanh",
+        "signature": "public async Task<IActionResult> LayDropdownChiNhanh([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc\")]"
+        ],
+        "methodName": "LayDanhSachKhoaHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachKhoaHoc("
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"khoa-hoc\")]"
+        ],
+        "methodName": "TaoKhoaHoc",
+        "signature": "public async Task<IActionResult> TaoKhoaHoc([FromBody] TaoKhoaHocRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"khoa-hoc/{id}\")]"
+        ],
+        "methodName": "XoaKhoaHoc",
+        "signature": "public async Task<IActionResult> XoaKhoaHoc(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"bo-mon\")]"
+        ],
+        "methodName": "LayDanhSachBoMon",
+        "signature": "public async Task<IActionResult> LayDanhSachBoMon([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"bo-mon\")]"
+        ],
+        "methodName": "TaoBoMon",
+        "signature": "public async Task<IActionResult> TaoBoMon([FromQuery] int? idDn, [FromBody] BoMonDto dto)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"bo-mon/{id}\")]"
+        ],
+        "methodName": "XoaBoMon",
+        "signature": "public async Task<IActionResult> XoaBoMon(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"mon-hoc\")]"
+        ],
+        "methodName": "LayDanhSachMonHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachMonHoc([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"mon-hoc\")]"
+        ],
+        "methodName": "TaoMonHoc",
+        "signature": "public async Task<IActionResult> TaoMonHoc([FromQuery] int? idDn, [FromBody] TaoMonHocRequest req)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"mon-hoc/{id}\")]"
+        ],
+        "methodName": "XoaMonHoc",
+        "signature": "public async Task<IActionResult> XoaMonHoc(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"nam-hoc/{id}/doi-trang-thai\")]"
+        ],
+        "methodName": "DoiTrangThaiHoanThanhNamHoc",
+        "signature": "public async Task<IActionResult> DoiTrangThaiHoanThanhNamHoc(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"tuan-hoc/theo-ngay\")]"
+        ],
+        "methodName": "TimTuanHocTheoNgay",
+        "signature": "public async Task<IActionResult> TimTuanHocTheoNgay([FromQuery] DateOnly? ngay, [FromQuery] int? idDn)"
+      }
+    ]
+  },
+  "ChuDoanhNghiepDashboardController": {
+    "javaCount": 4,
+    "csCount": 4,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/tong-quan\", \"/{idDn}/tong-quan\", \"/doanh-nghiep/{idDn}/tong-quan\"})"
+        ],
+        "methodName": "public ApiResponse<Map<String, Object>> layTongQuanChuoi(",
+        "signature": "public ApiResponse<Map<String, Object>> layTongQuanChuoi("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/{idDn}/thong-ke-tong-quan\", \"/{idDn}/thong-ke-tong-quan\", \"/thong-ke/doanh-nghiep/{idDn}\"})"
+        ],
+        "methodName": "layThongKeTongQuan",
+        "signature": "public ApiResponse<ThongKeTongQuanDto> layThongKeTongQuan("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/{idDn}/nam-hoc\", \"/nam-hoc\", \"/doanh-nghiep/{idDn}/nam-hoc\"})"
+        ],
+        "methodName": "public ApiResponse<List<NamHoc>> layDanhSachNamHoc(",
+        "signature": "public ApiResponse<List<NamHoc>> layDanhSachNamHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/nam-hoc/{idNh}/ky-hoc\", \"/doanh-nghiep/nam-hoc/{idNh}/ky-hoc\"})"
+        ],
+        "methodName": "public ApiResponse<List<KyHoc>> layKyHocTheoNamHoc(@PathVariable Integer idNh) {",
+        "signature": "public ApiResponse<List<KyHoc>> layKyHocTheoNamHoc(@PathVariable Integer idNh)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"tong-quan\")]",
+          "[HttpGet(\"{idDn}/tong-quan\")]",
+          "[HttpGet(\"doanh-nghiep/{idDn}/tong-quan\")]"
+        ],
+        "methodName": "LayTongQuanChuoi",
+        "signature": "public async Task<IActionResult> LayTongQuanChuoi(int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/thong-ke-tong-quan\")]",
+          "[HttpGet(\"{idDn}/thong-ke-tong-quan\")]",
+          "[HttpGet(\"thong-ke/doanh-nghiep/{idDn}\")]"
+        ],
+        "methodName": "LayThongKeTongQuan",
+        "signature": "public async Task<IActionResult> LayThongKeTongQuan(int idDn, [FromQuery] int idNamHoc, [FromQuery] int? idKyHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"{idDn}/nam-hoc\")]",
+          "[HttpGet(\"nam-hoc\")]",
+          "[HttpGet(\"doanh-nghiep/{idDn}/nam-hoc\")]"
+        ],
+        "methodName": "LayDanhSachNamHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachNamHoc(int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"nam-hoc/{idNh}/ky-hoc\")]",
+          "[HttpGet(\"doanh-nghiep/nam-hoc/{idNh}/ky-hoc\")]"
+        ],
+        "methodName": "LayKyHocTheoNamHoc",
+        "signature": "public async Task<IActionResult> LayKyHocTheoNamHoc(int idNh)"
+      }
+    ]
+  },
+  "ChuDoanhNghiepNhanSuController": {
+    "javaCount": 45,
+    "csCount": 28,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/nhan-su/teachers\", \"/doanh-nghiep/giao-vien\", \"/giao-vien\", \"/v1/owner/personnel/teachers\"})"
+        ],
+        "methodName": "public ApiResponse<List<GiaoVien>> layDanhSachGiaoVien(",
+        "signature": "public ApiResponse<List<GiaoVien>> layDanhSachGiaoVien("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/giao-vien\")"
+        ],
+        "methodName": "public ApiResponse<List<GiaoVien>> layGiaoVienTheoDoanhNghiep(@PathVariable Integer idDn) {",
+        "signature": "public ApiResponse<List<GiaoVien>> layGiaoVienTheoDoanhNghiep(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/admin/giao-vien\")"
+        ],
+        "methodName": "public ApiResponse<List<GiaoVien>> layTatCaGiaoVienAdmin() {",
+        "signature": "public ApiResponse<List<GiaoVien>> layTatCaGiaoVienAdmin()"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/nhan-su/teachers/{id}\", \"/giao-vien/{id}\"})"
+        ],
+        "methodName": "layGiaoVienTheoId",
+        "signature": "public ApiResponse<GiaoVien> layGiaoVienTheoId(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/giao-vien/tim-kiem-sdt\")"
+        ],
+        "methodName": "public ApiResponse<List<GiaoVien>> timKiemGiaoVienTheoSdt(",
+        "signature": "public ApiResponse<List<GiaoVien>> timKiemGiaoVienTheoSdt("
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/doanh-nghiep/nhan-su/teachers\", \"/doanh-nghiep/giao-vien\", \"/giao-vien\", \"/v1/owner/personnel/teachers\"})"
+        ],
+        "methodName": "taoGiaoVien",
+        "signature": "public ApiResponse<GiaoVien> taoGiaoVien("
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/doanh-nghiep/{idDn}/giao-vien\")"
+        ],
+        "methodName": "taoGiaoVienPath",
+        "signature": "public ApiResponse<GiaoVien> taoGiaoVienPath("
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/doanh-nghiep/nhan-su/teachers/bulk\", \"/doanh-nghiep/giao-vien/hang-loat\"})"
+        ],
+        "methodName": "taoDanhSachGiaoVien",
+        "signature": "public ApiResponse<BulkResultDto> taoDanhSachGiaoVien("
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/doanh-nghiep/{idDn}/giao-vien/hang-loat\")"
+        ],
+        "methodName": "taoDanhSachGiaoVienPath",
+        "signature": "public ApiResponse<BulkResultDto> taoDanhSachGiaoVienPath("
+      },
+      {
+        "annotations": [
+          "@PutMapping({\"/doanh-nghiep/nhan-su/teachers/{id}\", \"/giao-vien/{id}\"})"
+        ],
+        "methodName": "capNhatGiaoVien",
+        "signature": "public ApiResponse<GiaoVien> capNhatGiaoVien(@PathVariable Integer id, @RequestBody GiaoVien gv)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/doanh-nghiep/nhan-su/teachers/{id}\", \"/giao-vien/{id}\"})"
+        ],
+        "methodName": "xoaGiaoVien",
+        "signature": "public ApiResponse<Void> xoaGiaoVien(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/giao-vien/{idGv}/tai-khoan\")"
+        ],
+        "methodName": "taoTaiKhoanChoGiaoVien",
+        "signature": "public ApiResponse<TaiKhoanGv> taoTaiKhoanChoGiaoVien("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/giao-vien/{idGv}/tai-khoan\")"
+        ],
+        "methodName": "layTaiKhoanGiaoVien",
+        "signature": "public ApiResponse<TaiKhoan> layTaiKhoanGiaoVien(@PathVariable Integer idGv)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/giao-vien/{idGv}/chi-tiet\")"
+        ],
+        "methodName": "layChiTietGiaoVien",
+        "signature": "public ApiResponse<ChiTietGv> layChiTietGiaoVien(@PathVariable Integer idGv)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/giao-vien/{idGv}/chi-tiet\")"
+        ],
+        "methodName": "luuChiTietGiaoVien",
+        "signature": "public ApiResponse<ChiTietGv> luuChiTietGiaoVien(@PathVariable Integer idGv, @RequestBody ChiTietGv chiTiet)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/giao-vien/{idGv}/chi-tiet\")"
+        ],
+        "methodName": "xoaChiTietGiaoVien",
+        "signature": "public ApiResponse<Void> xoaChiTietGiaoVien(@PathVariable Integer idGv)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/giao-vien/{idGv}/chung-chi\")"
+        ],
+        "methodName": "public ApiResponse<List<ChungChiGiaoVien>> layChungChiTheoGiaoVien(@PathVariable Integer idGv) {",
+        "signature": "public ApiResponse<List<ChungChiGiaoVien>> layChungChiTheoGiaoVien(@PathVariable Integer idGv)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/giao-vien/{idGv}/chung-chi\")"
+        ],
+        "methodName": "luuChungChiGiaoVien",
+        "signature": "public ApiResponse<ChungChiGiaoVien> luuChungChiGiaoVien(@PathVariable Integer idGv, @Valid @RequestBody ChungChiGiaoVien cc)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/chung-chi/{idChungChi}\")"
+        ],
+        "methodName": "xoaChungChi",
+        "signature": "public ApiResponse<Void> xoaChungChi(@PathVariable Integer idChungChi)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/giao-vien/{idGv}/chuyen-mon\")"
+        ],
+        "methodName": "public ApiResponse<List<GiaoVienChuyenMon>> layChuyenMonTheoGiaoVien(@PathVariable Integer idGv) {",
+        "signature": "public ApiResponse<List<GiaoVienChuyenMon>> layChuyenMonTheoGiaoVien(@PathVariable Integer idGv)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chuyen-mon/{idCm}/giao-vien\")"
+        ],
+        "methodName": "public ApiResponse<List<GiaoVienChuyenMon>> layGiaoVienTheoChuyenMon(@PathVariable Integer idCm) {",
+        "signature": "public ApiResponse<List<GiaoVienChuyenMon>> layGiaoVienTheoChuyenMon(@PathVariable Integer idCm)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/giao-vien/{idGv}/chuyen-mon/{idCm}\")"
+        ],
+        "methodName": "ganChuyenMonChoGiaoVien",
+        "signature": "public ApiResponse<GiaoVienChuyenMon> ganChuyenMonChoGiaoVien(@PathVariable Integer idGv, @PathVariable Integer idCm)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/giao-vien-chuyen-mon/{idGvCm}\")"
+        ],
+        "methodName": "xoaGiaoVienChuyenMon",
+        "signature": "public ApiResponse<Void> xoaGiaoVienChuyenMon(@PathVariable Integer idGvCm)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/giao-vien/{idGv}/chi-nhanh\")"
+        ],
+        "methodName": "public ApiResponse<List<GiaoVienChiNhanh>> layChiNhanhTheoGiaoVien(@PathVariable Integer idGv) {",
+        "signature": "public ApiResponse<List<GiaoVienChiNhanh>> layChiNhanhTheoGiaoVien(@PathVariable Integer idGv)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chi-nhanh/{idCn}/giao-vien\")"
+        ],
+        "methodName": "public ApiResponse<List<GiaoVienChiNhanh>> layGiaoVienTheoChiNhanh(@PathVariable Integer idCn) {",
+        "signature": "public ApiResponse<List<GiaoVienChiNhanh>> layGiaoVienTheoChiNhanh(@PathVariable Integer idCn)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/giao-vien/{idGv}/chi-nhanh/{idCn}\")"
+        ],
+        "methodName": "ganChiNhanhChoGiaoVien",
+        "signature": "public ApiResponse<GiaoVienChiNhanh> ganChiNhanhChoGiaoVien(@PathVariable Integer idGv, @PathVariable Integer idCn)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/giao-vien-chi-nhanh/{idGvChiNhanh}\")"
+        ],
+        "methodName": "xoaGiaoVienChiNhanh",
+        "signature": "public ApiResponse<Void> xoaGiaoVienChiNhanh(@PathVariable Integer idGvChiNhanh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/nhan-su/managers\", \"/doanh-nghiep/quan-ly\", \"/quan-ly\", \"/v1/owner/personnel/managers\"})"
+        ],
+        "methodName": "public ApiResponse<List<QuanLy>> layDanhSachQuanLy(",
+        "signature": "public ApiResponse<List<QuanLy>> layDanhSachQuanLy("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/quan-ly\")"
+        ],
+        "methodName": "public ApiResponse<List<QuanLy>> layQuanLyTheoDoanhNghiep(@PathVariable Integer idDn) {",
+        "signature": "public ApiResponse<List<QuanLy>> layQuanLyTheoDoanhNghiep(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chi-nhanh/{idCn}/quan-ly\")"
+        ],
+        "methodName": "public ApiResponse<List<QuanLy>> layQuanLyTheoChiNhanh(@PathVariable Integer idCn) {",
+        "signature": "public ApiResponse<List<QuanLy>> layQuanLyTheoChiNhanh(@PathVariable Integer idCn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/nhan-su/managers/{id}\", \"/quan-ly/{id}\"})"
+        ],
+        "methodName": "layQuanLyTheoId",
+        "signature": "public ApiResponse<QuanLy> layQuanLyTheoId(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/doanh-nghiep/nhan-su/managers\", \"/quan-ly\", \"/v1/owner/personnel/managers\"})"
+        ],
+        "methodName": "taoTaiKhoanQuanLy",
+        "signature": "public ApiResponse<QuanLy> taoTaiKhoanQuanLy(@Valid @RequestBody TaoQuanLyDto dto)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/chi-nhanh/{idCn}/quan-ly\")"
+        ],
+        "methodName": "taoQuanLyChiNhanh",
+        "signature": "public ApiResponse<QuanLy> taoQuanLyChiNhanh(@PathVariable Integer idCn, @Valid @RequestBody QuanLy ql)"
+      },
+      {
+        "annotations": [
+          "@PutMapping({\"/doanh-nghiep/nhan-su/managers/{id}\", \"/quan-ly/{id}\"})"
+        ],
+        "methodName": "capNhatQuanLy",
+        "signature": "public ApiResponse<QuanLy> capNhatQuanLy(@PathVariable Integer id, @RequestBody QuanLy ql)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/doanh-nghiep/nhan-su/managers/{id}\", \"/quan-ly/{id}\"})"
+        ],
+        "methodName": "xoaQuanLy",
+        "signature": "public ApiResponse<Void> xoaQuanLy(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/nhan-su/staffs\", \"/doanh-nghiep/nhan-cong\", \"/nhan-cong\", \"/v1/owner/personnel/staffs\"})"
+        ],
+        "methodName": "public ApiResponse<List<NhanCongKhac>> layDanhSachNhanVienKhac(",
+        "signature": "public ApiResponse<List<NhanCongKhac>> layDanhSachNhanVienKhac("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/nhan-cong\")"
+        ],
+        "methodName": "public ApiResponse<List<NhanCongKhac>> layNhanCongTheoDoanhNghiep(@PathVariable Integer idDn) {",
+        "signature": "public ApiResponse<List<NhanCongKhac>> layNhanCongTheoDoanhNghiep(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chi-nhanh/{idCn}/nhan-cong\")"
+        ],
+        "methodName": "public ApiResponse<List<NhanCongKhac>> layNhanCongTheoChiNhanh(@PathVariable Integer idCn) {",
+        "signature": "public ApiResponse<List<NhanCongKhac>> layNhanCongTheoChiNhanh(@PathVariable Integer idCn)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/doanh-nghiep/nhan-su/staffs\", \"/nhan-cong\", \"/v1/owner/personnel/staffs\"})"
+        ],
+        "methodName": "taoNhanVienKhac",
+        "signature": "public ApiResponse<NhanCongKhac> taoNhanVienKhac("
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/chi-nhanh/{idCn}/nhan-cong\")"
+        ],
+        "methodName": "taoNhanVienKhacPath",
+        "signature": "public ApiResponse<NhanCongKhac> taoNhanVienKhacPath("
+      },
+      {
+        "annotations": [
+          "@PutMapping({\"/doanh-nghiep/nhan-su/staffs/{id}\", \"/nhan-cong/{id}\"})"
+        ],
+        "methodName": "capNhatNhanVienKhac",
+        "signature": "public ApiResponse<NhanCongKhac> capNhatNhanVienKhac(@PathVariable Integer id, @RequestBody NhanCongKhac nc)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/doanh-nghiep/nhan-su/staffs/{id}\", \"/nhan-cong/{id}\"})"
+        ],
+        "methodName": "xoaNhanVienKhac",
+        "signature": "public ApiResponse<Void> xoaNhanVienKhac(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/nhan-su/specialties\", \"/chuyen-mon\", \"/v1/owner/personnel/specialties\"})"
+        ],
+        "methodName": "public ApiResponse<List<ChuyenMon>> layDanhSachChuyenMon(",
+        "signature": "public ApiResponse<List<ChuyenMon>> layDanhSachChuyenMon("
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/doanh-nghiep/nhan-su/specialties\", \"/chuyen-mon\", \"/v1/owner/personnel/specialties\"})"
+        ],
+        "methodName": "taoChuyenMon",
+        "signature": "public ApiResponse<ChuyenMon> taoChuyenMon("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/doanh-nghiep/nhan-su/specialties/{id}\", \"/chuyen-mon/{id}\"})"
+        ],
+        "methodName": "xoaChuyenMon",
+        "signature": "public ApiResponse<Void> xoaChuyenMon(@PathVariable Integer id)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/nhan-su/teachers\")]",
+          "[HttpGet(\"doanh-nghiep/giao-vien\")]",
+          "[HttpGet(\"giao-vien\")]",
+          "[HttpGet(\"v1/owner/personnel/teachers\")]"
+        ],
+        "methodName": "LayDanhSachGiaoVien",
+        "signature": "public async Task<IActionResult> LayDanhSachGiaoVien("
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/giao-vien\")]"
+        ],
+        "methodName": "LayGiaoVienTheoDoanhNghiep",
+        "signature": "public async Task<IActionResult> LayGiaoVienTheoDoanhNghiep(int idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"admin/giao-vien\")]"
+        ],
+        "methodName": "LayTatCaGiaoVienAdmin",
+        "signature": "public async Task<IActionResult> LayTatCaGiaoVienAdmin()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/nhan-su/teachers/{id}\")]",
+          "[HttpGet(\"giao-vien/{id}\")]"
+        ],
+        "methodName": "LayGiaoVienTheoId",
+        "signature": "public async Task<IActionResult> LayGiaoVienTheoId(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"doanh-nghiep/nhan-su/teachers\")]",
+          "[HttpPost(\"doanh-nghiep/giao-vien\")]",
+          "[HttpPost(\"giao-vien\")]",
+          "[HttpPost(\"v1/owner/personnel/teachers\")]"
+        ],
+        "methodName": "TaoGiaoVien",
+        "signature": "public async Task<IActionResult> TaoGiaoVien("
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"doanh-nghiep/{idDn}/giao-vien\")]"
+        ],
+        "methodName": "TaoGiaoVienPath",
+        "signature": "public async Task<IActionResult> TaoGiaoVienPath(int idDn, [FromBody] TaoGiaoVienRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"giao-vien/{id}\")]",
+          "[HttpPut(\"doanh-nghiep/giao-vien/{id}\")]"
+        ],
+        "methodName": "CapNhatGiaoVien",
+        "signature": "public async Task<IActionResult> CapNhatGiaoVien(int id, [FromBody] CapNhatGiaoVienRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"giao-vien/{id}\")]",
+          "[HttpDelete(\"doanh-nghiep/giao-vien/{id}\")]"
+        ],
+        "methodName": "XoaGiaoVien",
+        "signature": "public async Task<IActionResult> XoaGiaoVien(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"quan-ly\")]"
+        ],
+        "methodName": "LayDanhSachQuanLy",
+        "signature": "public async Task<IActionResult> LayDanhSachQuanLy([FromQuery] int? idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"quan-ly/{id}\")]"
+        ],
+        "methodName": "LayQuanLyTheoId",
+        "signature": "public async Task<IActionResult> LayQuanLyTheoId(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"quan-ly\")]"
+        ],
+        "methodName": "TaoQuanLy",
+        "signature": "public async Task<IActionResult> TaoQuanLy([FromBody] TaoQuanLyRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"quan-ly/{id}\")]"
+        ],
+        "methodName": "CapNhatQuanLy",
+        "signature": "public async Task<IActionResult> CapNhatQuanLy(int id, [FromBody] QuanLyEntity ql)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"quan-ly/{id}\")]"
+        ],
+        "methodName": "XoaQuanLy",
+        "signature": "public async Task<IActionResult> XoaQuanLy(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"nhan-cong\")]",
+          "[HttpGet(\"doanh-nghiep/{idDn}/nhan-cong\")]"
+        ],
+        "methodName": "LayDanhSachNhanCong",
+        "signature": "public async Task<IActionResult> LayDanhSachNhanCong(int? idDn, [FromQuery] int? enterpriseId)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh/{idCn}/nhan-cong\")]"
+        ],
+        "methodName": "LayDanhSachNhanCongTheoChiNhanh",
+        "signature": "public async Task<IActionResult> LayDanhSachNhanCongTheoChiNhanh(int idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"nhan-cong\")]"
+        ],
+        "methodName": "TaoMoiNhanCong",
+        "signature": "public async Task<IActionResult> TaoMoiNhanCong([FromBody] TaoNhanCongRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"nhan-cong/{id}\")]"
+        ],
+        "methodName": "CapNhatNhanCong",
+        "signature": "public async Task<IActionResult> CapNhatNhanCong(int id, [FromBody] TaoNhanCongRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"nhan-cong/{id}\")]"
+        ],
+        "methodName": "XoaNhanCong",
+        "signature": "public async Task<IActionResult> XoaNhanCong(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"giao-vien/{idGv}/chung-chi\")]"
+        ],
+        "methodName": "LayChungChiTheoGiaoVien",
+        "signature": "public async Task<IActionResult> LayChungChiTheoGiaoVien(int idGv)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"giao-vien/{idGv}/chung-chi\")]"
+        ],
+        "methodName": "ThemChungChiGiaoVien",
+        "signature": "public async Task<IActionResult> ThemChungChiGiaoVien(int idGv, [FromBody] ChungChiRequestDto request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"chung-chi/{id}\")]"
+        ],
+        "methodName": "XoaChungChiGiaoVien",
+        "signature": "public async Task<IActionResult> XoaChungChiGiaoVien(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"giao-vien/{idGv}/chi-tiet\")]"
+        ],
+        "methodName": "LayChiTietGiaoVien",
+        "signature": "public async Task<IActionResult> LayChiTietGiaoVien(int idGv)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"giao-vien/{idGv}/chi-tiet\")]"
+        ],
+        "methodName": "LuuChiTietGiaoVien",
+        "signature": "public async Task<IActionResult> LuuChiTietGiaoVien(int idGv, [FromBody] ChiTietGiaoVienDto request)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"giao-vien/{idGv}/ho-so\")]"
+        ],
+        "methodName": "LayHoSoCaNhanGiaoVien",
+        "signature": "public async Task<IActionResult> LayHoSoCaNhanGiaoVien(int idGv)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"giao-vien/{idGv}/tai-khoan\")]"
+        ],
+        "methodName": "TaoTaiKhoanChoGiaoVien",
+        "signature": "public async Task<IActionResult> TaoTaiKhoanChoGiaoVien(int idGv, [FromBody] TaoTaiKhoanGvRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"giao-vien/{idGv}/tai-khoan\")]"
+        ],
+        "methodName": "TimTaiKhoanGiaoVien",
+        "signature": "public async Task<IActionResult> TimTaiKhoanGiaoVien(int idGv)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"giao-vien/tim-sdt\")]"
+        ],
+        "methodName": "TimGiaoVienTheoSdt",
+        "signature": "public async Task<IActionResult> TimGiaoVienTheoSdt([FromQuery] string sdt, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"giao-vien/tim-cccd\")]"
+        ],
+        "methodName": "TimGiaoVienTheoCccd",
+        "signature": "public async Task<IActionResult> TimGiaoVienTheoCccd([FromQuery] string cccd, [FromQuery] int? idDn)"
+      }
+    ]
+  },
+  "ChuDoanhNghiepStudentController": {
+    "javaCount": 23,
+    "csCount": 19,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/doanh-nghiep/hoc-sinh\", \"/v1/owner/students\", \"/hoc-sinh\", \"/doanh-nghiep/{idDn}/hoc-sinh\"})"
+        ],
+        "methodName": "public ApiResponse<List<HocSinh>> layDanhSachHocSinh(",
+        "signature": "public ApiResponse<List<HocSinh>> layDanhSachHocSinh("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/hoc-sinh/{id}\", \"/doanh-nghiep/hoc-sinh/{id}\", \"/v1/owner/students/{id}\"})"
+        ],
+        "methodName": "layHocSinhTheoId",
+        "signature": "public ApiResponse<HocSinh> layHocSinhTheoId(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/hoc-sinh\", \"/doanh-nghiep/hoc-sinh\", \"/v1/owner/students\", \"/doanh-nghiep/{idDn}/hoc-sinh\"})"
+        ],
+        "methodName": "taoHocSinh",
+        "signature": "public ApiResponse<HocSinh> taoHocSinh("
+      },
+      {
+        "annotations": [
+          "@PutMapping({\"/hoc-sinh/{id}\", \"/doanh-nghiep/hoc-sinh/{id}\", \"/v1/owner/students/{id}\"})"
+        ],
+        "methodName": "capNhatHocSinh",
+        "signature": "public ApiResponse<HocSinh> capNhatHocSinh("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/hoc-sinh/{id}\", \"/doanh-nghiep/hoc-sinh/{id}\", \"/v1/owner/students/{id}\"})"
+        ],
+        "methodName": "xoaHocSinh",
+        "signature": "public ApiResponse<Void> xoaHocSinh(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/phu-huynh\", \"/hoc-sinh/parents\", \"/doanh-nghiep/{idDn}/phu-huynh\"})"
+        ],
+        "methodName": "public ApiResponse<List<PhuHuynh>> layDanhSachPhuHuynh(",
+        "signature": "public ApiResponse<List<PhuHuynh>> layDanhSachPhuHuynh("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/phu-huynh/{id}\", \"/hoc-sinh/parents/{id}\"})"
+        ],
+        "methodName": "layPhuHuynhTheoId",
+        "signature": "public ApiResponse<PhuHuynh> layPhuHuynhTheoId(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/phu-huynh/student/{idHs}\", \"/hoc-sinh/{idHs}/phu-huynh\", \"/hoc-sinh/parents/student/{idHs}\"})"
+        ],
+        "methodName": "public ApiResponse<List<PhuHuynh>> layPhuHuynhTheoIdHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<PhuHuynh>> layPhuHuynhTheoIdHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/phu-huynh\", \"/hoc-sinh/parents\", \"/doanh-nghiep/{idDn}/phu-huynh\"})"
+        ],
+        "methodName": "taoPhuHuynh",
+        "signature": "public ApiResponse<PhuHuynh> taoPhuHuynh("
+      },
+      {
+        "annotations": [
+          "@PutMapping({\"/phu-huynh/{id}\", \"/hoc-sinh/parents/{id}\"})"
+        ],
+        "methodName": "capNhatPhuHuynh",
+        "signature": "public ApiResponse<PhuHuynh> capNhatPhuHuynh("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/phu-huynh/{id}\", \"/hoc-sinh/parents/{id}\"})"
+        ],
+        "methodName": "xoaPhuHuynh",
+        "signature": "public ApiResponse<Void> xoaPhuHuynh(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/phu-huynh/{idPh}/hoc-sinh-bang-phu\", \"/phu-huynh/{idPh}/hoc-sinh\"})"
+        ],
+        "methodName": "public ApiResponse<List<PhuHuynhHocSinh>> layHocSinhTheoPhuHuynhBangPhu(@PathVariable Integer idPh) {",
+        "signature": "public ApiResponse<List<PhuHuynhHocSinh>> layHocSinhTheoPhuHuynhBangPhu(@PathVariable Integer idPh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/hoc-sinh/{idHs}/phu-huynh-bang-phu\"})"
+        ],
+        "methodName": "public ApiResponse<List<PhuHuynhHocSinh>> layPhuHuynhTheoHocSinhBangPhu(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<PhuHuynhHocSinh>> layPhuHuynhTheoHocSinhBangPhu(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/phu-huynh-hoc-sinh\"})"
+        ],
+        "methodName": "ganQuanHePhuHuynhHocSinh",
+        "signature": "public ApiResponse<PhuHuynhHocSinh> ganQuanHePhuHuynhHocSinh("
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/hoc-sinh/{idHs}/phu-huynh\"})"
+        ],
+        "methodName": "taoMoiPhuHuynhChoHocSinh",
+        "signature": "public ApiResponse<PhuHuynh> taoMoiPhuHuynhChoHocSinh("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/phu-huynh-hoc-sinh/{idPhHs}\"})"
+        ],
+        "methodName": "xoaQuanHePhuHuynhHocSinh",
+        "signature": "public ApiResponse<Void> xoaQuanHePhuHuynhHocSinh(@PathVariable Integer idPhHs)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/dang-ky-hoc/lop-hoc/{idLop}\", \"/lop-hoc/{idLop}/dang-ky-hoc\"})"
+        ],
+        "methodName": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoLop(@PathVariable Integer idLop) {",
+        "signature": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoLop(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/dang-ky-hoc/hoc-sinh/{idHs}\", \"/hoc-sinh/{idHs}/dang-ky-hoc\"})"
+        ],
+        "methodName": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/dang-ky-hoc\", \"/hoc-sinh/enrollments\"})"
+        ],
+        "methodName": "dangKyLopHoc",
+        "signature": "public ApiResponse<DangKyHoc> dangKyLopHoc("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/dang-ky-hoc/{id}\", \"/hoc-sinh/enrollments/{id}\"})"
+        ],
+        "methodName": "huyDangKyHoc",
+        "signature": "public ApiResponse<Void> huyDangKyHoc(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/bao-luu\", \"/hoc-sinh/deferrals\"})"
+        ],
+        "methodName": "public ApiResponse<List<BaoLuuKhoaHoc>> layDanhSachBaoLuu(",
+        "signature": "public ApiResponse<List<BaoLuuKhoaHoc>> layDanhSachBaoLuu("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/hoc-sinh/{idHs}/bao-luu\")"
+        ],
+        "methodName": "public ApiResponse<List<BaoLuuKhoaHoc>> layBaoLuuTheoHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<BaoLuuKhoaHoc>> layBaoLuuTheoHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/hoc-sinh/khoa-hoc/{idKhoaHoc}\", \"/khoa-hoc/{idKhoaHoc}/hoc-sinh\"})"
+        ],
+        "methodName": "public ApiResponse<List<HocSinh>> layDanhSachHocSinhTheoKhoaHoc(",
+        "signature": "public ApiResponse<List<HocSinh>> layDanhSachHocSinhTheoKhoaHoc("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/hoc-sinh\")]",
+          "[HttpGet(\"hoc-sinh\")]",
+          "[HttpGet(\"v1/owner/students\")]",
+          "[HttpGet(\"v1/hoc-sinh\")]"
+        ],
+        "methodName": "LayDanhSachHocSinh",
+        "signature": "public async Task<IActionResult> LayDanhSachHocSinh("
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"hoc-sinh/{id}\")]",
+          "[HttpGet(\"v1/hoc-sinh/{id}\")]",
+          "[HttpGet(\"doanh-nghiep/hoc-sinh/{id}\")]"
+        ],
+        "methodName": "LayHocSinhTheoId",
+        "signature": "public async Task<IActionResult> LayHocSinhTheoId(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"hoc-sinh\")]",
+          "[HttpPost(\"v1/hoc-sinh\")]",
+          "[HttpPost(\"doanh-nghiep/hoc-sinh\")]"
+        ],
+        "methodName": "TaoHocSinh",
+        "signature": "public async Task<IActionResult> TaoHocSinh([FromQuery] int? idDn, [FromBody] HocSinh hs)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"hoc-sinh/{id}\")]",
+          "[HttpPut(\"v1/hoc-sinh/{id}\")]",
+          "[HttpPut(\"doanh-nghiep/hoc-sinh/{id}\")]"
+        ],
+        "methodName": "CapNhatHocSinh",
+        "signature": "public async Task<IActionResult> CapNhatHocSinh(int id, [FromBody] HocSinh hs)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"hoc-sinh/{id}\")]",
+          "[HttpDelete(\"v1/hoc-sinh/{id}\")]",
+          "[HttpDelete(\"doanh-nghiep/hoc-sinh/{id}\")]"
+        ],
+        "methodName": "XoaHocSinh",
+        "signature": "public async Task<IActionResult> XoaHocSinh(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"phu-huynh\")]",
+          "[HttpGet(\"hoc-sinh/parents\")]"
+        ],
+        "methodName": "LayDanhSachPhuHuynh",
+        "signature": "public async Task<IActionResult> LayDanhSachPhuHuynh("
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"phu-huynh/{id}\")]",
+          "[HttpGet(\"hoc-sinh/parents/{id}\")]"
+        ],
+        "methodName": "LayPhuHuynhTheoId",
+        "signature": "public async Task<IActionResult> LayPhuHuynhTheoId(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"phu-huynh\")]",
+          "[HttpPost(\"hoc-sinh/parents\")]"
+        ],
+        "methodName": "TaoPhuHuynh",
+        "signature": "public async Task<IActionResult> TaoPhuHuynh([FromQuery] int? idDn, [FromBody] PhuHuynh ph)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"phu-huynh/{id}\")]",
+          "[HttpPut(\"hoc-sinh/parents/{id}\")]"
+        ],
+        "methodName": "CapNhatPhuHuynh",
+        "signature": "public async Task<IActionResult> CapNhatPhuHuynh(int id, [FromBody] PhuHuynh ph)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"phu-huynh/{id}\")]",
+          "[HttpDelete(\"hoc-sinh/parents/{id}\")]"
+        ],
+        "methodName": "XoaPhuHuynh",
+        "signature": "public async Task<IActionResult> XoaPhuHuynh(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"hoc-sinh/{idHs}/phu-huynh\")]"
+        ],
+        "methodName": "LayPhuHuynhTheoHocSinh",
+        "signature": "public async Task<IActionResult> LayPhuHuynhTheoHocSinh(int idHs)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"phu-huynh/{idPh}/hoc-sinh\")]"
+        ],
+        "methodName": "LayHocSinhTheoPhuHuynh",
+        "signature": "public async Task<IActionResult> LayHocSinhTheoPhuHuynh(int idPh)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"hoc-sinh/gan-phu-huynh\")]"
+        ],
+        "methodName": "GanPhuHuynhVaoHocSinh",
+        "signature": "public async Task<IActionResult> GanPhuHuynhVaoHocSinh([FromBody] GanPhuHuynhRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"hoc-sinh/{idHs}/phu-huynh/{idPh}\")]"
+        ],
+        "methodName": "XoaQuanHePhuHuynhHocSinh",
+        "signature": "public async Task<IActionResult> XoaQuanHePhuHuynhHocSinh(int idHs, int idPh)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"hoc-sinh/{idHs}/tao-phu-huynh\")]"
+        ],
+        "methodName": "TaoMoiPhuHuynhChoHocSinh",
+        "signature": "public async Task<IActionResult> TaoMoiPhuHuynhChoHocSinh(int idHs, [FromBody] TaoPhuHuynhChoHocSinhRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"hoc-sinh/tim-sdt\")]"
+        ],
+        "methodName": "TimHocSinhTheoSdt",
+        "signature": "public async Task<IActionResult> TimHocSinhTheoSdt([FromQuery] string sdt, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"hoc-sinh/tim-cccd\")]"
+        ],
+        "methodName": "TimHocSinhTheoCccd",
+        "signature": "public async Task<IActionResult> TimHocSinhTheoCccd([FromQuery] string cccd, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"phu-huynh/tim-sdt\")]"
+        ],
+        "methodName": "TimPhuHuynhTheoSdt",
+        "signature": "public async Task<IActionResult> TimPhuHuynhTheoSdt([FromQuery] string sdt, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"phu-huynh/tim-cccd\")]"
+        ],
+        "methodName": "TimPhuHuynhTheoCccd",
+        "signature": "public async Task<IActionResult> TimPhuHuynhTheoCccd([FromQuery] string cccd, [FromQuery] int? idDn)"
+      }
+    ]
+  },
+  "ChuDoanhNghiepTaiChinhController": {
+    "javaCount": 23,
+    "csCount": 23,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/so-quy\", \"/cashbook\", \"/doanh-nghiep/{idDn}/so-quy\"})"
+        ],
+        "methodName": "public ApiResponse<List<SoQuyThuChi>> laySoQuyDoanhNghiep(",
+        "signature": "public ApiResponse<List<SoQuyThuChi>> laySoQuyDoanhNghiep("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chi-nhanh/{idCn}/giao-dich\")"
+        ],
+        "methodName": "public ApiResponse<List<SoQuyThuChi>> layGiaoDichTheoChiNhanh(@PathVariable Integer idCn) {",
+        "signature": "public ApiResponse<List<SoQuyThuChi>> layGiaoDichTheoChiNhanh(@PathVariable Integer idCn)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/chi-nhanh/{idCn}/giao-dich\")"
+        ],
+        "methodName": "taoGiaoDichChiNhanh",
+        "signature": "public ApiResponse<SoQuyThuChi> taoGiaoDichChiNhanh("
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/so-quy\", \"/giao-dich\"})"
+        ],
+        "methodName": "taoGiaoDichThuChi",
+        "signature": "public ApiResponse<SoQuyThuChi> taoGiaoDichThuChi("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/so-quy/{id}\", \"/giao-dich/{id}\"})"
+        ],
+        "methodName": "xoaGiaoDichThuChi",
+        "signature": "public ApiResponse<Void> xoaGiaoDichThuChi(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/luong-giao-vien\", \"/teacher-payrolls\", \"/thanh-toan-giao-vien\", \"/doanh-nghiep/{idDn}/thanh-toan-giao-vien\", \"/doanh-nghiep/{idDn}/luong-giao-vien\"})"
+        ],
+        "methodName": "public ApiResponse<List<ThanhToanGiaoVien>> layDanhSachLuongGiaoVien(",
+        "signature": "public ApiResponse<List<ThanhToanGiaoVien>> layDanhSachLuongGiaoVien("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/giao-vien/{idGv}/thanh-toan\")"
+        ],
+        "methodName": "public ApiResponse<List<ThanhToanGiaoVien>> layThanhToanTheoGiaoVien(@PathVariable Integer idGv) {",
+        "signature": "public ApiResponse<List<ThanhToanGiaoVien>> layThanhToanTheoGiaoVien(@PathVariable Integer idGv)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/luong-giao-vien\", \"/thanh-toan-giao-vien\"})"
+        ],
+        "methodName": "taoPhieuLuongGiaoVien",
+        "signature": "public ApiResponse<ThanhToanGiaoVien> taoPhieuLuongGiaoVien("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/luong-giao-vien/{id}\", \"/thanh-toan-giao-vien/{id}\"})"
+        ],
+        "methodName": "xoaPhieuLuongGiaoVien",
+        "signature": "public ApiResponse<Void> xoaPhieuLuongGiaoVien(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/hoc-sinh/{idHs}/phieu-thu\")"
+        ],
+        "methodName": "public ApiResponse<List<PhieuThuHocPhi>> layPhieuThuTheoHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<PhieuThuHocPhi>> layPhieuThuTheoHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/dang-ky-hoc/{idDangKy}/phieu-thu\")"
+        ],
+        "methodName": "public ApiResponse<List<PhieuThuHocPhi>> layPhieuThuTheoDangKyHoc(@PathVariable Integer idDangKy) {",
+        "signature": "public ApiResponse<List<PhieuThuHocPhi>> layPhieuThuTheoDangKyHoc(@PathVariable Integer idDangKy)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/khoa-hoc/{idKhoaHoc}/phieu-thu\", \"/course/{idKhoaHoc}/receipts\"})"
+        ],
+        "methodName": "public ApiResponse<List<PhieuThuHocPhi>> layPhieuThuTheoKhoaHoc(@PathVariable Integer idKhoaHoc) {",
+        "signature": "public ApiResponse<List<PhieuThuHocPhi>> layPhieuThuTheoKhoaHoc(@PathVariable Integer idKhoaHoc)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/khoa-hoc/{idKhoaHoc}/thanh-toan-hoc-phi\", \"/course/{idKhoaHoc}/tuition-payments\"})"
+        ],
+        "methodName": "public ApiResponse<List<com.example.project.entity.ThanhToanHocPhiKhoaHocHocSinh>> layThanhToanHocPhiTheoKhoaHoc(@PathVariable Integer idKhoaHoc) {",
+        "signature": "public ApiResponse<List<com.example.project.entity.ThanhToanHocPhiKhoaHocHocSinh>> layThanhToanHocPhiTheoKhoaHoc(@PathVariable Integer idKhoaHoc)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/phieu-thu\")"
+        ],
+        "methodName": "lapPhieuThuHocPhi",
+        "signature": "public ApiResponse<PhieuThuHocPhi> lapPhieuThuHocPhi(@Valid @RequestBody PhieuThuHocPhi pt)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/phieu-thu/{id}\")"
+        ],
+        "methodName": "xoaPhieuThuHocPhi",
+        "signature": "public ApiResponse<Void> xoaPhieuThuHocPhi(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/bao-luu\", \"/deferrals\"})"
+        ],
+        "methodName": "public ApiResponse<List<BaoLuuKhoaHoc>> layDanhSachBaoLuu(",
+        "signature": "public ApiResponse<List<BaoLuuKhoaHoc>> layDanhSachBaoLuu("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/hoc-sinh/{idHs}/bao-luu\")"
+        ],
+        "methodName": "public ApiResponse<List<BaoLuuKhoaHoc>> layBaoLuuTheoHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<BaoLuuKhoaHoc>> layBaoLuuTheoHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/bao-luu\")"
+        ],
+        "methodName": "lapPhieuBaoLuu",
+        "signature": "public ApiResponse<BaoLuuKhoaHoc> lapPhieuBaoLuu(@Valid @RequestBody BaoLuuKhoaHoc baoLuu)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/bao-luu/{id}\")"
+        ],
+        "methodName": "xoaBaoLuu",
+        "signature": "public ApiResponse<Void> xoaBaoLuu(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/thu-chi-nam\", \"/yearly-summary\"})"
+        ],
+        "methodName": "public ApiResponse<List<com.example.project.entity.ThuChiNamHoc>> layThuChiNam(",
+        "signature": "public ApiResponse<List<com.example.project.entity.ThuChiNamHoc>> layThuChiNam("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/thu-chi-ky\", \"/semester-summary\"})"
+        ],
+        "methodName": "public ApiResponse<List<com.example.project.entity.ThuChiKyHoc>> layThuChiKy(",
+        "signature": "public ApiResponse<List<com.example.project.entity.ThuChiKyHoc>> layThuChiKy("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/thu-chi-thang\", \"/monthly-summary\"})"
+        ],
+        "methodName": "public ApiResponse<List<com.example.project.entity.ThuChiThangHoc>> layThuChiThang(",
+        "signature": "public ApiResponse<List<com.example.project.entity.ThuChiThangHoc>> layThuChiThang("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/thu-chi-tuan\", \"/weekly-summary\"})"
+        ],
+        "methodName": "public ApiResponse<List<com.example.project.entity.ThuChiTuanHoc>> layThuChiTuan(",
+        "signature": "public ApiResponse<List<com.example.project.entity.ThuChiTuanHoc>> layThuChiTuan("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"so-quy\")]",
+          "[HttpGet(\"cashbook\")]",
+          "[HttpGet(\"doanh-nghiep/{idDn}/so-quy\")]",
+          "[HttpGet(\"doanh-nghiep/tai-chinh/so-quy\")]",
+          "[HttpGet(\"v1/tai-chinh/so-quy\")]",
+          "[HttpGet(\"tai-chinh/so-quy\")]"
+        ],
+        "methodName": "LaySoQuyDoanhNghiep",
+        "signature": "public async Task<IActionResult> LaySoQuyDoanhNghiep(int? idDn, [FromQuery] int? queryIdDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh/{idCn}/giao-dich\")]"
+        ],
+        "methodName": "LayGiaoDichTheoChiNhanh",
+        "signature": "public async Task<IActionResult> LayGiaoDichTheoChiNhanh(int idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"chi-nhanh/{idCn}/giao-dich\")]"
+        ],
+        "methodName": "TaoGiaoDichChiNhanh",
+        "signature": "public async Task<IActionResult> TaoGiaoDichChiNhanh(int idCn, [FromBody] SoQuyThuChi gd)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"so-quy\")]",
+          "[HttpPost(\"giao-dich\")]",
+          "[HttpPost(\"doanh-nghiep/tai-chinh/so-quy\")]",
+          "[HttpPost(\"v1/tai-chinh/so-quy\")]",
+          "[HttpPost(\"tai-chinh/so-quy\")]"
+        ],
+        "methodName": "TaoGiaoDichThuChi",
+        "signature": "public async Task<IActionResult> TaoGiaoDichThuChi([FromQuery] int? idCn, [FromBody] SoQuyThuChi gd)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"so-quy/{id}\")]",
+          "[HttpDelete(\"giao-dich/{id}\")]"
+        ],
+        "methodName": "XoaGiaoDichThuChi",
+        "signature": "public async Task<IActionResult> XoaGiaoDichThuChi(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"bao-cao-tong-hop\")]",
+          "[HttpGet(\"v1/tai-chinh/bao-cao-tong-hop\")]",
+          "[HttpGet(\"tai-chinh/bao-cao-tong-hop\")]",
+          "[HttpGet(\"doanh-nghiep/tai-chinh/bao-cao-tong-hop\")]"
+        ],
+        "methodName": "LayBaoCaoTongHop",
+        "signature": "public async Task<IActionResult> LayBaoCaoTongHop("
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"phieu-thu\")]",
+          "[HttpPost(\"v1/tai-chinh/phieu-thu\")]",
+          "[HttpPost(\"tai-chinh/phieu-thu\")]"
+        ],
+        "methodName": "LapPhieuThu",
+        "signature": "public async Task<IActionResult> LapPhieuThu([FromBody] TaoPhieuThuRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"phieu-thu/hoc-sinh/{idHs}\")]",
+          "[HttpGet(\"v1/tai-chinh/phieu-thu/hoc-sinh/{idHs}\")]",
+          "[HttpGet(\"tai-chinh/phieu-thu/hoc-sinh/{idHs}\")]",
+          "[HttpGet(\"hoc-sinh/{idHs}/phieu-thu\")]"
+        ],
+        "methodName": "LayPhieuThuTheoHocSinh",
+        "signature": "public async Task<IActionResult> LayPhieuThuTheoHocSinh(int idHs)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"luong-giao-vien\")]",
+          "[HttpGet(\"teacher-payrolls\")]",
+          "[HttpGet(\"thanh-toan-giao-vien\")]",
+          "[HttpGet(\"doanh-nghiep/{idDn}/thanh-toan-giao-vien\")]"
+        ],
+        "methodName": "LayDanhSachLuongGiaoVien",
+        "signature": "public async Task<IActionResult> LayDanhSachLuongGiaoVien(int? idDn, [FromQuery] int? queryIdDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"giao-vien/{idGv}/thanh-toan\")]"
+        ],
+        "methodName": "LayThanhToanTheoGiaoVien",
+        "signature": "public async Task<IActionResult> LayThanhToanTheoGiaoVien(int idGv)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"luong-giao-vien\")]",
+          "[HttpPost(\"thanh-toan-giao-vien\")]"
+        ],
+        "methodName": "TaoPhieuLuongGiaoVien",
+        "signature": "public async Task<IActionResult> TaoPhieuLuongGiaoVien("
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"thanh-toan-luong\")]"
+        ],
+        "methodName": "ThanhToanLuongGiaoVien",
+        "signature": "public async Task<IActionResult> ThanhToanLuongGiaoVien([FromBody] ThanhToanLuongGvRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"thanh-toan-giao-vien/{id}\")]"
+        ],
+        "methodName": "XoaThanhToanGiaoVien",
+        "signature": "public async Task<IActionResult> XoaThanhToanGiaoVien(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"bao-luu\")]",
+          "[HttpGet(\"doanh-nghiep/{idDn}/bao-luu\")]"
+        ],
+        "methodName": "LayDanhSachBaoLuu",
+        "signature": "public async Task<IActionResult> LayDanhSachBaoLuu(int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh/{idCn}/bao-luu\")]"
+        ],
+        "methodName": "LayDanhSachBaoLuuTheoChiNhanh",
+        "signature": "public async Task<IActionResult> LayDanhSachBaoLuuTheoChiNhanh(int idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"hoc-sinh/{idHs}/bao-luu\")]"
+        ],
+        "methodName": "LayDanhSachBaoLuuTheoHocSinh",
+        "signature": "public async Task<IActionResult> LayDanhSachBaoLuuTheoHocSinh(int idHs)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"bao-luu\")]"
+        ],
+        "methodName": "TaoBaoLuu",
+        "signature": "public async Task<IActionResult> TaoBaoLuu([FromBody] TaoBaoLuuRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"bao-luu/{id}/duyet\")]"
+        ],
+        "methodName": "DuyetBaoLuu",
+        "signature": "public async Task<IActionResult> DuyetBaoLuu(int id, [FromBody] DuyetBaoLuuRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"bao-luu/{id}\")]"
+        ],
+        "methodName": "XoaBaoLuu",
+        "signature": "public async Task<IActionResult> XoaBaoLuu(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"thu-chi-nam/{idNamHoc}\")]"
+        ],
+        "methodName": "LayThuChiNam",
+        "signature": "public async Task<IActionResult> LayThuChiNam(int idNamHoc, [FromQuery] int? idCn, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"thu-chi-ky/{idKyHoc}\")]"
+        ],
+        "methodName": "LayThuChiKy",
+        "signature": "public async Task<IActionResult> LayThuChiKy(int idKyHoc, [FromQuery] int? idCn, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"thu-chi-thang/{idThangHoc}\")]"
+        ],
+        "methodName": "LayThuChiThang",
+        "signature": "public async Task<IActionResult> LayThuChiThang(int idThangHoc, [FromQuery] int? idCn, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"thu-chi-tuan/{idTuanHoc}\")]"
+        ],
+        "methodName": "LayThuChiTuan",
+        "signature": "public async Task<IActionResult> LayThuChiTuan(int idTuanHoc, [FromQuery] int? idCn, [FromQuery] int? idDn)"
+      }
+    ]
+  },
+  "HocSinhKhoaHocController": {
+    "javaCount": 4,
+    "csCount": 6,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc/{idKhoaHoc}\")"
+        ],
+        "methodName": "public ApiResponse<List<HocSinhKhoaHoc>> layDanhSachTheoKhoaHoc(",
+        "signature": "public ApiResponse<List<HocSinhKhoaHoc>> layDanhSachTheoKhoaHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc/{idKhoaHoc}/ngan-gon\")"
+        ],
+        "methodName": "public ApiResponse<List<HocSinhKhoaHocDTO>> layDanhSachNganGonTheoKhoaHoc(@PathVariable Integer idKhoaHoc) {",
+        "signature": "public ApiResponse<List<HocSinhKhoaHocDTO>> layDanhSachNganGonTheoKhoaHoc(@PathVariable Integer idKhoaHoc)"
+      },
+      {
+        "annotations": [
+          "@PostMapping"
+        ],
+        "methodName": "ganHocSinhVaoKhoaHoc",
+        "signature": "public ApiResponse<HocSinhKhoaHoc> ganHocSinhVaoKhoaHoc("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/khoa-hoc/{idKhoaHoc}/hoc-sinh/{idHs}\")"
+        ],
+        "methodName": "xoaHocSinhKhoaHoc",
+        "signature": "public ApiResponse<Void> xoaHocSinhKhoaHoc("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc/{idKhoaHoc}\")]"
+        ],
+        "methodName": "LayDanhSachTheoKhoaHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachTheoKhoaHoc(int idKhoaHoc, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc/{idKhoaHoc}/ngan-gon\")]"
+        ],
+        "methodName": "LayDanhSachNganGonTheoKhoaHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachNganGonTheoKhoaHoc(int idKhoaHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpPost]",
+          "[HttpPost(\"gan-khoa-hoc\")]"
+        ],
+        "methodName": "GanHocSinhVaoKhoaHoc",
+        "signature": "public async Task<IActionResult> GanHocSinhVaoKhoaHoc("
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"khoa-hoc/{idKhoaHoc}/batch\")]"
+        ],
+        "methodName": "GanNhieuHocSinhVaoKhoaHoc",
+        "signature": "public async Task<IActionResult> GanNhieuHocSinhVaoKhoaHoc(int idKhoaHoc, [FromBody] List<int> dsIdHs)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"khoa-hoc/{idKhoaHoc}/hoc-sinh/{idHs}\")]"
+        ],
+        "methodName": "XoaHocSinhKhoaHoc",
+        "signature": "public async Task<IActionResult> XoaHocSinhKhoaHoc(int idKhoaHoc, int idHs)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc/{idKhoaHoc}/hoc-sinh\")]"
+        ],
+        "methodName": "LayDanhSachHocSinhTheoKhoaHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachHocSinhTheoKhoaHoc(int idKhoaHoc)"
+      }
+    ]
+  },
+  "AuthController": {
+    "javaCount": 6,
+    "csCount": 4,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@PostMapping(\"/login\")"
+        ],
+        "methodName": "dangNhap",
+        "signature": "public ApiResponse<LoginResponseDto> dangNhap(@RequestBody Map<String, String> request, HttpServletResponse response)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/register\")"
+        ],
+        "methodName": "dangKy",
+        "signature": "public ApiResponse<TaiKhoan> dangKy(@RequestBody TaiKhoan taiKhoan)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/refresh\")"
+        ],
+        "methodName": "lamMoiToken",
+        "signature": "public ApiResponse<LoginResponseDto> lamMoiToken(HttpServletRequest request, HttpServletResponse response)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/logout\")"
+        ],
+        "methodName": "dangXuat",
+        "signature": "public ApiResponse<Void> dangXuat(HttpServletResponse response)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/reset-dev-passwords\")"
+        ],
+        "methodName": "datLaiMatKhauDev",
+        "signature": "public ApiResponse<String> datLaiMatKhauDev()"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/dev/accounts\")"
+        ],
+        "methodName": "public ApiResponse<List<Map<String, Object>>> layDanhSachTaiKhoanDev() {",
+        "signature": "public ApiResponse<List<Map<String, Object>>> layDanhSachTaiKhoanDev()"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpPost(\"login\")]"
+        ],
+        "methodName": "DangNhap",
+        "signature": "public async Task<IActionResult> DangNhap([FromBody] LoginRequestDto request)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"refresh\")]"
+        ],
+        "methodName": "LamMoiToken",
+        "signature": "public async Task<IActionResult> LamMoiToken()"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"register\")]"
+        ],
+        "methodName": "DangKy",
+        "signature": "public async Task<IActionResult> DangKy([FromBody] TaiKhoan taiKhoan)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"logout\")]"
+        ],
+        "methodName": "DangXuat",
+        "signature": "public IActionResult DangXuat()"
+      }
+    ]
+  },
+  "ChungDaoTaoController": {
+    "javaCount": 51,
+    "csCount": 23,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping(\"/nam-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<NamHoc>> layDanhSachNamHoc(",
+        "signature": "public ApiResponse<List<NamHoc>> layDanhSachNamHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/nam-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<NamHoc>> layDanhSachNamHocTheoDoanhNghiep(@PathVariable Integer idDn) {",
+        "signature": "public ApiResponse<List<NamHoc>> layDanhSachNamHocTheoDoanhNghiep(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/nam-hoc/{idNh}\")"
+        ],
+        "methodName": "layNamHocTheoId",
+        "signature": "public ApiResponse<NamHoc> layNamHocTheoId(@PathVariable Integer idNh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/ky-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KyHoc>> layDanhSachKyHoc(",
+        "signature": "public ApiResponse<List<KyHoc>> layDanhSachKyHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/ky-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KyHoc>> layDanhSachKyHocTheoDoanhNghiep(@PathVariable Integer idDn) {",
+        "signature": "public ApiResponse<List<KyHoc>> layDanhSachKyHocTheoDoanhNghiep(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/nam-hoc/{idNh}/ky-hoc\", \"/nam-hoc/{idNh}/terms\"})"
+        ],
+        "methodName": "public ApiResponse<List<KyHoc>> layKyHocTheoNamHoc(@PathVariable Integer idNh) {",
+        "signature": "public ApiResponse<List<KyHoc>> layKyHocTheoNamHoc(@PathVariable Integer idNh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tuan-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<TuanHoc>> layDanhSachTuanHoc(",
+        "signature": "public ApiResponse<List<TuanHoc>> layDanhSachTuanHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/tuan-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<TuanHoc>> layDanhSachTuanHocTheoDoanhNghiep(@PathVariable Integer idDn) {",
+        "signature": "public ApiResponse<List<TuanHoc>> layDanhSachTuanHocTheoDoanhNghiep(@PathVariable Integer idDn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/ky-hoc/{idKh}/tuan-hoc\", \"/terms/{idKh}/weeks\"})"
+        ],
+        "methodName": "public ApiResponse<List<TuanHoc>> layTuanHocTheoKyHoc(@PathVariable Integer idKh) {",
+        "signature": "public ApiResponse<List<TuanHoc>> layTuanHocTheoKyHoc(@PathVariable Integer idKh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tuan-hoc/{idTh}\")"
+        ],
+        "methodName": "layTuanHocTheoId",
+        "signature": "public ApiResponse<TuanHoc> layTuanHocTheoId(@PathVariable Integer idTh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KhoaHocDto>> layDanhSachKhoaHoc(",
+        "signature": "public ApiResponse<List<KhoaHocDto>> layDanhSachKhoaHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/lop-hoc/{idLop}/khoa-hoc\", \"/khoa-hoc/lop-hoc/{idLop}\"})"
+        ],
+        "methodName": "public ApiResponse<List<KhoaHocDto>> layKhoaHocTheoLop(@PathVariable Integer idLop) {",
+        "signature": "public ApiResponse<List<KhoaHocDto>> layKhoaHocTheoLop(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc/{idKhoaHoc}\")"
+        ],
+        "methodName": "layKhoaHocTheoId",
+        "signature": "public ApiResponse<KhoaHocDto> layKhoaHocTheoId(@PathVariable Integer idKhoaHoc)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/bo-mon/{idBoMon}/khoa-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KhoaHocDto>> layKhoaHocTheoBoMon(@PathVariable Integer idBoMon) {",
+        "signature": "public ApiResponse<List<KhoaHocDto>> layKhoaHocTheoBoMon(@PathVariable Integer idBoMon)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layDanhSachLopHoc(",
+        "signature": "public ApiResponse<List<LopHocDto>> layDanhSachLopHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/mon-hoc/{idMh}/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoMonHoc(",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoMonHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/bo-mon/{idBoMon}/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoBoMon(",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoBoMon("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc/{idLop}\")"
+        ],
+        "methodName": "layLopHocTheoId",
+        "signature": "public ApiResponse<LopHocDto> layLopHocTheoId(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/ky-hoc/{idKh}/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoKyHoc(@PathVariable Integer idKh) {",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoKyHoc(@PathVariable Integer idKh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc/{idKhoaHoc}/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoKhoaHoc(@PathVariable Integer idKhoaHoc) {",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoKhoaHoc(@PathVariable Integer idKhoaHoc)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chi-nhanh/{idCn}/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoChiNhanh(",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoChiNhanh("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/chi-nhanh/{idCn}/ky-hoc/{idKh}/lop-hoc\", \"/chi-nhanh/{idCn}/terms/{idKh}/classes\"})"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoChiNhanhVaKyHoc(",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoChiNhanhVaKyHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/lop-hoc/{idLop}/buoi-hoc\", \"/buoi-hoc/lop-hoc/{idLop}\"})"
+        ],
+        "methodName": "public ApiResponse<List<BuoiHocDto>> layBuoiHocTheoLop(@PathVariable Integer idLop) {",
+        "signature": "public ApiResponse<List<BuoiHocDto>> layBuoiHocTheoLop(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc/{idKhoaHoc}/buoi-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<BuoiHocDto>> layBuoiHocTheoKhoaHoc(@PathVariable Integer idKhoaHoc) {",
+        "signature": "public ApiResponse<List<BuoiHocDto>> layBuoiHocTheoKhoaHoc(@PathVariable Integer idKhoaHoc)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/buoi-hoc/{idBuoiHoc}\")"
+        ],
+        "methodName": "layBuoiHocTheoId",
+        "signature": "public ApiResponse<BuoiHocDto> layBuoiHocTheoId(@PathVariable Integer idBuoiHoc)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/buoi-hoc\")"
+        ],
+        "methodName": "taoBuoiHoc",
+        "signature": "public ApiResponse<BuoiHocDto> taoBuoiHoc(@RequestBody BuoiHoc buoiHoc)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/thoi-khoa-bieu/tuan/{idTh}\")"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoTuan(",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoTuan("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/thoi-khoa-bieu/all\", \"/thoi-khoa-bieu\"})"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layTatCaThoiKhoaBieuThuocDoanhNghiep(",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layTatCaThoiKhoaBieuThuocDoanhNghiep("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/thoi-khoa-bieu/lop/{idLop}\")"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoLop(@PathVariable Integer idLop) {",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoLop(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/thoi-khoa-bieu/phong/{idPhong}\")"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoPhong(@PathVariable Integer idPhong) {",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoPhong(@PathVariable Integer idPhong)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/thoi-khoa-bieu/giao-vien/{idGv}\")"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoGiaoVien(",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoGiaoVien("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/bo-mon\")"
+        ],
+        "methodName": "public ApiResponse<List<BoMon>> layDanhSachBoMon(",
+        "signature": "public ApiResponse<List<BoMon>> layDanhSachBoMon("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/bo-mon/{idBoMon}/mon-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<MonHoc>> layMonHocTheoBoMon(@PathVariable Integer idBoMon) {",
+        "signature": "public ApiResponse<List<MonHoc>> layMonHocTheoBoMon(@PathVariable Integer idBoMon)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/bo-mon/{idBoMon}/giao-vien\")"
+        ],
+        "methodName": "public ApiResponse<List<com.example.project.dto.daotao.GiaoVienBoMonDto>> layGiaoVienTheoBoMon(",
+        "signature": "public ApiResponse<List<com.example.project.dto.daotao.GiaoVienBoMonDto>> layGiaoVienTheoBoMon("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/bo-mon/{idBoMon}/thong-ke\")"
+        ],
+        "methodName": "layThongKeBoMon",
+        "signature": "public ApiResponse<ThongKeBoMonDto> layThongKeBoMon("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/bo-mon/{idBoMon}/chuyen-mon\")"
+        ],
+        "methodName": "public ApiResponse<List<ChuyenMonBoMonDto>> layChuyenMonTheoBoMon(",
+        "signature": "public ApiResponse<List<ChuyenMonBoMonDto>> layChuyenMonTheoBoMon("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chuyen-mon/{idCm}/giao-vien\")"
+        ],
+        "methodName": "public ApiResponse<List<GiaoVienBoMonDto>> layGiaoVienTheoChuyenMon(",
+        "signature": "public ApiResponse<List<GiaoVienBoMonDto>> layGiaoVienTheoChuyenMon("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/bo-mon/{idBoMon}/chuyen-mon/{idCm}/mon-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<MonHoc>> layMonHocTheoBoMonVaChuyenMon(",
+        "signature": "public ApiResponse<List<MonHoc>> layMonHocTheoBoMonVaChuyenMon("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chuyen-mon\")"
+        ],
+        "methodName": "public ApiResponse<List<ChuyenMon>> layDanhSachChuyenMon(",
+        "signature": "public ApiResponse<List<ChuyenMon>> layDanhSachChuyenMon("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chi-nhanh\")"
+        ],
+        "methodName": "public ApiResponse<List<ChiNhanh>> layDanhSachChiNhanh(",
+        "signature": "public ApiResponse<List<ChiNhanh>> layDanhSachChiNhanh("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/phong-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<PhongHoc>> layDanhSachPhongHoc(",
+        "signature": "public ApiResponse<List<PhongHoc>> layDanhSachPhongHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc/{idLop}/dang-ky-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoLop(@PathVariable Integer idLop) {",
+        "signature": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoLop(@PathVariable Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/lop-hoc/{idLop}/dang-ky-hoc\")"
+        ],
+        "methodName": "themHocSinhVaoLop",
+        "signature": "public ApiResponse<DangKyHoc> themHocSinhVaoLop("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/dang-ky-hoc/{idDangKy}\")"
+        ],
+        "methodName": "xoaDangKyHoc",
+        "signature": "public ApiResponse<Void> xoaDangKyHoc(@PathVariable Integer idDangKy)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/lop-hoc/{idLop}/hoc-sinh/{idHs}\")"
+        ],
+        "methodName": "xoaHocSinhKhoiLop",
+        "signature": "public ApiResponse<Void> xoaHocSinhKhoiLop("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/hoc-sinh/{idHs}/dang-ky-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<DangKyHoc>> layDangKyHocTheoHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/buoi-hoc/{idBuoiHoc}/diem-danh\", \"/buoi-hoc/{idBuoiHoc}/diem-danh-hoc-sinh\"})"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoBuoiHoc(@PathVariable Integer idBuoiHoc) {",
+        "signature": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoBuoiHoc(@PathVariable Integer idBuoiHoc)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/buoi-hoc/{idBuoiHoc}/diem-danh\", \"/buoi-hoc/{idBuoiHoc}/diem-danh-hoc-sinh\"})"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhHocSinh>> luuDiemDanhBuoiHoc(",
+        "signature": "public ApiResponse<List<DiemDanhHocSinh>> luuDiemDanhBuoiHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/khoa-hoc/{idKhoaHoc}/diem-danh\", \"/khoa-hoc/{idKhoaHoc}/diem-danh-hoc-sinh\"})"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoKhoaHoc(@PathVariable Integer idKhoaHoc) {",
+        "signature": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoKhoaHoc(@PathVariable Integer idKhoaHoc)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/hoc-sinh/{idHs}\")"
+        ],
+        "methodName": "layChiTietHocSinh",
+        "signature": "public ApiResponse<HocSinh> layChiTietHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/hoc-sinh/{idHs}/diem-danh\")"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhHocSinh>> layLichSuDiemDanhCuaHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<DiemDanhHocSinh>> layLichSuDiemDanhCuaHocSinh(@PathVariable Integer idHs)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"nam-hoc\")]"
+        ],
+        "methodName": "LayDanhSachNamHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachNamHoc([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/nam-hoc\")]"
+        ],
+        "methodName": "LayDanhSachNamHocTheoDoanhNghiep",
+        "signature": "public async Task<IActionResult> LayDanhSachNamHocTheoDoanhNghiep(int idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"ky-hoc\")]"
+        ],
+        "methodName": "LayDanhSachKyHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachKyHoc([FromQuery] int? idNh)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"nam-hoc/{idNh}/ky-hoc\")]"
+        ],
+        "methodName": "LayKyHocTheoNamHoc",
+        "signature": "public async Task<IActionResult> LayKyHocTheoNamHoc(int idNh)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"tuan-hoc\")]"
+        ],
+        "methodName": "LayDanhSachTuanHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachTuanHoc([FromQuery] int? idKh)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"ky-hoc/{idKh}/tuan-hoc\")]"
+        ],
+        "methodName": "LayTuanHocTheoKyHoc",
+        "signature": "public async Task<IActionResult> LayTuanHocTheoKyHoc(int idKh)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc\")]"
+        ],
+        "methodName": "LayDanhSachKhoaHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachKhoaHoc([FromQuery] int? idLop, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc/{idLop}/khoa-hoc\")]"
+        ],
+        "methodName": "LayKhoaHocTheoLop",
+        "signature": "public async Task<IActionResult> LayKhoaHocTheoLop(int idLop)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc/{idKhoaHoc}\")]"
+        ],
+        "methodName": "LayKhoaHocTheoId",
+        "signature": "public async Task<IActionResult> LayKhoaHocTheoId(int idKhoaHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc\")]"
+        ],
+        "methodName": "LayDanhSachLopHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachLopHoc("
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc/{idLop}\")]"
+        ],
+        "methodName": "LayLopHocTheoId",
+        "signature": "public async Task<IActionResult> LayLopHocTheoId(int idLop)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh/{idCn}/lop-hoc\")]"
+        ],
+        "methodName": "LayLopHocTheoChiNhanh",
+        "signature": "public async Task<IActionResult> LayLopHocTheoChiNhanh(int idCn, [FromQuery] int? idKh)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc/{idLop}/buoi-hoc\")]"
+        ],
+        "methodName": "LayBuoiHocTheoLop",
+        "signature": "public async Task<IActionResult> LayBuoiHocTheoLop(int idLop)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"buoi-hoc/{idBuoiHoc}\")]"
+        ],
+        "methodName": "LayBuoiHocTheoId",
+        "signature": "public async Task<IActionResult> LayBuoiHocTheoId(int idBuoiHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"thoi-khoa-bieu/tuan/{idTh}\")]"
+        ],
+        "methodName": "LayThoiKhoaBieuTheoTuan",
+        "signature": "public async Task<IActionResult> LayThoiKhoaBieuTheoTuan(int idTh, [FromQuery] int? idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"thoi-khoa-bieu/lop/{idLop}\")]"
+        ],
+        "methodName": "LayThoiKhoaBieuTheoLop",
+        "signature": "public async Task<IActionResult> LayThoiKhoaBieuTheoLop(int idLop)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"bo-mon\")]"
+        ],
+        "methodName": "LayDanhSachBoMon",
+        "signature": "public async Task<IActionResult> LayDanhSachBoMon([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chuyen-mon\")]"
+        ],
+        "methodName": "LayDanhSachChuyenMon",
+        "signature": "public async Task<IActionResult> LayDanhSachChuyenMon([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"phong-hoc\")]"
+        ],
+        "methodName": "LayDanhSachPhongHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachPhongHoc([FromQuery] int? idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh\")]"
+        ],
+        "methodName": "LayDanhSachChiNhanh",
+        "signature": "public async Task<IActionResult> LayDanhSachChiNhanh([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc/{idLop}/dang-ky-hoc\")]"
+        ],
+        "methodName": "LayDangKyHocTheoLop",
+        "signature": "public async Task<IActionResult> LayDangKyHocTheoLop(int idLop)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"buoi-hoc/{idBuoiHoc}/diem-danh\")]"
+        ],
+        "methodName": "LayDiemDanhTheoBuoiHoc",
+        "signature": "public async Task<IActionResult> LayDiemDanhTheoBuoiHoc(int idBuoiHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"hoc-sinh/{idHs}\")]"
+        ],
+        "methodName": "LayChiTietHocSinh",
+        "signature": "public async Task<IActionResult> LayChiTietHocSinh(int idHs)"
+      }
+    ]
+  },
+  "TimKiemNhanhController": {
+    "javaCount": 12,
+    "csCount": 14,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping(\"/tim-kiem/giao-vien/sdt\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timGiaoVienTheoSdt(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timGiaoVienTheoSdt("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/tim-kiem/giao-vien/sdt\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timGiaoVienTheoSdtTrongDoanhNghiep(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timGiaoVienTheoSdtTrongDoanhNghiep("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tim-kiem/giao-vien/cccd\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timGiaoVienTheoCccd(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timGiaoVienTheoCccd("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/tim-kiem/giao-vien/cccd\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timGiaoVienTheoCccdTrongDoanhNghiep(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timGiaoVienTheoCccdTrongDoanhNghiep("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tim-kiem/quan-ly/sdt\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timQuanLyTheoSdt(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timQuanLyTheoSdt("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/tim-kiem/quan-ly/sdt\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timQuanLyTheoSdtTrongDoanhNghiep(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timQuanLyTheoSdtTrongDoanhNghiep("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tim-kiem/quan-ly/cccd\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timQuanLyTheoCccd(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timQuanLyTheoCccd("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/tim-kiem/quan-ly/cccd\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timQuanLyTheoCccdTrongDoanhNghiep(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timQuanLyTheoCccdTrongDoanhNghiep("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tim-kiem/hoc-sinh/sdt\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timHocSinhTheoSdt(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timHocSinhTheoSdt("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/tim-kiem/hoc-sinh/sdt\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timHocSinhTheoSdtTrongDoanhNghiep(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timHocSinhTheoSdtTrongDoanhNghiep("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tim-kiem/hoc-sinh/cccd\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timHocSinhTheoCccd(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timHocSinhTheoCccd("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/doanh-nghiep/{idDn}/tim-kiem/hoc-sinh/cccd\")"
+        ],
+        "methodName": "public ApiResponse<List<NguoiDungNganGonDto>> timHocSinhTheoCccdTrongDoanhNghiep(",
+        "signature": "public ApiResponse<List<NguoiDungNganGonDto>> timHocSinhTheoCccdTrongDoanhNghiep("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"tim-kiem/tat-ca/sdt\")]"
+        ],
+        "methodName": "TimKiemTatCaTheoSdt",
+        "signature": "public async Task<IActionResult> TimKiemTatCaTheoSdt([FromQuery] string sdt, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"tim-kiem/tat-ca/cccd\")]"
+        ],
+        "methodName": "TimKiemTatCaTheoCccd",
+        "signature": "public async Task<IActionResult> TimKiemTatCaTheoCccd([FromQuery] string cccd, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"tim-kiem/giao-vien/sdt\")]"
+        ],
+        "methodName": "TimGiaoVienTheoSdt",
+        "signature": "public async Task<IActionResult> TimGiaoVienTheoSdt([FromQuery] string sdt, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/tim-kiem/giao-vien/sdt\")]"
+        ],
+        "methodName": "TimGiaoVienTheoSdtTrongDoanhNghiep",
+        "signature": "public Task<IActionResult> TimGiaoVienTheoSdtTrongDoanhNghiep(int idDn, [FromQuery] string sdt) => TimGiaoVienTheoSdt(sdt, idDn);"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"tim-kiem/giao-vien/cccd\")]"
+        ],
+        "methodName": "TimGiaoVienTheoCccd",
+        "signature": "public async Task<IActionResult> TimGiaoVienTheoCccd([FromQuery] string cccd, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/tim-kiem/giao-vien/cccd\")]"
+        ],
+        "methodName": "TimGiaoVienTheoCccdTrongDoanhNghiep",
+        "signature": "public Task<IActionResult> TimGiaoVienTheoCccdTrongDoanhNghiep(int idDn, [FromQuery] string cccd) => TimGiaoVienTheoCccd(cccd, idDn);"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"tim-kiem/quan-ly/sdt\")]"
+        ],
+        "methodName": "TimQuanLyTheoSdt",
+        "signature": "public async Task<IActionResult> TimQuanLyTheoSdt([FromQuery] string sdt, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/tim-kiem/quan-ly/sdt\")]"
+        ],
+        "methodName": "TimQuanLyTheoSdtTrongDoanhNghiep",
+        "signature": "public Task<IActionResult> TimQuanLyTheoSdtTrongDoanhNghiep(int idDn, [FromQuery] string sdt) => TimQuanLyTheoSdt(sdt, idDn);"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"tim-kiem/quan-ly/cccd\")]"
+        ],
+        "methodName": "TimQuanLyTheoCccd",
+        "signature": "public async Task<IActionResult> TimQuanLyTheoCccd([FromQuery] string cccd, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/tim-kiem/quan-ly/cccd\")]"
+        ],
+        "methodName": "TimQuanLyTheoCccdTrongDoanhNghiep",
+        "signature": "public Task<IActionResult> TimQuanLyTheoCccdTrongDoanhNghiep(int idDn, [FromQuery] string cccd) => TimQuanLyTheoCccd(cccd, idDn);"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"tim-kiem/hoc-sinh/sdt\")]"
+        ],
+        "methodName": "TimHocSinhTheoSdt",
+        "signature": "public async Task<IActionResult> TimHocSinhTheoSdt([FromQuery] string sdt, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/tim-kiem/hoc-sinh/sdt\")]"
+        ],
+        "methodName": "TimHocSinhTheoSdtTrongDoanhNghiep",
+        "signature": "public Task<IActionResult> TimHocSinhTheoSdtTrongDoanhNghiep(int idDn, [FromQuery] string sdt) => TimHocSinhTheoSdt(sdt, idDn);"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"tim-kiem/hoc-sinh/cccd\")]"
+        ],
+        "methodName": "TimHocSinhTheoCccd",
+        "signature": "public async Task<IActionResult> TimHocSinhTheoCccd([FromQuery] string cccd, [FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"doanh-nghiep/{idDn}/tim-kiem/hoc-sinh/cccd\")]"
+        ],
+        "methodName": "TimHocSinhTheoCccdTrongDoanhNghiep",
+        "signature": "public Task<IActionResult> TimHocSinhTheoCccdTrongDoanhNghiep(int idDn, [FromQuery] string cccd) => TimHocSinhTheoCccd(cccd, idDn);"
+      }
+    ]
+  },
+  "TraCuuCayDaoTaoController": {
+    "javaCount": 6,
+    "csCount": 6,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping(\"/chi-nhanh\")"
+        ],
+        "methodName": "public ApiResponse<List<NodeCayDto>> layChiNhanhTheoDoanhNghiep(",
+        "signature": "public ApiResponse<List<NodeCayDto>> layChiNhanhTheoDoanhNghiep("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/nam-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<NodeCayDto>> layNamHocTheoDoanhNghiep(",
+        "signature": "public ApiResponse<List<NodeCayDto>> layNamHocTheoDoanhNghiep("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/ky-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<NodeCayDto>> layKyHocTheoNamHoc(@RequestParam Integer idNh) {",
+        "signature": "public ApiResponse<List<NodeCayDto>> layKyHocTheoNamHoc(@RequestParam Integer idNh)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoNhanh(",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoNhanh("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<NodeCayDto>> layKhoaHocTheoLop(@RequestParam Integer idLop) {",
+        "signature": "public ApiResponse<List<NodeCayDto>> layKhoaHocTheoLop(@RequestParam Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/toan-bo\", \"/toan-bo/{idDn}\"})"
+        ],
+        "methodName": "layToanBoCayDaoTao",
+        "signature": "public ApiResponse<CayPhanCapDaoTaoDto> layToanBoCayDaoTao("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh\")]"
+        ],
+        "methodName": "LayChiNhanhTheoDoanhNghiep",
+        "signature": "public async Task<IActionResult> LayChiNhanhTheoDoanhNghiep([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"nam-hoc\")]"
+        ],
+        "methodName": "LayNamHocTheoDoanhNghiep",
+        "signature": "public async Task<IActionResult> LayNamHocTheoDoanhNghiep([FromQuery] int? idDn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"ky-hoc\")]"
+        ],
+        "methodName": "LayKyHocTheoNamHoc",
+        "signature": "public async Task<IActionResult> LayKyHocTheoNamHoc([FromQuery] int idNh)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc\")]"
+        ],
+        "methodName": "LayLopHocTheoNhanh",
+        "signature": "public async Task<IActionResult> LayLopHocTheoNhanh("
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc\")]"
+        ],
+        "methodName": "LayKhoaHocTheoLop",
+        "signature": "public async Task<IActionResult> LayKhoaHocTheoLop([FromQuery] int idLop)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"toan-bo\")]",
+          "[HttpGet(\"toan-bo/{idDn}\")]"
+        ],
+        "methodName": "LayToanBoCayDaoTao",
+        "signature": "public async Task<IActionResult> LayToanBoCayDaoTao([FromRoute] int? idDn)"
+      }
+    ]
+  },
+  "GiaoVienDiemDanhController": {
+    "javaCount": 8,
+    "csCount": 7,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/api/giao-vien/buoi-hoc/{idBuoiHoc}/danh-sach-diem-danh\", \"/api/buoi-hoc/{idBuoiHoc}/diem-danh-hoc-sinh\"})"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoBuoi(@PathVariable Integer idBuoiHoc) {",
+        "signature": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoBuoi(@PathVariable Integer idBuoiHoc)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/api/buoi-hoc/{idBuoiHoc}/diem-danh-hoc-sinh\")"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhHocSinh>> capNhatDiemDanhHocSinh(",
+        "signature": "public ApiResponse<List<DiemDanhHocSinh>> capNhatDiemDanhHocSinh("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/api/giao-vien/khoa-hoc/{idKhoaHoc}/danh-sach-diem-danh\", \"/api/khoa-hoc/{idKhoaHoc}/diem-danh-hoc-sinh\"})"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoKhoaHoc(@PathVariable Integer idKhoaHoc) {",
+        "signature": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoKhoaHoc(@PathVariable Integer idKhoaHoc)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/api/buoi-hoc/{idBuoiHoc}/diem-danh-giao-vien\")"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhGiaoVien>> layDiemDanhGiaoVienTheoBuoi(@PathVariable Integer idBuoiHoc) {",
+        "signature": "public ApiResponse<List<DiemDanhGiaoVien>> layDiemDanhGiaoVienTheoBuoi(@PathVariable Integer idBuoiHoc)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/api/buoi-hoc/{idBuoiHoc}/diem-danh-giao-vien\")"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhGiaoVien>> capNhatDiemDanhGiaoVien(",
+        "signature": "public ApiResponse<List<DiemDanhGiaoVien>> capNhatDiemDanhGiaoVien("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/api/hoc-sinh/{idHs}/diem-danh\")"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/api/giao-vien/{idGv}/diem-danh\")"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhGiaoVien>> layDiemDanhTheoGiaoVien(@PathVariable Integer idGv) {",
+        "signature": "public ApiResponse<List<DiemDanhGiaoVien>> layDiemDanhTheoGiaoVien(@PathVariable Integer idGv)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/api/diem-danh-hoc-sinh/batch\", \"/api/giao-vien/diem-danh/batch\"})"
+        ],
+        "methodName": "public ApiResponse<Map<String, Object>> luuDanhSachDiemDanh(@RequestBody List<DiemDanhHocSinh> danhSachDiemDanh) {",
+        "signature": "public ApiResponse<Map<String, Object>> luuDanhSachDiemDanh(@RequestBody List<DiemDanhHocSinh> danhSachDiemDanh)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"api/giao-vien/buoi-hoc/{idBuoiHoc}/danh-sach-diem-danh\")]",
+          "[HttpGet(\"api/buoi-hoc/{idBuoiHoc}/diem-danh-hoc-sinh\")]",
+          "[HttpGet(\"api/v1/diem-danh/buoi-hoc/{idBuoiHoc}\")]",
+          "[HttpGet(\"api/diem-danh/buoi-hoc/{idBuoiHoc}\")]"
+        ],
+        "methodName": "LayDiemDanhTheoBuoi",
+        "signature": "public async Task<IActionResult> LayDiemDanhTheoBuoi(int idBuoiHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"api/buoi-hoc/{idBuoiHoc}/diem-danh-hoc-sinh\")]"
+        ],
+        "methodName": "CapNhatDiemDanhHocSinh",
+        "signature": "public async Task<IActionResult> CapNhatDiemDanhHocSinh(int idBuoiHoc, [FromBody] LuuDiemDanhBuoiHocRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"api/giao-vien/khoa-hoc/{idKhoaHoc}/danh-sach-diem-danh\")]",
+          "[HttpGet(\"api/khoa-hoc/{idKhoaHoc}/diem-danh-hoc-sinh\")]"
+        ],
+        "methodName": "LayDiemDanhTheoKhoaHoc",
+        "signature": "public async Task<IActionResult> LayDiemDanhTheoKhoaHoc(int idKhoaHoc, [FromQuery] int? idHs)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"api/buoi-hoc/{idBuoiHoc}/diem-danh-giao-vien\")]"
+        ],
+        "methodName": "LayDiemDanhGiaoVienTheoBuoi",
+        "signature": "public async Task<IActionResult> LayDiemDanhGiaoVienTheoBuoi(int idBuoiHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"api/hoc-sinh/{idHs}/diem-danh\")]"
+        ],
+        "methodName": "LayDiemDanhTheoHocSinh",
+        "signature": "public async Task<IActionResult> LayDiemDanhTheoHocSinh(int idHs, [FromQuery] int? idKhoaHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"api/giao-vien/{idGv}/diem-danh\")]"
+        ],
+        "methodName": "LayDiemDanhTheoGiaoVien",
+        "signature": "public async Task<IActionResult> LayDiemDanhTheoGiaoVien(int idGv, [FromQuery] int? idBuoiHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"api/diem-danh-hoc-sinh/batch\")]",
+          "[HttpPost(\"api/giao-vien/diem-danh/batch\")]",
+          "[HttpPost(\"api/v1/diem-danh/hoc-sinh/batch\")]",
+          "[HttpPost(\"api/diem-danh/hoc-sinh/batch\")]"
+        ],
+        "methodName": "LuuDanhSachDiemDanh",
+        "signature": "public async Task<IActionResult> LuuDanhSachDiemDanh([FromBody] LuuDiemDanhBuoiHocRequest request)"
+      }
+    ]
+  },
+  "GiaoVienHoSoController": {
+    "javaCount": 10,
+    "csCount": 8,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping"
+        ],
+        "methodName": "layHoSoCaNhan",
+        "signature": "public ApiResponse<HoSoGiaoVienDto> layHoSoCaNhan(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/{id}\")"
+        ],
+        "methodName": "layHoSoTheoId",
+        "signature": "public ApiResponse<HoSoGiaoVienDto> layHoSoTheoId("
+      },
+      {
+        "annotations": [
+          "@PutMapping"
+        ],
+        "methodName": "capNhatHoSoCaNhan",
+        "signature": "public ApiResponse<HoSoGiaoVienDto> capNhatHoSoCaNhan("
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/{id}\")"
+        ],
+        "methodName": "capNhatHoSoTheoId",
+        "signature": "public ApiResponse<HoSoGiaoVienDto> capNhatHoSoTheoId("
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/doi-mat-khau\")"
+        ],
+        "methodName": "doiMatKhau",
+        "signature": "public ApiResponse<Void> doiMatKhau("
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/tai-khoan\")"
+        ],
+        "methodName": "capNhatTaiKhoan",
+        "signature": "public ApiResponse<Void> capNhatTaiKhoan("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/certificates\")"
+        ],
+        "methodName": "public ApiResponse<List<ChungChiGiaoVienDto>> layDanhSachChungChi(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<ChungChiGiaoVienDto>> layDanhSachChungChi(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/chung-chi\", \"/certificates\"})"
+        ],
+        "methodName": "themChungChi",
+        "signature": "public ApiResponse<ChungChiGiaoVienDto> themChungChi("
+      },
+      {
+        "annotations": [
+          "@PutMapping({\"/chung-chi/{idChungChi}\", \"/certificates/{idChungChi}\"})"
+        ],
+        "methodName": "suaChungChi",
+        "signature": "public ApiResponse<ChungChiGiaoVienDto> suaChungChi("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/chung-chi/{idChungChi}\", \"/certificates/{idChungChi}\"})"
+        ],
+        "methodName": "xoaChungChi",
+        "signature": "public ApiResponse<Void> xoaChungChi("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet]"
+        ],
+        "methodName": "LayHoSoCaNhan",
+        "signature": "public async Task<IActionResult> LayHoSoCaNhan()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"{id}\")]"
+        ],
+        "methodName": "LayHoSoTheoId",
+        "signature": "public async Task<IActionResult> LayHoSoTheoId(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPut]"
+        ],
+        "methodName": "CapNhatHoSoCaNhan",
+        "signature": "public async Task<IActionResult> CapNhatHoSoCaNhan([FromBody] CapNhatHoSoGiaoVienDto req)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"{id}\")]"
+        ],
+        "methodName": "CapNhatHoSoTheoId",
+        "signature": "public async Task<IActionResult> CapNhatHoSoTheoId(int id, [FromBody] CapNhatHoSoGiaoVienDto req)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"doi-mat-khau\")]"
+        ],
+        "methodName": "DoiMatKhau",
+        "signature": "public async Task<IActionResult> DoiMatKhau([FromBody] DoiMatKhauDto req)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"certificates\")]"
+        ],
+        "methodName": "LayDanhSachChungChi",
+        "signature": "public async Task<IActionResult> LayDanhSachChungChi()"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"chung-chi\")]",
+          "[HttpPost(\"certificates\")]"
+        ],
+        "methodName": "ThemChungChi",
+        "signature": "public async Task<IActionResult> ThemChungChi([FromBody] ChungChiRequestDto req)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"chung-chi/{idChungChi}\")]",
+          "[HttpDelete(\"certificates/{idChungChi}\")]"
+        ],
+        "methodName": "XoaChungChi",
+        "signature": "public async Task<IActionResult> XoaChungChi(int idChungChi)"
+      }
+    ]
+  },
+  "GiaoVienLopHocController": {
+    "javaCount": 12,
+    "csCount": 10,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping(\"/chi-nhanh\")"
+        ],
+        "methodName": "public ApiResponse<List<ChiNhanh>> layChiNhanhCuaToi(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<ChiNhanh>> layChiNhanhCuaToi(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chi-nhanh/{idCn}\")"
+        ],
+        "methodName": "layChiNhanhTheoId",
+        "signature": "public ApiResponse<ChiNhanh> layChiNhanhTheoId("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/lop-hoc\", \"/dao-tao/lop-hoc\"})"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layDanhSachLopHocCuaToi(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<LopHocDto>> layDanhSachLopHocCuaToi(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc/{idLop}\")"
+        ],
+        "methodName": "layLopHocTheoId",
+        "signature": "public ApiResponse<LopHocDto> layLopHocTheoId("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KhoaHocDto>> layDanhSachKhoaHocCuaToi(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<KhoaHocDto>> layDanhSachKhoaHocCuaToi(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/khoa-hoc/{idKhoaHoc}\")"
+        ],
+        "methodName": "layKhoaHocTheoId",
+        "signature": "public ApiResponse<KhoaHocDto> layKhoaHocTheoId("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/classes/{classId}/students\", \"/lop-hoc/{classId}/hoc-sinh\"})"
+        ],
+        "methodName": "public ApiResponse<List<DangKyHoc>> layHocSinhTheoLop(",
+        "signature": "public ApiResponse<List<DangKyHoc>> layHocSinhTheoLop("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/sessions/{sessionId}/attendance\")"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoBuoiHoc(@PathVariable Integer sessionId) {",
+        "signature": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhTheoBuoiHoc(@PathVariable Integer sessionId)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/sessions/{sessionId}/attendance\")"
+        ],
+        "methodName": "diemDanhHocSinh",
+        "signature": "public ApiResponse<DiemDanhHocSinh> diemDanhHocSinh("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/ky-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<KyHoc>> layTatCaKyHoc() {",
+        "signature": "public ApiResponse<List<KyHoc>> layTatCaKyHoc()"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/ky-hoc/{idKh}/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layLopHocTheoKyHoc(",
+        "signature": "public ApiResponse<List<LopHocDto>> layLopHocTheoKyHoc("
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/buoi-hoc\")"
+        ],
+        "methodName": "taoBuoiHoc",
+        "signature": "public ApiResponse<BuoiHoc> taoBuoiHoc(@Valid @RequestBody BuoiHoc buoi)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh\")]"
+        ],
+        "methodName": "LayChiNhanhCuaToi",
+        "signature": "public async Task<IActionResult> LayChiNhanhCuaToi()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh/{idCn}\")]"
+        ],
+        "methodName": "LayChiNhanhTheoId",
+        "signature": "public async Task<IActionResult> LayChiNhanhTheoId(int idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc\")]",
+          "[HttpGet(\"dao-tao/lop-hoc\")]"
+        ],
+        "methodName": "LayDanhSachLopHocCuaToi",
+        "signature": "public async Task<IActionResult> LayDanhSachLopHocCuaToi()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc/{idLop}\")]"
+        ],
+        "methodName": "LayLopHocTheoId",
+        "signature": "public async Task<IActionResult> LayLopHocTheoId(int idLop)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc\")]"
+        ],
+        "methodName": "LayDanhSachKhoaHocCuaToi",
+        "signature": "public async Task<IActionResult> LayDanhSachKhoaHocCuaToi()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"classes/{classId}/students\")]",
+          "[HttpGet(\"lop-hoc/{classId}/hoc-sinh\")]"
+        ],
+        "methodName": "LayHocSinhTheoLop",
+        "signature": "public async Task<IActionResult> LayHocSinhTheoLop(int classId)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"sessions/{sessionId}/attendance\")]"
+        ],
+        "methodName": "LayDiemDanhTheoBuoiHoc",
+        "signature": "public async Task<IActionResult> LayDiemDanhTheoBuoiHoc(int sessionId)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"sessions/{sessionId}/attendance\")]"
+        ],
+        "methodName": "DiemDanhHocSinh",
+        "signature": "public async Task<IActionResult> DiemDanhHocSinh(int sessionId, [FromQuery] int idHs, [FromBody] DiemDanhHocSinh dd)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"ky-hoc\")]"
+        ],
+        "methodName": "LayTatCaKyHoc",
+        "signature": "public async Task<IActionResult> LayTatCaKyHoc()"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"buoi-hoc\")]"
+        ],
+        "methodName": "TaoBuoiHoc",
+        "signature": "public async Task<IActionResult> TaoBuoiHoc([FromBody] BuoiHoc buoi)"
+      }
+    ]
+  },
+  "GiaoVienTaiChinhController": {
+    "javaCount": 4,
+    "csCount": 4,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/attendance-history\", \"/cong-day\"})"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhGiaoVien>> layLichSuDiemDanhCuaToi(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<DiemDanhGiaoVien>> layLichSuDiemDanhCuaToi(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/payrolls\", \"/bang-luong\"})"
+        ],
+        "methodName": "public ApiResponse<List<ThanhToanGiaoVien>> layBangLuongCuaToi(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<ThanhToanGiaoVien>> layBangLuongCuaToi(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/khoa-hoc\", \"/course-salaries\"})"
+        ],
+        "methodName": "public ApiResponse<List<ThanhToanGiaoVienKhoaHoc>> layThanhToanLuongKhoaHocCuaToi(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<ThanhToanGiaoVienKhoaHoc>> layThanhToanLuongKhoaHocCuaToi(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/khoa-hoc/{idKhoaHoc}\", \"/course-salaries/{idKhoaHoc}\"})"
+        ],
+        "methodName": "layThanhToanLuongTheoKhoaHoc",
+        "signature": "public ApiResponse<ThanhToanGiaoVienKhoaHoc> layThanhToanLuongTheoKhoaHoc("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"attendance-history\")]",
+          "[HttpGet(\"cong-day\")]"
+        ],
+        "methodName": "LayLichSuDiemDanhCuaToi",
+        "signature": "public async Task<IActionResult> LayLichSuDiemDanhCuaToi()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"payrolls\")]",
+          "[HttpGet(\"bang-luong\")]"
+        ],
+        "methodName": "LayBangLuongCuaToi",
+        "signature": "public async Task<IActionResult> LayBangLuongCuaToi()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc\")]",
+          "[HttpGet(\"course-salaries\")]"
+        ],
+        "methodName": "LayThanhToanLuongKhoaHocCuaToi",
+        "signature": "public async Task<IActionResult> LayThanhToanLuongKhoaHocCuaToi()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"khoa-hoc/{idKhoaHoc}\")]",
+          "[HttpGet(\"course-salaries/{idKhoaHoc}\")]"
+        ],
+        "methodName": "LayThanhToanLuongTheoKhoaHoc",
+        "signature": "public async Task<IActionResult> LayThanhToanLuongTheoKhoaHoc(int idKhoaHoc)"
+      }
+    ]
+  },
+  "GiaoVienThoiKhoaBieuController": {
+    "javaCount": 7,
+    "csCount": 7,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"\", \"/classes\"})"
+        ],
+        "methodName": "public ApiResponse<List<Map<String, Object>>> layLichDayCuaToi(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<Map<String, Object>>> layLichDayCuaToi(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tuan-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<TuanHoc>> layDanhSachTuanHoc(@AuthenticationPrincipal JwtUserDetails user) {",
+        "signature": "public ApiResponse<List<TuanHoc>> layDanhSachTuanHoc(@AuthenticationPrincipal JwtUserDetails user)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/phong-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<PhongHoc>> layDanhSachPhongHoc(",
+        "signature": "public ApiResponse<List<PhongHoc>> layDanhSachPhongHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layDanhSachLopHoc(",
+        "signature": "public ApiResponse<List<LopHocDto>> layDanhSachLopHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/tuan/{idTh}\")"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoTuan(",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuanDto>> layThoiKhoaBieuTheoTuan("
+      },
+      {
+        "annotations": [
+          "@PostMapping"
+        ],
+        "methodName": "luuThoiKhoaBieu",
+        "signature": "public ApiResponse<ThoiKhoaBieuTuanDto> luuThoiKhoaBieu("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/{id}\")"
+        ],
+        "methodName": "xoaThoiKhoaBieu",
+        "signature": "public ApiResponse<Void> xoaThoiKhoaBieu(@PathVariable Integer id)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet]",
+          "[HttpGet(\"classes\")]"
+        ],
+        "methodName": "LayLichDayCuaToi",
+        "signature": "public async Task<IActionResult> LayLichDayCuaToi()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"tuan-hoc\")]"
+        ],
+        "methodName": "LayDanhSachTuanHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachTuanHoc()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"phong-hoc\")]"
+        ],
+        "methodName": "LayDanhSachPhongHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachPhongHoc([FromQuery] int? idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"lop-hoc\")]"
+        ],
+        "methodName": "LayDanhSachLopHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachLopHoc()"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"tuan/{idTh}\")]"
+        ],
+        "methodName": "LayThoiKhoaBieuTheoTuan",
+        "signature": "public async Task<IActionResult> LayThoiKhoaBieuTheoTuan(int idTh)"
+      },
+      {
+        "attributes": [
+          "[HttpPost]"
+        ],
+        "methodName": "LuuThoiKhoaBieu",
+        "signature": "public async Task<IActionResult> LuuThoiKhoaBieu([FromBody] ThoiKhoaBieuTuan tkb)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"{id}\")]"
+        ],
+        "methodName": "XoaThoiKhoaBieu",
+        "signature": "public async Task<IActionResult> XoaThoiKhoaBieu(int id)"
+      }
+    ]
+  },
+  "QuanLyDashboardController": {
+    "javaCount": 1,
+    "csCount": 1,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping(\"/tong-quan\")"
+        ],
+        "methodName": "layTongQuanCoSo",
+        "signature": "public ApiResponse<ThongKeChiNhanhDto> layTongQuanCoSo("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"tong-quan\")]"
+        ],
+        "methodName": "LayTongQuanCoSo",
+        "signature": "public async Task<IActionResult> LayTongQuanCoSo([FromQuery] int? idCn)"
+      }
+    ]
+  },
+  "QuanLyDiemDanhController": {
+    "javaCount": 5,
+    "csCount": 7,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping(\"/students\")"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhHocSinh(@RequestParam Integer idBuoi) {",
+        "signature": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhHocSinh(@RequestParam Integer idBuoi)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/students\")"
+        ],
+        "methodName": "diemDanhHocSinh",
+        "signature": "public ApiResponse<DiemDanhHocSinh> diemDanhHocSinh("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/teachers\")"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhGiaoVien>> layDiemDanhGiaoVien(@RequestParam Integer idGv) {",
+        "signature": "public ApiResponse<List<DiemDanhGiaoVien>> layDiemDanhGiaoVien(@RequestParam Integer idGv)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/teachers\")"
+        ],
+        "methodName": "diemDanhGiaoVien",
+        "signature": "public ApiResponse<DiemDanhGiaoVien> diemDanhGiaoVien("
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/teachers/{idDiemDanh}\")"
+        ],
+        "methodName": "capNhatDiemDanhGiaoVien",
+        "signature": "public ApiResponse<DiemDanhGiaoVien> capNhatDiemDanhGiaoVien("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"students\")]"
+        ],
+        "methodName": "LayDiemDanhHocSinh",
+        "signature": "public async Task<IActionResult> LayDiemDanhHocSinh([FromQuery] int? idBuoi, [FromQuery] int? idHs, [FromQuery] int? idKhoaHoc)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"students\")]"
+        ],
+        "methodName": "DiemDanhHocSinh",
+        "signature": "public async Task<IActionResult> DiemDanhHocSinh("
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"students/batch\")]"
+        ],
+        "methodName": "DiemDanhHocSinhBatch",
+        "signature": "public async Task<IActionResult> DiemDanhHocSinhBatch([FromBody] LuuDiemDanhBuoiHocRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"students\")]"
+        ],
+        "methodName": "XoaDiemDanhHocSinh",
+        "signature": "public async Task<IActionResult> XoaDiemDanhHocSinh([FromQuery] int idBuoi, [FromBody] List<int>? ids)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"teachers\")]"
+        ],
+        "methodName": "LayDiemDanhGiaoVien",
+        "signature": "public async Task<IActionResult> LayDiemDanhGiaoVien([FromQuery] int? idGv, [FromQuery] int? idBuoi)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"teachers\")]"
+        ],
+        "methodName": "DiemDanhGiaoVien",
+        "signature": "public async Task<IActionResult> DiemDanhGiaoVien("
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"teachers/{idDiemDanh}\")]"
+        ],
+        "methodName": "CapNhatDiemDanhGiaoVien",
+        "signature": "public async Task<IActionResult> CapNhatDiemDanhGiaoVien(int idDiemDanh, [FromQuery] string trangThai)"
+      }
+    ]
+  },
+  "QuanLyHoSoHocSinh360Controller": {
+    "javaCount": 10,
+    "csCount": 10,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping(\"/{idHs}\")"
+        ],
+        "methodName": "layThongTinHocSinh",
+        "signature": "public ApiResponse<HocSinh> layThongTinHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@PostMapping"
+        ],
+        "methodName": "taoHocSinh",
+        "signature": "public ApiResponse<HocSinh> taoHocSinh("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/{idHs}/lop-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<DangKyHoc>> layLopHocHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<DangKyHoc>> layLopHocHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/enrollments\")"
+        ],
+        "methodName": "dangKyLopHoc",
+        "signature": "public ApiResponse<DangKyHoc> dangKyLopHoc("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/enrollments/{id}\")"
+        ],
+        "methodName": "huyDangKyHoc",
+        "signature": "public ApiResponse<Void> huyDangKyHoc(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/{idHs}/diem-danh\")"
+        ],
+        "methodName": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<DiemDanhHocSinh>> layDiemDanhHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/{idHs}/hoc-phi\")"
+        ],
+        "methodName": "public ApiResponse<List<PhieuThuHocPhi>> layHocPhiHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<PhieuThuHocPhi>> layHocPhiHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/{idHs}/bao-luu\")"
+        ],
+        "methodName": "public ApiResponse<List<BaoLuuKhoaHoc>> layBaoLuuHocSinh(@PathVariable Integer idHs) {",
+        "signature": "public ApiResponse<List<BaoLuuKhoaHoc>> layBaoLuuHocSinh(@PathVariable Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/deferrals\")"
+        ],
+        "methodName": "taoBaoLuu",
+        "signature": "public ApiResponse<BaoLuuKhoaHoc> taoBaoLuu(@Valid @RequestBody BaoLuuKhoaHoc bl)"
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/deferrals/{id}/approve\")"
+        ],
+        "methodName": "duyetBaoLuu",
+        "signature": "public ApiResponse<BaoLuuKhoaHoc> duyetBaoLuu("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"{idHs}\")]"
+        ],
+        "methodName": "LayThongTinHocSinh",
+        "signature": "public async Task<IActionResult> LayThongTinHocSinh(int idHs)"
+      },
+      {
+        "attributes": [
+          "[HttpPost]"
+        ],
+        "methodName": "TaoHocSinh",
+        "signature": "public async Task<IActionResult> TaoHocSinh([FromQuery] int? idDn, [FromBody] HocSinh hs)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"{idHs}/lop-hoc\")]"
+        ],
+        "methodName": "LayLopHocHocSinh",
+        "signature": "public async Task<IActionResult> LayLopHocHocSinh(int idHs)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"enrollments\")]"
+        ],
+        "methodName": "DangKyLopHoc",
+        "signature": "public async Task<IActionResult> DangKyLopHoc("
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"enrollments/{id}\")]"
+        ],
+        "methodName": "HuyDangKyHoc",
+        "signature": "public async Task<IActionResult> HuyDangKyHoc(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"{idHs}/diem-danh\")]"
+        ],
+        "methodName": "LayDiemDanhHocSinh",
+        "signature": "public async Task<IActionResult> LayDiemDanhHocSinh(int idHs)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"{idHs}/hoc-phi\")]"
+        ],
+        "methodName": "LayHocPhiHocSinh",
+        "signature": "public async Task<IActionResult> LayHocPhiHocSinh(int idHs)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"{idHs}/bao-luu\")]"
+        ],
+        "methodName": "LayBaoLuuHocSinh",
+        "signature": "public async Task<IActionResult> LayBaoLuuHocSinh(int idHs)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"deferrals\")]"
+        ],
+        "methodName": "TaoBaoLuu",
+        "signature": "public async Task<IActionResult> TaoBaoLuu([FromBody] BaoLuuKhoaHoc bl)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"deferrals/{id}/approve\")]"
+        ],
+        "methodName": "DuyetBaoLuu",
+        "signature": "public async Task<IActionResult> DuyetBaoLuu(int id, [FromBody] DuyetBaoLuuDto? dto)"
+      }
+    ]
+  },
+  "QuanLyLopHocController": {
+    "javaCount": 5,
+    "csCount": 5,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/lop-hoc\", \"\"})"
+        ],
+        "methodName": "public ApiResponse<List<LopHocDto>> layDanhSachLopHoc(",
+        "signature": "public ApiResponse<List<LopHocDto>> layDanhSachLopHoc("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/lop-hoc/{id}\")"
+        ],
+        "methodName": "layLopHocTheoId",
+        "signature": "public ApiResponse<LopHoc> layLopHocTheoId(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/lop-hoc\", \"\"})"
+        ],
+        "methodName": "taoLopHoc",
+        "signature": "public ApiResponse<LopHoc> taoLopHoc("
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/lop-hoc/{id}\")"
+        ],
+        "methodName": "capNhatLopHoc",
+        "signature": "public ApiResponse<LopHoc> capNhatLopHoc(@PathVariable Integer id, @RequestBody LopHoc lop)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/lop-hoc/{id}/assign-teacher\")"
+        ],
+        "methodName": "phanCongGiaoVien",
+        "signature": "public ApiResponse<LopHoc> phanCongGiaoVien(@PathVariable Integer id, @RequestBody PhanCongGiaoVienDto dto)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet]",
+          "[HttpGet(\"lop-hoc\")]"
+        ],
+        "methodName": "LayDanhSachLopHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachLopHoc("
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"{id}\")]",
+          "[HttpGet(\"lop-hoc/{id}\")]"
+        ],
+        "methodName": "LayLopHocTheoId",
+        "signature": "public async Task<IActionResult> LayLopHocTheoId(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost]",
+          "[HttpPost(\"lop-hoc\")]"
+        ],
+        "methodName": "TaoLopHoc",
+        "signature": "public async Task<IActionResult> TaoLopHoc([FromBody] TaoLopHocRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"{id}\")]",
+          "[HttpPut(\"lop-hoc/{id}\")]"
+        ],
+        "methodName": "CapNhatLopHoc",
+        "signature": "public async Task<IActionResult> CapNhatLopHoc(int id, [FromBody] CapNhatLopHocRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"{id}/assign-teacher\")]",
+          "[HttpPost(\"lop-hoc/{id}/assign-teacher\")]"
+        ],
+        "methodName": "PhanCongGiaoVien",
+        "signature": "public async Task<IActionResult> PhanCongGiaoVien(int id, [FromBody] PhanCongGiaoVienDto dto)"
+      }
+    ]
+  },
+  "QuanLyNhanSuController": {
+    "javaCount": 4,
+    "csCount": 4,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping"
+        ],
+        "methodName": "public ApiResponse<List<NhanCongKhac>> layDanhSachNhanVienChiNhanh(",
+        "signature": "public ApiResponse<List<NhanCongKhac>> layDanhSachNhanVienChiNhanh("
+      },
+      {
+        "annotations": [
+          "@PostMapping"
+        ],
+        "methodName": "taoNhanVienChiNhanh",
+        "signature": "public ApiResponse<NhanCongKhac> taoNhanVienChiNhanh("
+      },
+      {
+        "annotations": [
+          "@PutMapping(\"/{id}\")"
+        ],
+        "methodName": "capNhatNhanVienChiNhanh",
+        "signature": "public ApiResponse<NhanCongKhac> capNhatNhanVienChiNhanh(@PathVariable Integer id, @RequestBody NhanCongKhac nc)"
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/{id}\")"
+        ],
+        "methodName": "xoaNhanVienChiNhanh",
+        "signature": "public ApiResponse<Void> xoaNhanVienChiNhanh(@PathVariable Integer id)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet]"
+        ],
+        "methodName": "LayDanhSachNhanVienChiNhanh",
+        "signature": "public async Task<IActionResult> LayDanhSachNhanVienChiNhanh([FromQuery] int? idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpPost]"
+        ],
+        "methodName": "TaoNhanVienChiNhanh",
+        "signature": "public async Task<IActionResult> TaoNhanVienChiNhanh([FromQuery] int? idCn, [FromBody] TaoNhanCongRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpPut(\"{id}\")]"
+        ],
+        "methodName": "CapNhatNhanVienChiNhanh",
+        "signature": "public async Task<IActionResult> CapNhatNhanVienChiNhanh(int id, [FromBody] TaoNhanCongRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"{id}\")]"
+        ],
+        "methodName": "XoaNhanVienChiNhanh",
+        "signature": "public async Task<IActionResult> XoaNhanVienChiNhanh(int id)"
+      }
+    ]
+  },
+  "QuanLyPhongHocController": {
+    "javaCount": 6,
+    "csCount": 6,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/quan-ly/phong-hoc\", \"/phong-hoc\", \"/v1/manager/rooms\"})"
+        ],
+        "methodName": "public ApiResponse<List<PhongHoc>> layPhongHocTheoChiNhanh(",
+        "signature": "public ApiResponse<List<PhongHoc>> layPhongHocTheoChiNhanh("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/chi-nhanh/{idCn}/phong-hoc\")"
+        ],
+        "methodName": "public ApiResponse<List<PhongHoc>> layPhongHocTheoChiNhanhPath(@PathVariable Integer idCn) {",
+        "signature": "public ApiResponse<List<PhongHoc>> layPhongHocTheoChiNhanhPath(@PathVariable Integer idCn)"
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/quan-ly/phong-hoc/{id}\", \"/phong-hoc/{id}\"})"
+        ],
+        "methodName": "layPhongHocTheoId",
+        "signature": "public ApiResponse<PhongHoc> layPhongHocTheoId(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/quan-ly/phong-hoc\", \"/phong-hoc\", \"/v1/manager/rooms\"})"
+        ],
+        "methodName": "taoPhongHoc",
+        "signature": "public ApiResponse<PhongHoc> taoPhongHoc("
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/chi-nhanh/{idCn}/phong-hoc\")"
+        ],
+        "methodName": "taoPhongHocChiNhanhPath",
+        "signature": "public ApiResponse<PhongHoc> taoPhongHocChiNhanhPath("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping({\"/quan-ly/phong-hoc/{id}\", \"/phong-hoc/{id}\"})"
+        ],
+        "methodName": "xoaPhongHoc",
+        "signature": "public ApiResponse<Void> xoaPhongHoc(@PathVariable Integer id)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"quan-ly/phong-hoc\")]",
+          "[HttpGet(\"phong-hoc\")]",
+          "[HttpGet(\"v1/manager/rooms\")]"
+        ],
+        "methodName": "LayPhongHocTheoChiNhanh",
+        "signature": "public async Task<IActionResult> LayPhongHocTheoChiNhanh([FromQuery] int? idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"chi-nhanh/{idCn}/phong-hoc\")]"
+        ],
+        "methodName": "LayPhongHocTheoChiNhanhPath",
+        "signature": "public async Task<IActionResult> LayPhongHocTheoChiNhanhPath(int idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"quan-ly/phong-hoc/{id}\")]",
+          "[HttpGet(\"phong-hoc/{id}\")]"
+        ],
+        "methodName": "LayPhongHocTheoId",
+        "signature": "public async Task<IActionResult> LayPhongHocTheoId(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"quan-ly/phong-hoc\")]",
+          "[HttpPost(\"phong-hoc\")]",
+          "[HttpPost(\"v1/manager/rooms\")]"
+        ],
+        "methodName": "TaoPhongHoc",
+        "signature": "public async Task<IActionResult> TaoPhongHoc([FromQuery] int? idCn, [FromBody] TaoPhongHocRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"chi-nhanh/{idCn}/phong-hoc\")]"
+        ],
+        "methodName": "TaoPhongHocChiNhanhPath",
+        "signature": "public async Task<IActionResult> TaoPhongHocChiNhanhPath(int idCn, [FromBody] TaoPhongHocRequest request)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"quan-ly/phong-hoc/{id}\")]",
+          "[HttpDelete(\"phong-hoc/{id}\")]"
+        ],
+        "methodName": "XoaPhongHoc",
+        "signature": "public async Task<IActionResult> XoaPhongHoc(int id)"
+      }
+    ]
+  },
+  "QuanLyTaiChinhController": {
+    "javaCount": 9,
+    "csCount": 9,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping(\"/receipts\")"
+        ],
+        "methodName": "public ApiResponse<List<PhieuThuHocPhi>> layPhieuThuTheoHocSinh(@RequestParam Integer idHs) {",
+        "signature": "public ApiResponse<List<PhieuThuHocPhi>> layPhieuThuTheoHocSinh(@RequestParam Integer idHs)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/receipts\")"
+        ],
+        "methodName": "taoPhieuThu",
+        "signature": "public ApiResponse<PhieuThuHocPhi> taoPhieuThu("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/cashbook\")"
+        ],
+        "methodName": "public ApiResponse<List<SoQuyThuChi>> laySoQuyChiNhanh(",
+        "signature": "public ApiResponse<List<SoQuyThuChi>> laySoQuyChiNhanh("
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/cashbook\")"
+        ],
+        "methodName": "taoGiaoDichThuChi",
+        "signature": "public ApiResponse<SoQuyThuChi> taoGiaoDichThuChi("
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/teacher-payrolls\")"
+        ],
+        "methodName": "public ApiResponse<List<ThanhToanGiaoVien>> layBangLuongGiaoVienTheoChiNhanh(",
+        "signature": "public ApiResponse<List<ThanhToanGiaoVien>> layBangLuongGiaoVienTheoChiNhanh("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/thu-chi-nam\", \"/yearly-summary\"})"
+        ],
+        "methodName": "public ApiResponse<List<com.example.project.entity.ThuChiNamHoc>> layThuChiNamChiNhanh(",
+        "signature": "public ApiResponse<List<com.example.project.entity.ThuChiNamHoc>> layThuChiNamChiNhanh("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/thu-chi-ky\", \"/semester-summary\"})"
+        ],
+        "methodName": "public ApiResponse<List<com.example.project.entity.ThuChiKyHoc>> layThuChiKyChiNhanh(",
+        "signature": "public ApiResponse<List<com.example.project.entity.ThuChiKyHoc>> layThuChiKyChiNhanh("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/thu-chi-thang\", \"/monthly-summary\"})"
+        ],
+        "methodName": "public ApiResponse<List<com.example.project.entity.ThuChiThangHoc>> layThuChiThangChiNhanh(",
+        "signature": "public ApiResponse<List<com.example.project.entity.ThuChiThangHoc>> layThuChiThangChiNhanh("
+      },
+      {
+        "annotations": [
+          "@GetMapping({\"/thu-chi-tuan\", \"/weekly-summary\"})"
+        ],
+        "methodName": "public ApiResponse<List<com.example.project.entity.ThuChiTuanHoc>> layThuChiTuanChiNhanh(",
+        "signature": "public ApiResponse<List<com.example.project.entity.ThuChiTuanHoc>> layThuChiTuanChiNhanh("
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"receipts\")]"
+        ],
+        "methodName": "LayPhieuThuTheoHocSinh",
+        "signature": "public async Task<IActionResult> LayPhieuThuTheoHocSinh([FromQuery] int idHs)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"receipts\")]"
+        ],
+        "methodName": "TaoPhieuThu",
+        "signature": "public async Task<IActionResult> TaoPhieuThu("
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"cashbook\")]"
+        ],
+        "methodName": "LaySoQuyChiNhanh",
+        "signature": "public async Task<IActionResult> LaySoQuyChiNhanh([FromQuery] int? idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"cashbook\")]"
+        ],
+        "methodName": "TaoGiaoDichThuChi",
+        "signature": "public async Task<IActionResult> TaoGiaoDichThuChi([FromQuery] int? idCn, [FromBody] SoQuyThuChi gd)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"teacher-payrolls\")]"
+        ],
+        "methodName": "LayBangLuongGiaoVienTheoChiNhanh",
+        "signature": "public async Task<IActionResult> LayBangLuongGiaoVienTheoChiNhanh([FromQuery] int? idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"thu-chi-nam\")]",
+          "[HttpGet(\"yearly-summary\")]"
+        ],
+        "methodName": "LayThuChiNamChiNhanh",
+        "signature": "public async Task<IActionResult> LayThuChiNamChiNhanh([FromQuery] int? idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"thu-chi-ky\")]",
+          "[HttpGet(\"semester-summary\")]"
+        ],
+        "methodName": "LayThuChiKyChiNhanh",
+        "signature": "public async Task<IActionResult> LayThuChiKyChiNhanh([FromQuery] int? idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"thu-chi-thang\")]",
+          "[HttpGet(\"monthly-summary\")]"
+        ],
+        "methodName": "LayThuChiThangChiNhanh",
+        "signature": "public async Task<IActionResult> LayThuChiThangChiNhanh([FromQuery] int? idCn)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"thu-chi-tuan\")]",
+          "[HttpGet(\"weekly-summary\")]"
+        ],
+        "methodName": "LayThuChiTuanChiNhanh",
+        "signature": "public async Task<IActionResult> LayThuChiTuanChiNhanh([FromQuery] int? idCn)"
+      }
+    ]
+  },
+  "QuanLyThoiKhoaBieuController": {
+    "javaCount": 7,
+    "csCount": 13,
+    "javaEndpoints": [
+      {
+        "annotations": [
+          "@GetMapping({\"/tuan\", \"/weekly\"})"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuan>> layTkbTheoTuan(",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuan>> layTkbTheoTuan("
+      },
+      {
+        "annotations": [
+          "@PostMapping({\"/batch-save\", \"/weekly/batch\"})"
+        ],
+        "methodName": "public ApiResponse<List<ThoiKhoaBieuTuan>> luuDanhSachTkb(@RequestBody List<ThoiKhoaBieuTuan> danhSachTkb) {",
+        "signature": "public ApiResponse<List<ThoiKhoaBieuTuan>> luuDanhSachTkb(@RequestBody List<ThoiKhoaBieuTuan> danhSachTkb)"
+      },
+      {
+        "annotations": [
+          "@GetMapping(\"/fixed\")"
+        ],
+        "methodName": "public ApiResponse<List<KhungLichHocCoDinh>> layKhungLichCoDinh(@RequestParam Integer idLop) {",
+        "signature": "public ApiResponse<List<KhungLichHocCoDinh>> layKhungLichCoDinh(@RequestParam Integer idLop)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/fixed\")"
+        ],
+        "methodName": "taoKhungLichCoDinh",
+        "signature": "public ApiResponse<KhungLichHocCoDinh> taoKhungLichCoDinh("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/fixed/{id}\")"
+        ],
+        "methodName": "xoaKhungLichCoDinh",
+        "signature": "public ApiResponse<Void> xoaKhungLichCoDinh(@PathVariable Integer id)"
+      },
+      {
+        "annotations": [
+          "@PostMapping(\"/sessions\")"
+        ],
+        "methodName": "taoBuoiHoc",
+        "signature": "public ApiResponse<BuoiHoc> taoBuoiHoc("
+      },
+      {
+        "annotations": [
+          "@DeleteMapping(\"/sessions/{id}\")"
+        ],
+        "methodName": "xoaBuoiHoc",
+        "signature": "public ApiResponse<Void> xoaBuoiHoc(@PathVariable Integer id)"
+      }
+    ],
+    "csEndpoints": [
+      {
+        "attributes": [
+          "[HttpGet(\"tuan\")]",
+          "[HttpGet(\"weekly\")]"
+        ],
+        "methodName": "LayTkbTheoTuan",
+        "signature": "public async Task<IActionResult> LayTkbTheoTuan("
+      },
+      {
+        "attributes": [
+          "[HttpPost]",
+          "[HttpPost(\"single\")]"
+        ],
+        "methodName": "LuuThoiKhoaBieu",
+        "signature": "public async Task<IActionResult> LuuThoiKhoaBieu([FromBody] ThoiKhoaBieuTuan tkb)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"batch-save\")]",
+          "[HttpPost(\"weekly/batch\")]"
+        ],
+        "methodName": "LuuDanhSachTkb",
+        "signature": "public async Task<IActionResult> LuuDanhSachTkb([FromBody] List<ThoiKhoaBieuTuan> danhSachTkb)"
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"{id}\")]"
+        ],
+        "methodName": "XoaThoiKhoaBieu",
+        "signature": "public async Task<IActionResult> XoaThoiKhoaBieu(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"fixed\")]"
+        ],
+        "methodName": "LayKhungLichCoDinh",
+        "signature": "public async Task<IActionResult> LayKhungLichCoDinh([FromQuery] int? idLop, [FromQuery] int? idPhong)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"fixed\")]"
+        ],
+        "methodName": "TaoKhungLichCoDinh",
+        "signature": "public async Task<IActionResult> TaoKhungLichCoDinh("
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"fixed/{id}\")]"
+        ],
+        "methodName": "XoaKhungLichCoDinh",
+        "signature": "public async Task<IActionResult> XoaKhungLichCoDinh(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"sessions\")]"
+        ],
+        "methodName": "LayDanhSachBuoiHoc",
+        "signature": "public async Task<IActionResult> LayDanhSachBuoiHoc([FromQuery] int? idLop, [FromQuery] int? idKhoaHoc, [FromQuery] int? idPhong)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"sessions/{id}\")]"
+        ],
+        "methodName": "LayChiTietBuoiHoc",
+        "signature": "public async Task<IActionResult> LayChiTietBuoiHoc(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"sessions\")]"
+        ],
+        "methodName": "TaoBuoiHoc",
+        "signature": "public async Task<IActionResult> TaoBuoiHoc("
+      },
+      {
+        "attributes": [
+          "[HttpDelete(\"sessions/{id}\")]"
+        ],
+        "methodName": "XoaBuoiHoc",
+        "signature": "public async Task<IActionResult> XoaBuoiHoc(int id)"
+      },
+      {
+        "attributes": [
+          "[HttpPost(\"classes/{idLop}/weeks/{idTuan}/generate-sessions\")]",
+          "[HttpPost(\"tu-dong-sinh-buoi\")]"
+        ],
+        "methodName": "TuDongSinhBuoiHoc",
+        "signature": "public async Task<IActionResult> TuDongSinhBuoiHoc([FromRoute] int? idLop, [FromRoute] int? idTuan, [FromQuery] int? lopId, [FromQuery] int? tuanId)"
+      },
+      {
+        "attributes": [
+          "[HttpGet(\"enrollments\")]",
+          "[HttpGet(\"dang-ky-hoc\")]"
+        ],
+        "methodName": "LayDanhSachDangKy",
+        "signature": "public async Task<IActionResult> LayDanhSachDangKy([FromQuery] int? idLop, [FromQuery] int? idHs)"
+      }
+    ]
+  }
+}

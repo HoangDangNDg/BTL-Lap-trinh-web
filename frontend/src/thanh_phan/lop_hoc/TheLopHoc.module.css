@@ -1,0 +1,211 @@
+.card {
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #DBDBDB;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  position: relative;
+}
+
+.card:hover {
+  border-color: #A8A8A8;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.cardDark {
+  background-color: #1E293B;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.4);
+}
+
+.cardDark:hover {
+  border-color: #475569;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+}
+
+.headerSublabel {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: #737373;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.headerSublabelDark {
+  color: #94A3B8;
+}
+
+.classTitle {
+  margin: 0.15rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #262626;
+  line-height: 1.3;
+}
+
+.classTitleDark {
+  color: #F8FAFC;
+}
+
+.bodyMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: #737373;
+}
+
+.bodyMetaDark {
+  color: #94A3B8;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.metaHighlight {
+  color: #262626;
+}
+
+.metaHighlightDark {
+  color: #F8FAFC;
+}
+
+.iconBlue {
+  color: #0095F6;
+}
+
+.iconSky {
+  color: #0284C7;
+}
+
+.iconGreen {
+  color: #10B981;
+}
+
+.iconAmber {
+  color: #F59E0B;
+}
+
+.badgeMonHoc {
+  font-size: 0.725rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  font-weight: 700;
+  border: 1px solid #BFDBFE;
+}
+
+.badgeMonHocDark {
+  background-color: rgba(37, 99, 235, 0.25);
+  color: #60A5FA;
+  border: 1px solid #1D4ED8;
+}
+
+.badgeBoMon {
+  font-size: 0.725rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  background-color: #F3E8FF;
+  color: #7E22CE;
+  font-weight: 600;
+}
+
+.badgeBoMonDark {
+  background-color: rgba(126, 34, 206, 0.25);
+  color: #C084FC;
+}
+
+.cardFooter {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.cardFooterDark {
+  border-top: 1px solid #334155;
+}
+
+.actionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.btnActionTaoBuoi {
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #BAE6FD;
+  background-color: #F0F9FF;
+  color: #0284C7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: all 0.15s ease;
+}
+
+.btnActionTaoBuoi:hover {
+  background-color: #E0F2FE;
+}
+
+.btnActionTaoBuoiDark {
+  border: 1px solid #0284C7;
+  background-color: rgba(2, 132, 199, 0.2);
+  color: #38BDF8;
+}
+
+.btnActionTaoBuoiDark:hover {
+  background-color: rgba(2, 132, 199, 0.35);
+}
+
+.btnActionDiemDanh {
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #BBF7D0;
+  background-color: #F0FDF4;
+  color: #15803D;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: all 0.15s ease;
+}
+
+.btnActionDiemDanh:hover {
+  background-color: #DCFCE7;
+}
+
+.btnActionDiemDanhDark {
+  border: 1px solid #059669;
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #34D399;
+}
+
+.btnActionDiemDanhDark:hover {
+  background-color: rgba(16, 185, 129, 0.35);
+}
